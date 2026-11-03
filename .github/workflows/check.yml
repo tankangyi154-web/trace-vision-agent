@@ -12,6 +12,8 @@ jobs:
       - run: pip install -r requirements-dev.txt
       - run: python -m pytest -q
       - run: python -m unittest discover -s evals -p test_evaluate.py
+      - name: Prepare the checksum-pinned review model
+        run: python -c "from vision.download_model import ensure_model; ensure_model()"
       - run: python -m pytest -q vision/test_media.py vision/test_review_gap.py vision/test_annotation.py
       - run: python evals/run_agent_eval.py --validate
   web:
@@ -26,3 +28,11 @@ jobs:
       - run: npm ci --prefix web
       - run: npm test --prefix web
       - run: npm run build --prefix web
+  gateway:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --test deploy/agent-gateway/tests/gateway.test.mjs
