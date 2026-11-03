@@ -1,7 +1,7 @@
 """Compact presentation of validated facts; explanations and evidence stay available."""
 import re
 
-PROMPT_VERSION='media-answer-v4-ai-reviewed'
+PROMPT_VERSION='media-answer-v5-connection-recovery'
 
 
 def distinct_descriptions(phrases):

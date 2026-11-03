@@ -97,7 +97,7 @@ def main():
         files.append({'path':path.relative_to(stage).as_posix(),'bytes':path.stat().st_size,'sha256':digest(path)})
     manifest={'project':'video-event-agent','edition':'windows-cpu-portable','build_id':str(uuid.uuid4()),'date':'2026-11-03','python':lock,
         'api_keys_included':False,'user_records_included':False,'gpu_dependencies_included':False,
-        'version':'1.0.1','launch':'启动项目.cmd','application_directory':'app','maintenance_directory':'开发与维护',
+        'version':'1.0.2','launch':'启动项目.cmd','application_directory':'app','maintenance_directory':'开发与维护',
         'native_runtime_note':'Some Windows machines require the Microsoft x64 Visual C++ runtime; startup checks it and preserves prepared examples when unavailable.',
         'files':files}
     (app/'PORTABLE-MANIFEST.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf8')

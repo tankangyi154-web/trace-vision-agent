@@ -13,6 +13,7 @@ LIMITS={
 }
 VISUAL_LABELS={'gender':'性别','body':'体型','height':'身高','action':'动作','clothing':'衣着','appearance':'可见外观','carrying':'随身物品'}
 PATTERNS={
+    'duration':r'(?:出现|停留|驻留|识别|看见)(?:了|持续|累计|大概|大约|总共|一共|时间|时长)*\s*(?:多久|多长时间|多少秒|几秒钟?)|出现时长|累计时长',
     'presence':r'首次|最早|出现时间|(?:什么时候|什么时间|何时|几秒).*出现|出现.*(?:什么时候|什么时间|何时|几秒)',
     'trajectory':r'轨迹|路线|路径|往哪|去哪|位置变化|移动方向|怎么走|走向',
     'visibility':r'消失|离开|不见|没(?:有)?(?:被)?识别|中断|跟丢|最后(?:一次)?(?:识别|出现|看见|看到)|看不见',
@@ -40,7 +41,10 @@ def question_plan(question):
             match=re.search(pattern,clause)
             if match and not re.search(r'不要|不用|无需|不必|别猜',clause[:match.start()][-12:]):
                 facets.append(facet);break
+    if 'duration' in facets and 'presence' in facets and not re.search(r'首次|第一次|最早|什么时候|什么时间|何时|出现时间|第几秒',question):facets.remove('presence')
     plan={'targets':targets,'facets':facets}
+    if 'duration' in facets and re.search(r'连续|不间断',question) and not re.search(r'累计|总共',question):
+        facets[facets.index('duration')]='continuous_duration'
     rankings=[]
     for clause in clauses:
         if not re.search(r'(?:出现|停留|驻留|待).*?最(?:长|久)|最(?:长|久).*?(?:出现|停留|驻留)',clause):continue

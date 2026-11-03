@@ -119,7 +119,7 @@ async def run_agent(scene,zone_id,dwell_seconds,question,history,settings,on_sta
             messages=[{'role':'system','content':'''你是视频提问的查询规划器，本轮只拆解用户请求，不回答内容、不分析图片。
 只返回JSON：{"question_plan":{"tasks":[...],"clarification":"必要时简短澄清，否则为空"}}。
 task仅允许以下三种：
-{"kind":"target","target_id":"已明确给出或选中的编号","facets":["presence","trajectory","visibility","gender","body","height","action","clothing","appearance","carrying","speed","distance","identity"]}（facets仅选择用户所问方面）；
+{"kind":"target","target_id":"已明确给出或选中的编号","facets":["presence","duration","continuous_duration","trajectory","visibility","gender","body","height","action","clothing","appearance","carrying","speed","distance","identity"]}（facets仅选择用户所问方面；duration为累计出现时长，continuous_duration为连续出现时长）；
 {"kind":"rank","label":"COCO英文类别、all或vehicles","metric":"observed_seconds或longest_interval_seconds"}；
 {"kind":"count","label":"COCO英文类别、all或vehicles","metric":"count或max_simultaneous或categories"}。
 最多五项、两个编号。累计出现最久与连续出现最久不同；视频当前画面数量用max_simultaneous，整段编号数用count，图片用count。
@@ -310,4 +310,13 @@ evidence_ids只选最多3个本轮返回的代表性证据ID，涉及未解帧�
         return final['result']
     except AgentError as e:
         e.partial={**e.partial,'usage':dict(accounting),'tool_calls':list(trace)}
+        from api.remote_agent import NETWORK_CODES
+        if media and trace and e.code in NETWORK_CODES|{'user_limit','daily_limit','monthly_limit'}:
+            try:
+                fallback=tools.connection_fallback()
+                if fallback:
+                    connection=e.partial.get('connection') or {'code':e.code,'message':e.message,'retryable':e.code in NETWORK_CODES}
+                    result=present_answer({**fallback,'usage':dict(accounting),'tool_calls':list(trace)},tools.scene,tools.plan)
+                    return {**e.partial,**result,'answer_state':'partial','execution_mode':'local_partial','connection':connection}
+            except (ValueError,KeyError,TypeError):pass
         raise

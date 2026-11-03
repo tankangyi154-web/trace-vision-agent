@@ -41,6 +41,7 @@ export interface ChatContext { scene_id: string; zone_id: string; dwell_seconds:
 export interface ChatRequest extends ChatContext { request_id: string; session_id: string; question: string }
 export interface Citation { evidence_id: string; track_id: string; t: number; image_url: string }
 export interface ChatResult {
+  connection?: { code: string; message: string; retryable: boolean; phase?: string; attempts?: number }
   request_id: string; status: 'queued' | 'running' | 'complete' | 'failed'; stage: string
   answer: string | null; citations: Citation[]; rule_citations: { id: string; text: string }[]
   insufficient_evidence?: boolean

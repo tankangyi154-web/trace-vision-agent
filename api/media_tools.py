@@ -59,6 +59,18 @@ class MediaTools(Toolset):
         messages=self.visual_messages;self.visual_messages=[]
         return messages
 
+    def connection_fallback(self):
+        """Keep retrieved facts, mark unperformed image analysis as pending, never invent a visual finding."""
+        for ident in self.plan['targets']:
+            for facet in facets_for(self.plan,ident):
+                key=f'target{ident}.{facet}'
+                if facet in VISUAL_LABELS and key not in self.visual_keys:
+                    self._metric(key,None,f'{VISUAL_LABELS[facet]}：在线画面分析暂未完成，恢复连接后可重试。')
+                    self.metric_status[key]='insufficient'
+        result=self.profile_answer({'answer':'','fact_keys':[],'evidence_ids':[],'rule_ids':[],'insufficient_evidence':True})
+        if result is None:return None
+        return {**result,'visual_frame_count':0}
+
     def load_visual(self,ident,result):
         wanted=set(facets_for(self.plan,ident))&VISUAL_LABELS.keys()
         if not wanted:return
@@ -425,6 +437,11 @@ class MediaTools(Toolset):
                 result['metrics']=[self._metric(f"target{target['id']}.first_seen",target['first_seen'],f"{target['name']}（{result['label']}）首次识别于{target['first_seen']:g}秒。"),self._metric(f"target{target['id']}.last_seen",target['last_seen'],f"最后一次识别到{target['name']}是在{target['last_seen']:g}秒。")]
             result['note']='这是单张图片中的目标，不能回答出现或离开的时间。' if scene['kind']=='image' else f"时刻来自每秒{scene['sample_fps']:g}帧的实际采样，首次/末次识别不等于实际进入/离开；间隔不证明连续。"
             profile=track_profile(scene,target);result['track_summary']=profile
+            observed=appearance_duration(scene,target)
+            for facet,metric,label in [('duration','observed_seconds','累计识别到'),('continuous_duration','longest_interval_seconds','最长连续识别到')]:
+                value=observed[metric] if observed else None
+                text=f'{label}{value:g}秒，未识别的间隔不计入。' if value is not None else '当前记录不足以计算出现时长。'
+                result['metrics'].append(self._metric(f'target{ident}.{facet}',value,text));self.metric_status[f'target{ident}.{facet}']='answered' if value is not None else 'insufficient'
             for facet,item in profile.items():
                 key=f'target{ident}.{facet}';result['metrics'].append(self._metric(key,item['value'],item['text']));self.metric_status[key]=item['status']
             for facet,text in LIMITS.items():

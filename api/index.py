@@ -99,6 +99,12 @@ def create_app(settings=None,store=None):
     @application.get('/api/object-classes')
     def object_classes():return {'classes':class_choices(),'max_selected':3}
 
+    @application.get('/api/agent/connection')
+    async def agent_connection(response:Response):
+        from api.agent_connection import check_connection
+        response.headers['Cache-Control']='no-store'
+        return await check_connection(settings)
+
     @application.get('/api/presets')
     def prepared_examples():
         from api.presets import list_presets
@@ -327,8 +333,7 @@ def create_app(settings=None,store=None):
         try:
             remote=None
             if not settings.api_key and settings.remote_agent_url:
-                remote=RemoteAgent(settings,rid)
-                await remote.reserve()
+                remote=RemoteAgent(settings,rid,on_stage=stage)
             result=await asyncio.wait_for(run_agent(scene,body.zone_id,body.dwell_seconds,body.question,history,settings,stage,
                     completion_transport=remote.complete if remote else None,
                     cancelled=cancelled,review_service=review_service if body.investigation_id else None,
@@ -338,8 +343,8 @@ def create_app(settings=None,store=None):
                     media_supplement=(lambda classes:upload_service.supplement(body.scene_id,media_owner,classes,stage)) if media else None),
                     timeout=settings.agent_timeout+(MEDIA_WAIT_SECONDS if media else 0))
             changes={**result,'status':'complete','stage':'已完成，证据引用已校验','error':None}
-            if remote:changes['remaining']=min(remote.remaining,reservation['result']['remaining'])
-            if media and cache_key and not cancelled.is_set():
+            if remote and remote.remaining is not None:changes['remaining']=min(remote.remaining,reservation['result']['remaining'])
+            if media and cache_key and not result.get('connection') and not cancelled.is_set():
                 try:await asyncio.to_thread(upload_service.cache_answer,body.scene_id,media_owner,cache_key,result)
                 except (UploadError,OSError,ValueError):pass
         except AgentError as e:

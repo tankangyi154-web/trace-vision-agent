@@ -5,7 +5,7 @@ from copy import deepcopy
 from api.media_profile import question_plan,VISUAL_LABELS,PATTERNS
 from vision.analyze_media import class_choices
 
-FACETS=set(PATTERNS)
+FACETS=set(PATTERNS)|{'continuous_duration'}
 ALIASES={'穿搭':'衣着','装束':'衣着','装扮':'衣着','打扮':'衣着','衣服什么样':'衣着','多久第一次露面':'什么时候出现','首次露面':'首次出现','最后露面':'最后出现','走的路线':'移动路线','去了哪里':'移动方向','忙什么':'在做什么','手上有什么':'手里拿什么','个头':'身高','壮不壮':'体型','胖不胖':'体型','什么时候不见':'最后出现'}
 PRONOUN=r'他|她|它|这(?:个|位|辆|艘|只)|那(?:个|位|辆|艘|只)|选中|刚才|上面'
 ALIASES.update({'服饰':'衣着','穿戴':'衣着'})
@@ -73,7 +73,7 @@ def build_plan(question,scene,selected_target=None,history=()):
             if re.search(r'人|谁|哪位',clause):labels.append('person')
             if re.search(r'汽车|轿车|车辆|哪辆|车',clause):labels.append('car')
             for label in labels:tasks.append({'kind':'rank','label':label,'metric':'longest_interval_seconds' if '连续' in clause else 'observed_seconds'})
-        if re.search(r'几(?:辆|个|只|艘|类)|多少(?:辆|个|只|艘|类)?|数量|数一下|数一数',clause) and not re.search(r'几秒|几号|编号',clause):
+        if re.search(r'几(?:辆|个|只|艘|类)|多少(?!\s*(?:秒|分|米|厘米|公分|时间|长|久))(?:辆|个|只|艘|类)?|数量|数一下|数一数',clause) and not re.search(r'几秒|几号|编号',clause):
             labels=[]
             for choice in class_choices():
                 if choice['name'] in clause:labels.append((clause.index(choice['name']),choice['label'].replace(' ','_')))
