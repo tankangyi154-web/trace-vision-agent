@@ -1,0 +1,123 @@
+{
+  "schema": "trace-independent-review-v1",
+  "reviewer": {
+    "id": "",
+    "kind": "human",
+    "independent": false
+  },
+  "note": "留空表示尚未核对；pass为未发现该项问题，fail为发现问题。不得用模型自评分替代独立人工标注。",
+  "cases": [
+    {
+      "id": "mixed",
+      "question": "画面里出现最长的人和汽车分别是编号几，人48号是什么性别 身高多高 什么身材",
+      "answer": "出现最久：人 #1（累计15.2秒），汽车 #36（累计7秒）。\n\n人 #48：短发、肩背较宽，整体外观偏男性化；看起来身形中等偏结实，肩背较宽；身高缺少可靠尺寸参照，暂不能估计。",
+      "source_sha256": "cbfc54178b5b5eefed4567d4e43d2500b42f11990aa78442dba0242734dce0b7",
+      "ratings": {
+        "question_coverage": null,
+        "fact_accuracy": null,
+        "citation_alignment": null,
+        "unnecessary_refusal": null,
+        "unsupported_inference": null
+      },
+      "comment": ""
+    },
+    {
+      "id": "cached_repeat",
+      "question": "画面里出现最长的人和汽车分别是编号几，人48号是什么性别 身高多高 什么身材",
+      "answer": "出现最久：人 #1（累计15.2秒），汽车 #36（累计7秒）。\n\n人 #48：短发、肩背较宽，整体外观偏男性化；看起来身形中等偏结实，肩背较宽；身高缺少可靠尺寸参照，暂不能估计。",
+      "source_sha256": "cbfc54178b5b5eefed4567d4e43d2500b42f11990aa78442dba0242734dce0b7",
+      "ratings": {
+        "question_coverage": null,
+        "fact_accuracy": null,
+        "citation_alignment": null,
+        "unnecessary_refusal": null,
+        "unsupported_inference": null
+      },
+      "comment": ""
+    },
+    {
+      "id": "pronoun",
+      "question": "他穿搭和手里拿什么？",
+      "answer": "人 #48：深色带彩色花纹的短袖球衣，背后印有名字和号码，配深蓝及膝短裤和人字拖；两手自然下垂，未见明显手持物品。",
+      "source_sha256": "cbfc54178b5b5eefed4567d4e43d2500b42f11990aa78442dba0242734dce0b7",
+      "ratings": {
+        "question_coverage": null,
+        "fact_accuracy": null,
+        "citation_alignment": null,
+        "unnecessary_refusal": null,
+        "unsupported_inference": null
+      },
+      "comment": ""
+    },
+    {
+      "id": "semantic",
+      "question": "帮我概括这位的服饰细节",
+      "answer": "人 #48：深色底彩色花纹短袖球衣，背后印名字和号码，袖口橙色；深蓝及膝短裤带浅色侧条；人字拖；两手自然下垂，未见明显手持物品。",
+      "source_sha256": "cbfc54178b5b5eefed4567d4e43d2500b42f11990aa78442dba0242734dce0b7",
+      "ratings": {
+        "question_coverage": null,
+        "fact_accuracy": null,
+        "citation_alignment": null,
+        "unnecessary_refusal": null,
+        "unsupported_inference": null
+      },
+      "comment": ""
+    },
+    {
+      "id": "lowres",
+      "question": "人30号穿什么、身材怎么样？",
+      "answer": "人 #30：身形轮廓无法判断；上身似为红色或暗红色上衣，下身深色长裤，手边有浅色物品。",
+      "source_sha256": "f9faba6482a182a937b429040450900a3d5c1bcc838a09175c8591bc992a1f29",
+      "ratings": {
+        "question_coverage": null,
+        "fact_accuracy": null,
+        "citation_alignment": null,
+        "unnecessary_refusal": null,
+        "unsupported_inference": null
+      },
+      "comment": ""
+    },
+    {
+      "id": "crowd",
+      "question": "人1号穿什么？",
+      "answer": "人 #1：深色长外套配浅色高领内搭，戴橄榄色头巾，斜挎深色小包。",
+      "source_sha256": "18a44466d9a458755883d0d0def3968723c5d62f85a92e96ca54798ca10e9ed6",
+      "ratings": {
+        "question_coverage": null,
+        "fact_accuracy": null,
+        "citation_alignment": null,
+        "unnecessary_refusal": null,
+        "unsupported_inference": null
+      },
+      "comment": ""
+    },
+    {
+      "id": "still",
+      "question": "人2号穿什么、是什么姿态、身高多高？",
+      "answer": "人 #2：身高缺少可靠尺寸参照，暂不能估计；双臂交叉抱在胸前，直立站在人行道上；浅米色毛绒长外套，内搭橙色上衣，深蓝牛仔裤，浅色运动鞋。",
+      "source_sha256": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63",
+      "ratings": {
+        "question_coverage": null,
+        "fact_accuracy": null,
+        "citation_alignment": null,
+        "unnecessary_refusal": null,
+        "unsupported_inference": null
+      },
+      "comment": ""
+    },
+    {
+      "id": "negative_control",
+      "question": "有几个人？",
+      "answer": "这张图片中没有检测到人。",
+      "source_sha256": "b49148ab4ca4005d6b4ef24e8de4485e155a94fc30d4d41a6dc9a3223242875f",
+      "ratings": {
+        "question_coverage": null,
+        "fact_accuracy": null,
+        "citation_alignment": null,
+        "unnecessary_refusal": null,
+        "unsupported_inference": null
+      },
+      "comment": ""
+    }
+  ]
+}

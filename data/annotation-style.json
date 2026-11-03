@@ -1,0 +1,6 @@
+{
+  "colors": {"person":"#2563eb","car":"#b45309","bicycle":"#be185d","motorcycle":"#a21caf","bus":"#7c3aed","truck":"#0f766e","boat":"#0369a1"},
+  "fallback_palette": ["#2563eb","#b45309","#0f766e","#7c3aed","#be185d","#0369a1"],
+  "label_height": 24,
+  "font_size": 14
+}

@@ -1,0 +1,12 @@
+{
+  "model": "osnet_x0_25_msmt17.pth",
+  "url": "https://huggingface.co/kaiyangzhou/osnet/resolve/a5c5cc037c24235cda3b21085b93ad77c9616224/osnet_x0_25_msmt17_combineall_256x128_amsgrad_ep150_stp60_lr0.0015_b64_fb10_softmax_labelsmooth_flip_jitter.pth",
+  "sha256": "cf55163d78fc44c62c82f85ab62d39f10438679b5abe8c698ae08cfa84aa6e18",
+  "bytes": 9336983,
+  "license": "MIT",
+  "source": "https://github.com/KaiyangZhou/deep-person-reid",
+  "source_commit": "f8cd150fdf77e8d9e1ed143b7f308c2c609ded50",
+  "architecture_sha256": "e3f6c728070c779c42efdf926c09defb938305f6f1a9b8ba437cd8d1ad06418f",
+  "input_height": 256,
+  "input_width": 128
+}

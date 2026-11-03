@@ -1,0 +1,75 @@
+{
+  "date": "2026-11-03",
+  "source_page": "https://www.pexels.com/video/busy-street-market-scene-with-vendor-and-traffic-36976482/",
+  "source_sha256": "cbfc54178b5b5eefed4567d4e43d2500b42f11990aa78442dba0242734dce0b7",
+  "question": "画面里出现最长的人和汽车分别是编号几，人48号是什么性别 身高多高 什么身材",
+  "verified_ranking_facts": [
+    {
+      "key": "ranking.person.observed_seconds",
+      "value": 15.2,
+      "source": "observations"
+    },
+    {
+      "key": "ranking.car.observed_seconds",
+      "value": 7.0,
+      "source": "observations"
+    }
+  ],
+  "winner_ids": {
+    "person": "1",
+    "car": "36"
+  },
+  "answer": "人中出现最久的是人 #1，可确认的累计出现时间15.2秒。中间没识别到的时间不计入。\n\n汽车中出现最久的是汽车 #36，可确认的累计出现时间7秒。中间没识别到的时间不计入。\n\n人 #48 · 外观呈现：短发、肩背较宽，整体外观偏男性化。\n\n人 #48 · 体型：身形中等偏结实，肩背较宽，四肢不显粗。（只看到背面，且上衣较宽松，真实胖瘦判断受限。）\n\n人 #48 · 身高：无法给出身高粗估。（头脚虽基本可见，但附近没有与本人处于相近距离的明确尺寸参照物。）",
+  "coverage": [
+    {
+      "scope": "ranking",
+      "label": "person",
+      "aspect": "observed_seconds",
+      "status": "answered"
+    },
+    {
+      "scope": "ranking",
+      "label": "car",
+      "aspect": "observed_seconds",
+      "status": "answered"
+    },
+    {
+      "target": "48",
+      "aspect": "gender",
+      "status": "uncertain"
+    },
+    {
+      "target": "48",
+      "aspect": "body",
+      "status": "uncertain"
+    },
+    {
+      "target": "48",
+      "aspect": "height",
+      "status": "insufficient"
+    }
+  ],
+  "visual_frame_count": 3,
+  "usage": {
+    "input_tokens": 6434,
+    "output_tokens": 481,
+    "model_calls": 1,
+    "tool_calls": 3,
+    "usage_complete": true
+  },
+  "tool_names": [
+    "rank_objects",
+    "rank_objects",
+    "locate_object"
+  ],
+  "validation_scope": "Actual provider response using an existing local record and its real target screenshots. No new video detection. Formatting replay reuses the same visual response. No independent semantic labels or measured height.",
+  "height_status": "No numerical estimate for this input; no suitable reference at comparable depth. The reference-based range path has unit validation only, no measured-height error benchmark.",
+  "browser": {
+    "complete_answer_rendered": true,
+    "car_citation_focuses_car": true,
+    "person_citation_focuses_person": true,
+    "refresh_preserves": true,
+    "extra_model_requests": 0,
+    "uploads": 0
+  }
+}

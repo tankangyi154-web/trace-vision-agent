@@ -1,0 +1,887 @@
+{
+  "schema": "trace-measured-height-v1",
+  "method": "ccvs_calibrated_manual_points_baseline_not_agent",
+  "ground_truth_source": "https://doi.org/10.1186/s13640-015-0086-1",
+  "cases": [
+    {
+      "id": "01-002",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 01 subject 002",
+      "measured_height_cm": 176.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 180.129223,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "01-003",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 01 subject 003",
+      "measured_height_cm": 169.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 172.094164,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "01-004",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 01 subject 004",
+      "measured_height_cm": 184.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 186.620811,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "01-005",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 01 subject 005",
+      "measured_height_cm": 170.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 168.585083,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "01-008",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 01 subject 008",
+      "measured_height_cm": 170.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 176.17554,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "01-009",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 01 subject 009",
+      "measured_height_cm": 173.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 176.899178,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "01-010",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 01 subject 010",
+      "measured_height_cm": 176.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 180.849503,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "01-011",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 01 subject 011",
+      "measured_height_cm": 174.0,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 172.22324,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "01-012",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 01 subject 012",
+      "measured_height_cm": 173.0,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 174.352928,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "02-002",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 02 subject 002",
+      "measured_height_cm": 176.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 181.111373,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "02-003",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 02 subject 003",
+      "measured_height_cm": 169.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 172.765982,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "02-004",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 02 subject 004",
+      "measured_height_cm": 184.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 188.703339,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "02-005",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 02 subject 005",
+      "measured_height_cm": 170.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 172.766868,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "02-006",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 02 subject 006",
+      "measured_height_cm": 179.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 183.010506,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "02-008",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 02 subject 008",
+      "measured_height_cm": 170.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 176.877207,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "02-009",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 02 subject 009",
+      "measured_height_cm": 173.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 177.763445,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "02-010",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 02 subject 010",
+      "measured_height_cm": 176.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 179.575206,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "02-011",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 02 subject 011",
+      "measured_height_cm": 174.0,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 176.135925,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "02-012",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 02 subject 012",
+      "measured_height_cm": 173.0,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 175.466538,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "03-002",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 03 subject 002",
+      "measured_height_cm": 176.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 180.019092,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "03-003",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 03 subject 003",
+      "measured_height_cm": 169.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 171.516613,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "03-004",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 03 subject 004",
+      "measured_height_cm": 184.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 186.215754,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "03-005",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 03 subject 005",
+      "measured_height_cm": 170.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 169.819613,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "03-006",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 03 subject 006",
+      "measured_height_cm": 179.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 180.41812,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "03-008",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 03 subject 008",
+      "measured_height_cm": 170.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 172.665182,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "03-009",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 03 subject 009",
+      "measured_height_cm": 173.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 174.758909,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "03-010",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 03 subject 010",
+      "measured_height_cm": 176.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 177.872155,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "03-011",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 03 subject 011",
+      "measured_height_cm": 174.0,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 174.598371,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "03-012",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 03 subject 012",
+      "measured_height_cm": 173.0,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 172.941236,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "04-002",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 04 subject 002",
+      "measured_height_cm": 174.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 176.379589,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "04-003",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 04 subject 003",
+      "measured_height_cm": 169.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 173.559798,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "04-004",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 04 subject 004",
+      "measured_height_cm": 184.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 184.195391,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "04-005",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 04 subject 005",
+      "measured_height_cm": 170.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 168.398232,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "04-006",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 04 subject 006",
+      "measured_height_cm": 179.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 180.617603,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "04-008",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 04 subject 008",
+      "measured_height_cm": 170.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 173.350396,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "04-009",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 04 subject 009",
+      "measured_height_cm": 173.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 176.733018,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "04-010",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 04 subject 010",
+      "measured_height_cm": 176.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 178.20027,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "04-011",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 04 subject 011",
+      "measured_height_cm": 174.0,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 176.05553,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "04-012",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 04 subject 012",
+      "measured_height_cm": 173.0,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 172.687862,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "05-002",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 05 subject 002",
+      "measured_height_cm": 176.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 176.804385,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "05-003",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 05 subject 003",
+      "measured_height_cm": 169.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 170.260507,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "05-004",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 05 subject 004",
+      "measured_height_cm": 184.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 180.460573,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "05-005",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 05 subject 005",
+      "measured_height_cm": 170.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 166.515242,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "05-006",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 05 subject 006",
+      "measured_height_cm": 179.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 179.506915,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "05-008",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 05 subject 008",
+      "measured_height_cm": 170.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 170.055112,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "05-009",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 05 subject 009",
+      "measured_height_cm": 173.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 172.68175,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "05-010",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 05 subject 010",
+      "measured_height_cm": 174.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 174.839967,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "05-011",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 05 subject 011",
+      "measured_height_cm": 174.0,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 173.627969,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "05-012",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 05 subject 012",
+      "measured_height_cm": 173.0,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 162.198366,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "08-002",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 08 subject 002",
+      "measured_height_cm": 176.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 177.605157,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "08-004",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 08 subject 004",
+      "measured_height_cm": 184.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 183.237801,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "08-005",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 08 subject 005",
+      "measured_height_cm": 170.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 168.760945,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "08-006",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 08 subject 006",
+      "measured_height_cm": 179.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 180.474219,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "08-008",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 08 subject 008",
+      "measured_height_cm": 170.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 171.969409,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "08-009",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 08 subject 009",
+      "measured_height_cm": 173.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 175.656251,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "08-010",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 08 subject 010",
+      "measured_height_cm": 176.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 177.526956,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "08-011",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 08 subject 011",
+      "measured_height_cm": 174.0,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 174.136257,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "08-012",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 08 subject 012",
+      "measured_height_cm": 173.0,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 172.64448,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "10-002",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 10 subject 002",
+      "measured_height_cm": 176.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 176.49455,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "10-003",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 10 subject 003",
+      "measured_height_cm": 169.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 169.861871,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "10-004",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 10 subject 004",
+      "measured_height_cm": 184.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 181.818671,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "10-005",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 10 subject 005",
+      "measured_height_cm": 170.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 168.638326,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "10-006",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 10 subject 006",
+      "measured_height_cm": 179.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 177.313785,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "10-008",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 10 subject 008",
+      "measured_height_cm": 170.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 171.360465,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "10-009",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 10 subject 009",
+      "measured_height_cm": 173.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 173.048029,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "10-010",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 10 subject 010",
+      "measured_height_cm": 176.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 175.791942,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "10-011",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 10 subject 011",
+      "measured_height_cm": 174.0,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 172.554756,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "10-012",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 10 subject 012",
+      "measured_height_cm": 173.0,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 172.686168,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "11-002",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 11 subject 002",
+      "measured_height_cm": 176.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 176.231787,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "11-003",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 11 subject 003",
+      "measured_height_cm": 169.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 171.428742,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "11-004",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 11 subject 004",
+      "measured_height_cm": 184.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 182.961203,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "11-005",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 11 subject 005",
+      "measured_height_cm": 170.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 169.832871,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "11-006",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 11 subject 006",
+      "measured_height_cm": 179.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 179.002749,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "11-008",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 11 subject 008",
+      "measured_height_cm": 170.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 171.913892,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "11-009",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 11 subject 009",
+      "measured_height_cm": 173.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 174.714386,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "11-010",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 11 subject 010",
+      "measured_height_cm": 176.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 176.123346,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "11-011",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 11 subject 011",
+      "measured_height_cm": 174.0,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 172.813795,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "11-012",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 11 subject 012",
+      "measured_height_cm": 173.0,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 172.505464,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "12-002",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 12 subject 002",
+      "measured_height_cm": 176.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 176.827029,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "12-003",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 12 subject 003",
+      "measured_height_cm": 169.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 171.049668,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "12-004",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 12 subject 004",
+      "measured_height_cm": 184.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 181.592272,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "12-005",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 12 subject 005",
+      "measured_height_cm": 170.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 170.229211,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "12-006",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 12 subject 006",
+      "measured_height_cm": 179.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 178.181045,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "12-008",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 12 subject 008",
+      "measured_height_cm": 170.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 171.944258,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "12-009",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 12 subject 009",
+      "measured_height_cm": 173.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 173.401903,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "12-010",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 12 subject 010",
+      "measured_height_cm": 176.5,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 175.036375,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "12-011",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 12 subject 011",
+      "measured_height_cm": 174.0,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 173.450551,
+      "predicted_range_cm": null
+    },
+    {
+      "id": "12-012",
+      "source_kind": "human_marked_head_foot_points",
+      "measurement_verified": true,
+      "measurement_source": "https://doi.org/10.1186/s13640-015-0086-1 section 3.2; source CCVS camera 12 subject 012",
+      "measured_height_cm": 173.0,
+      "measured_reference_cm": 174.5,
+      "predicted_height_cm": 164.414356,
+      "predicted_range_cm": null
+    }
+  ]
+}

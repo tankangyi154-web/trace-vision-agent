@@ -1,0 +1,3 @@
+# CPU wheel index for Windows/Linux; online API intentionally does not install this file.
+--extra-index-url https://download.pytorch.org/whl/cpu
+-r requirements.lock.txt

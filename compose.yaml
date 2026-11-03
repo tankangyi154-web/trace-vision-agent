@@ -1,0 +1,35 @@
+services:
+  showcase:
+    build:
+      context: .
+      target: showcase
+    ports:
+      - "127.0.0.1:8080:8000"
+    restart: unless-stopped
+    init: true
+    security_opt:
+      - no-new-privileges:true
+  analysis:
+    profiles: [analysis]
+    build:
+      context: .
+      target: cpu
+    ports:
+      - "127.0.0.1:8081:8000"
+    env_file:
+      - path: deploy/server.env
+        required: false
+    environment:
+      APP_MODE: local
+      TRACE_LOCAL_STATE_DIR: /app/work/state
+    volumes:
+      - trace-records:/app/work/uploads
+      - trace-state:/app/work/state
+    restart: unless-stopped
+    init: true
+    security_opt:
+      - no-new-privileges:true
+    stop_grace_period: 15s
+volumes:
+  trace-records:
+  trace-state:

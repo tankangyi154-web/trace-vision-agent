@@ -1,0 +1,53 @@
+{
+  "scope": "CPU detector + appearance tracking on the same 90 sampled frames; not full task timing or labelled accuracy",
+  "hardware": "Intel i5-14400F, four inference threads, CPU only",
+  "precision": "FP32",
+  "model": "YOLO11s + OSNet x0.25",
+  "runs": [
+    {
+      "example": "daylight",
+      "frames": 30,
+      "timings_seconds": {
+        "pytorch-cpu": 9.535,
+        "onnxruntime-cpu": 8.564
+      },
+      "phase_speedup": 1.113,
+      "matched_boxes": 587,
+      "comparison_boxes": 587,
+      "matched_fraction": 1.0,
+      "minimum_matched_iou": 0.9999855756759644,
+      "id_consistency_on_matched_boxes": 1.0,
+      "imgsz": 1280
+    },
+    {
+      "example": "lowlight",
+      "frames": 30,
+      "timings_seconds": {
+        "pytorch-cpu": 4.885,
+        "onnxruntime-cpu": 3.862
+      },
+      "phase_speedup": 1.265,
+      "matched_boxes": 263,
+      "comparison_boxes": 263,
+      "matched_fraction": 1.0,
+      "minimum_matched_iou": 0.9999942779541016,
+      "id_consistency_on_matched_boxes": 1.0,
+      "imgsz": 960
+    },
+    {
+      "example": "occlusion",
+      "frames": 30,
+      "timings_seconds": {
+        "pytorch-cpu": 8.543,
+        "onnxruntime-cpu": 7.736
+      },
+      "phase_speedup": 1.104,
+      "matched_boxes": 512,
+      "comparison_boxes": 512,
+      "matched_fraction": 1.0,
+      "minimum_matched_iou": 0.9999924302101135,
+      "id_consistency_on_matched_boxes": 1.0,
+      "imgsz": 1280
+    }
+  ]
+}

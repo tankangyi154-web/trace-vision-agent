@@ -1,0 +1,7 @@
+-r requirements.txt
+onnxruntime==1.23.2
+coloredlogs==15.0.1
+flatbuffers==25.12.19
+humanfriendly==10.0
+protobuf==7.36.2
+pyreadline3==3.5.6; sys_platform == "win32"

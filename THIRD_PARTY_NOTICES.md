@@ -1,0 +1,19 @@
+# Third-party notices
+
+- Ultralytics YOLO11n (existing demos/review), YOLO11s (uploads) / ultralytics 8.3.231: AGPL-3.0, official model provenance and SHA256 in vision/model.lock.json and vision/upload-model.lock.json. https://github.com/ultralytics/ultralytics and https://www.ultralytics.com/license
+- OSNet x0.25 (MSMT17), Kaiyang Zhou / deep-person-reid: MIT. Architecture adapted from commit f8cd150fdf77e8d9e1ed143b7f308c2c609ded50 with downloading and loading helpers removed. License preserved in vision/vendor/OSNET-LICENSE; model and source hashes in vision/appearance-model.lock.json. Official author-published weights: https://huggingface.co/kaiyangzhou/osnet
+- The appearance association loop in vision/appearance_tracker.py adapts Ultralytics 8.3.231 ByteTrack (AGPL-3.0), applying the appearance gate in both high- and low-confidence stages. It does not modify the installed library.
+- ByteTrack: original project https://github.com/ifzhang/ByteTrack (MIT); tracker implementation used here is distributed in Ultralytics under that distribution's terms. No custom training claimed.
+- LangGraph: MIT, https://github.com/langchain-ai/langgraph ; LangChain Core/LangSmith distributed dependencies have their own licenses; external tracing disabled in this app.
+- FastAPI: MIT, https://github.com/fastapi/fastapi
+- Windows portable Python 3.12.10: PSF License, official embedded distribution with LICENSE.txt retained; provenance and SHA in scripts/portable-runtime.lock.json.
+- CPU inference: PyTorch (BSD-style) and ONNX Runtime (MIT); installed package notices are retained in the portable runtime. Exported graphs derive from the same YOLO/OSNet weights and retain their upstream terms.
+- Portable FFmpeg: imageio-ffmpeg 0.6.0 Windows binary, FFmpeg 7.1 essentials build from Gyan Doshi, GPLv3-or-later enabled build. Exact version/configuration and license notice in docs/licenses/FFMPEG-BUILD.txt and FFMPEG-LICENSE.txt, full GPLv3 in docs/licenses/GPL-3.0.txt. Source release: https://ffmpeg.org/releases/ffmpeg-7.1.tar.xz ; upstream build/source information: https://www.gyan.dev/ffmpeg/builds/ . FFmpeg remains a separate executable and is not modified here.
+- Vue: MIT, https://github.com/vuejs/core
+- Vite: MIT, https://github.com/vitejs/vite
+- TypeScript: Apache-2.0, https://github.com/microsoft/TypeScript
+- New prepared examples: Pexels License; Image Hunter, Nothing Ahead, and SHOX ART. Individual original pages, modifications and checksums are in docs/prepared-examples.md and data/presets/*.json. These are integrated analysis examples, not a stock-media library; no endorsement is implied.
+- Historical public video sources and derived frames: attribution and CC BY-SA4.0 licensing in docs/sources.md and web/public/media/ATTRIBUTION.txt. New Pexels examples retain their own license and are not relicensed as CC BY-SA.
+- DeepSeek / Alibaba model APIs are external hosted services; no hosted model weights redistributed and no API credentials committed.
+- Height validation: CCVS author data (https://github.com/lishengzhe/ccvs, commit 2a1f45a29eeceb945d53410135535d5e6c87b408), associated paper https://doi.org/10.1186/s13640-015-0086-1. The upstream toolbox states GPL-2.0; upstream code/binaries are not embedded or executed here. The geometric benchmark is independently implemented from the published projection equations. Raw annotations are fetched locally by pinned SHA256 and excluded from the archive.
+- Height image spotcheck: author-published examples and Actual labels from https://github.com/seanmiles/HeightEstimator (commit 0441d2667f99892fe3e0beb99f6a70fe97b8f755). No explicit redistribution license was found; source photos and source code are not bundled. The optional downloader retrieves them only for local testing. Results cite the source and distinguish author labels from independently measured heights.

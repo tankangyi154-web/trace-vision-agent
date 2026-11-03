@@ -1,0 +1,668 @@
+{
+  "schema": "trace-ai-evidence-review-v1",
+  "checked_on": "2026-11-03",
+  "reviewer": {
+    "kind": "model",
+    "id": "Codex current assistant",
+    "independent": false,
+    "role": "implementation_agent_with_access_to_outputs"
+  },
+  "status": "ai_review_completed_with_disclosed_issues",
+  "user_scope": "User selected AI review; independent human review deferred.",
+  "additional_external_provider_calls": 0,
+  "response_cases": 11,
+  "unique_question_responses": 10,
+  "distinct_source_media": 8,
+  "human_reviewed_cases": 0,
+  "method": "AI inspection of representative actual evidence images plus deterministic checks of all cited asset/target bindings and recorded numeric claims.",
+  "deterministic_checks": {
+    "citations_checked": 33,
+    "citation_membership_failures": 0,
+    "record_rankings": {
+      "person": {
+        "winners": [
+          "1"
+        ],
+        "observed_seconds": 15.2
+      },
+      "car": {
+        "winners": [
+          "36"
+        ],
+        "observed_seconds": 7.0
+      }
+    },
+    "cache_preserves_actual_reply_and_zero_new_usage": true
+  },
+  "fixes": [
+    {
+      "id": "R1",
+      "issue": "不确定持物短答丢失关键理由",
+      "code_status": "fixed_with_local_regression",
+      "residual": "小物件视觉漏看仍可能发生；未追加真实模型调用验证提示效果"
+    },
+    {
+      "id": "R2",
+      "issue": "肯定描述重复",
+      "code_status": "fixed_with_local_regression",
+      "residual": "完整分项与限制保留"
+    },
+    {
+      "id": "R3",
+      "issue": "未被询问的外观附带推断",
+      "code_status": "task_scope_and_fallback_guard_fixed_with_local_regression",
+      "residual": "显式询问的视觉细节仍可能误读"
+    },
+    {
+      "id": "R4",
+      "issue": "UW1身高区间未覆盖作者标签",
+      "code_status": "retained_as_experimental_failure_not_rewritten",
+      "residual": "无法由格式校验保证身高准确"
+    }
+  ],
+  "not_claimed": [
+    "独立人工评估已完成",
+    "独立语义准确率",
+    "全部视觉解读正确",
+    "修改后重新进行了付费模型语义评测"
+  ],
+  "cases": [
+    {
+      "id": "mixed",
+      "title": "复合提问：全局比较与指定编号外观",
+      "question": "画面里出现最长的人和汽车分别是编号几，人48号是什么性别 身高多高 什么身材",
+      "answer": "出现最久：人 #1（累计15.2秒），汽车 #36（累计7秒）。\n\n人 #48：短发、肩背较宽，整体外观偏男性化；看起来身形中等偏结实，肩背较宽；身高缺少可靠尺寸参照，暂不能估计。",
+      "source_sha256": "cbfc54178b5b5eefed4567d4e43d2500b42f11990aa78442dba0242734dce0b7",
+      "source_note": "编号只在本素材内有效；排行榜来自识别记录，外观是对画面的解读。",
+      "ai_ratings": {
+        "question_coverage": "pass",
+        "fact_accuracy": "pass_with_record_scope",
+        "citation_alignment": "pass",
+        "unnecessary_refusal": "pass",
+        "unsupported_inference": "pass_with_visual_uncertainty"
+      },
+      "ai_comment": "重复描述肩背；排名仅在识别记录范围内成立，不证明真实唯一身份。",
+      "evidence_checks": [
+        {
+          "t": 0.0,
+          "target": "1",
+          "image_sha256": "0073a57d7d34d34cb9dc4c3a8d32d66da40a6ddc5325bd2fdd0d29004210613d",
+          "belongs_to_current_record": true
+        },
+        {
+          "t": 7.4,
+          "target": "36",
+          "image_sha256": "5f24376bc75cf65cb53f95952fdb8a9304c0233266a26043fc9918f5076d8c0c",
+          "belongs_to_current_record": true
+        },
+        {
+          "t": 11.8,
+          "target": "48",
+          "image_sha256": "a328fe6754d987e9ed4fa2f4c3b9bc0851b6df430dabc9f99d921307c0e65994",
+          "belongs_to_current_record": true
+        },
+        {
+          "t": 12.8,
+          "target": "48",
+          "image_sha256": "1eb5585cf551698a2611de6ff81382eff60d8221e19475ed0aecbacd204f5dd8",
+          "belongs_to_current_record": true
+        }
+      ]
+    },
+    {
+      "id": "cached_repeat",
+      "title": "相同问题：复用本机回答",
+      "question": "画面里出现最长的人和汽车分别是编号几，人48号是什么性别 身高多高 什么身材",
+      "answer": "出现最久：人 #1（累计15.2秒），汽车 #36（累计7秒）。\n\n人 #48：短发、肩背较宽，整体外观偏男性化；看起来身形中等偏结实，肩背较宽；身高缺少可靠尺寸参照，暂不能估计。",
+      "source_sha256": "cbfc54178b5b5eefed4567d4e43d2500b42f11990aa78442dba0242734dce0b7",
+      "source_note": "编号只在本素材内有效；排行榜来自识别记录，外观是对画面的解读。",
+      "ai_ratings": {
+        "question_coverage": "duplicate_of_mixed",
+        "fact_accuracy": "duplicate_of_mixed",
+        "citation_alignment": "pass",
+        "unnecessary_refusal": "duplicate_of_mixed",
+        "unsupported_inference": "duplicate_of_mixed"
+      },
+      "ai_comment": "与mixed相同的缓存响应，不视为独立语义样本。",
+      "evidence_checks": [
+        {
+          "t": 0.0,
+          "target": "1",
+          "image_sha256": "0073a57d7d34d34cb9dc4c3a8d32d66da40a6ddc5325bd2fdd0d29004210613d",
+          "belongs_to_current_record": true
+        },
+        {
+          "t": 7.4,
+          "target": "36",
+          "image_sha256": "5f24376bc75cf65cb53f95952fdb8a9304c0233266a26043fc9918f5076d8c0c",
+          "belongs_to_current_record": true
+        },
+        {
+          "t": 11.8,
+          "target": "48",
+          "image_sha256": "a328fe6754d987e9ed4fa2f4c3b9bc0851b6df430dabc9f99d921307c0e65994",
+          "belongs_to_current_record": true
+        },
+        {
+          "t": 12.8,
+          "target": "48",
+          "image_sha256": "1eb5585cf551698a2611de6ff81382eff60d8221e19475ed0aecbacd204f5dd8",
+          "belongs_to_current_record": true
+        }
+      ],
+      "duplicate_of": "mixed"
+    },
+    {
+      "id": "pronoun",
+      "title": "追问：他穿什么、手里拿什么",
+      "question": "他穿搭和手里拿什么？",
+      "answer": "人 #48：深色带彩色花纹的短袖球衣，背后印有名字和号码，配深蓝及膝短裤和人字拖；两手自然下垂，未见明显手持物品。",
+      "source_sha256": "cbfc54178b5b5eefed4567d4e43d2500b42f11990aa78442dba0242734dce0b7",
+      "source_note": "编号只在本素材内有效；排行榜来自识别记录，外观是对画面的解读。",
+      "ai_ratings": {
+        "question_coverage": "pass",
+        "fact_accuracy": "small_object_needs_review",
+        "citation_alignment": "pass",
+        "unnecessary_refusal": "not_applicable",
+        "unsupported_inference": "absence_wording_needs_qualification"
+      },
+      "ai_comment": "12.6秒手边可见浅色细小轮廓；具体物品不宜确定。未见明显物品的短答丢失了原始手部细节不足理由，应保留不确定性。",
+      "evidence_checks": [
+        {
+          "t": 12.6,
+          "target": "48",
+          "image_sha256": "b38a35fae8426fa1020d900e69dcf188c83cbd5aab65e3e8a3d9a4111bfd45a4",
+          "belongs_to_current_record": true
+        },
+        {
+          "t": 14.0,
+          "target": "48",
+          "image_sha256": "8f5f2607dae067a32c879f0fa800425989bbd3b50a46da15a6fde835fa8b29f9",
+          "belongs_to_current_record": true
+        },
+        {
+          "t": 12.8,
+          "target": "48",
+          "image_sha256": "1eb5585cf551698a2611de6ff81382eff60d8221e19475ed0aecbacd204f5dd8",
+          "belongs_to_current_record": true
+        },
+        {
+          "t": 11.4,
+          "target": "48",
+          "image_sha256": "eacb4ea2c4263d92cefebbdca7fb6a9a6acd99059df5e90fe16943706b444014",
+          "belongs_to_current_record": true
+        }
+      ]
+    },
+    {
+      "id": "semantic",
+      "title": "换种问法：服饰细节",
+      "question": "帮我概括这位的服饰细节",
+      "answer": "人 #48：深色底彩色花纹短袖球衣，背后印名字和号码，袖口橙色；深蓝及膝短裤带浅色侧条；人字拖；两手自然下垂，未见明显手持物品。",
+      "source_sha256": "cbfc54178b5b5eefed4567d4e43d2500b42f11990aa78442dba0242734dce0b7",
+      "source_note": "编号只在本素材内有效；排行榜来自识别记录，外观是对画面的解读。",
+      "ai_ratings": {
+        "question_coverage": "pass",
+        "fact_accuracy": "small_object_needs_review",
+        "citation_alignment": "pass",
+        "unnecessary_refusal": "not_applicable",
+        "unsupported_inference": "unrequested_carrying_claim"
+      },
+      "ai_comment": "衣着主体与截图相符，但附带未询问的持物结论；小物件仍有漏看疑点。",
+      "evidence_checks": [
+        {
+          "t": 12.6,
+          "target": "48",
+          "image_sha256": "b38a35fae8426fa1020d900e69dcf188c83cbd5aab65e3e8a3d9a4111bfd45a4",
+          "belongs_to_current_record": true
+        },
+        {
+          "t": 14.0,
+          "target": "48",
+          "image_sha256": "8f5f2607dae067a32c879f0fa800425989bbd3b50a46da15a6fde835fa8b29f9",
+          "belongs_to_current_record": true
+        },
+        {
+          "t": 12.8,
+          "target": "48",
+          "image_sha256": "1eb5585cf551698a2611de6ff81382eff60d8221e19475ed0aecbacd204f5dd8",
+          "belongs_to_current_record": true
+        },
+        {
+          "t": 11.4,
+          "target": "48",
+          "image_sha256": "eacb4ea2c4263d92cefebbdca7fb6a9a6acd99059df5e90fe16943706b444014",
+          "belongs_to_current_record": true
+        }
+      ]
+    },
+    {
+      "id": "lowres",
+      "title": "低清画面：衣着与体型",
+      "question": "人30号穿什么、身材怎么样？",
+      "answer": "人 #30：身形轮廓无法判断；上身似为红色或暗红色上衣，下身深色长裤，手边有浅色物品。",
+      "source_sha256": "f9faba6482a182a937b429040450900a3d5c1bcc838a09175c8591bc992a1f29",
+      "source_note": "编号只在本素材内有效；排行榜来自识别记录，外观是对画面的解读。",
+      "ai_ratings": {
+        "question_coverage": "pass",
+        "fact_accuracy": "supported_coarse_visual_description",
+        "citation_alignment": "pass",
+        "unnecessary_refusal": "pass",
+        "unsupported_inference": "pass"
+      },
+      "ai_comment": "红色上身、深色下身、浅色手边物品有画面线索；拒绝确定体型与该低清画面相符。",
+      "evidence_checks": [
+        {
+          "t": 24.0,
+          "target": "30",
+          "image_sha256": "1e86413e809eb19e802793f488f7f543602b24ab58cb35a8bc376f5b4402f6a6",
+          "belongs_to_current_record": true
+        },
+        {
+          "t": 38.0,
+          "target": "30",
+          "image_sha256": "899cd3d03578a5987804a42e4c4980d26033416856a3798061c375cc77e59f4c",
+          "belongs_to_current_record": true
+        },
+        {
+          "t": 26.8,
+          "target": "30",
+          "image_sha256": "c5de7e807c6ac215f2ada19e7ee88bdbf95e7c5b0779ce26b768c3cfd378d1ab",
+          "belongs_to_current_record": true
+        },
+        {
+          "t": 19.0,
+          "target": "30",
+          "image_sha256": "8adaa625766a940ec266b85cf520556a34dd37e78cd6b0d980230cab9e1b9ac8",
+          "belongs_to_current_record": true
+        }
+      ]
+    },
+    {
+      "id": "crowd",
+      "title": "密集人群：指定编号的衣着",
+      "question": "人1号穿什么？",
+      "answer": "人 #1：深色长外套配浅色高领内搭，戴橄榄色头巾，斜挎深色小包。",
+      "source_sha256": "18a44466d9a458755883d0d0def3968723c5d62f85a92e96ca54798ca10e9ed6",
+      "source_note": "编号只在本素材内有效；排行榜来自识别记录，外观是对画面的解读。",
+      "ai_ratings": {
+        "question_coverage": "pass",
+        "fact_accuracy": "supported_by_selected_views",
+        "citation_alignment": "pass",
+        "unnecessary_refusal": "not_applicable",
+        "unsupported_inference": "pass"
+      },
+      "ai_comment": "所引同编号画面可见深色外套、浅色内搭、橄榄色头巾和斜挎包。未将这几帧验证扩展为全片身份一致性证明。",
+      "evidence_checks": [
+        {
+          "t": 0.6,
+          "target": "1",
+          "image_sha256": "93f9d29672bf9c01f0e050ed2d65b37e0201137e02bcddac3202efab94fc2c79",
+          "belongs_to_current_record": true
+        },
+        {
+          "t": 0.8,
+          "target": "1",
+          "image_sha256": "f55ba73ebdcddb5d323615c0ca912b19a21cd13fc6604d900cff0415981ce35c",
+          "belongs_to_current_record": true
+        },
+        {
+          "t": 1.8,
+          "target": "1",
+          "image_sha256": "613f3813dd273f0aee2b338103a1973b914c341ead59a335efbdc6d1cebb0af4",
+          "belongs_to_current_record": true
+        },
+        {
+          "t": 0.0,
+          "target": "1",
+          "image_sha256": "68df9787bdbeecf554d380956ca9fda4118cbf994298945f1e616356c2f96dbe",
+          "belongs_to_current_record": true
+        }
+      ]
+    },
+    {
+      "id": "still",
+      "title": "单张图片：衣着、姿态与身高",
+      "question": "人2号穿什么、是什么姿态、身高多高？",
+      "answer": "人 #2：身高缺少可靠尺寸参照，暂不能估计；双臂交叉抱在胸前，直立站在人行道上；浅米色毛绒长外套，内搭橙色上衣，深蓝牛仔裤，浅色运动鞋。",
+      "source_sha256": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63",
+      "source_note": "编号只在本素材内有效；排行榜来自识别记录，外观是对画面的解读。",
+      "ai_ratings": {
+        "question_coverage": "pass",
+        "fact_accuracy": "supported_coarse_visual_description",
+        "citation_alignment": "pass",
+        "unnecessary_refusal": "pass",
+        "unsupported_inference": "pass"
+      },
+      "ai_comment": "可见米色外套、蓝色裤装与抱臂站姿；附近参照尺寸和远近不确定，身高不足说明合理。单图没有被解释为持续行为。",
+      "evidence_checks": [
+        {
+          "t": 0,
+          "target": "2",
+          "image_sha256": "ca35083fe70fb252ef6f843e8ccd96d8a330044cd57cfd4152ca8db13aa0957b",
+          "belongs_to_current_record": true
+        },
+        {
+          "t": 0,
+          "target": "2",
+          "image_sha256": "2b71bcd5124be6a40d15cc4f728d9f4da5a23862a88533f2040b8f00410839f5",
+          "belongs_to_current_record": true
+        }
+      ]
+    },
+    {
+      "id": "negative_control",
+      "title": "阴性对照：没有人物的合成图片",
+      "question": "有几个人？",
+      "answer": "这张图片中没有检测到人。",
+      "source_sha256": "b49148ab4ca4005d6b4ef24e8de4485e155a94fc30d4d41a6dc9a3223242875f",
+      "source_note": "编号只在本素材内有效；排行榜来自识别记录，外观是对画面的解读。",
+      "ai_ratings": {
+        "question_coverage": "pass",
+        "fact_accuracy": "pass_synthetic_control_only",
+        "citation_alignment": "pass",
+        "unnecessary_refusal": "not_applicable",
+        "unsupported_inference": "pass"
+      },
+      "ai_comment": "合成纯色图无人物，程序未检测到人；不能将该阴性对照扩展为空街景泛化证明。",
+      "evidence_checks": [
+        {
+          "t": 0,
+          "target": "",
+          "image_sha256": "d3701e41aa031354a0e5b8f3a316bcd06849b203f5eb7e8b5866c8f98274b725",
+          "belongs_to_current_record": true
+        }
+      ]
+    },
+    {
+      "id": "UW1",
+      "title": "身高样本一：作者标注照片",
+      "question": "人 #1目测多高？按手中的纸张参照给粗略范围；以作者采用的美式Letter纸尺寸假设（短边21.59厘米、长边27.94厘米）比较，注意纸张横竖方向。依据不足就具体说明。",
+      "answer": "人 #1：身高：粗略目测约165—185厘米，参照手中白色打印纸（横向持握，画面竖直方向为短边）的常见高度；受距离和视角影响，仅作目测参考；看起来身形中等，肩背略宽，整体偏结实；双手在胸前横向持一张白纸；黑色长袖上衣配黑色长裤，脚穿黑白帆布鞋，戴眼镜。",
+      "source_sha256": "03a5bb6569e8f1111d4c0dbfbf80783088d74a52555893eecb53e1742c2bfffb",
+      "source_note": "作者标注162.56厘米；测量流程未公开，纸张尺寸为来源项目假设。",
+      "ai_ratings": {
+        "question_coverage": "pass",
+        "fact_accuracy": "height_interval_misses_author_label",
+        "citation_alignment": "pass",
+        "unnecessary_refusal": "not_applicable",
+        "unsupported_inference": "unasked_glasses_claim_not_supported"
+      },
+      "ai_comment": "原回答附加眼镜等未询问外观，截图无清楚眼镜依据；身高区间未覆盖作者标签，保留失败案例。",
+      "evidence_checks": [
+        {
+          "t": 0,
+          "target": "1",
+          "image_sha256": "3dadb7a96db5e714c4fbd6cbb1733ba0aa108ee7f1746368d936afc7001d4423",
+          "belongs_to_current_record": true
+        },
+        {
+          "t": 0,
+          "target": "1",
+          "image_sha256": "445d4f5311192df970dcf45056860774cb63a1d8f709f9c981b3d8a1cefe0a51",
+          "belongs_to_current_record": true
+        }
+      ],
+      "author_label_comparison": {
+        "author_height_cm": 162.56,
+        "predicted_range_cm": [
+          165,
+          185
+        ],
+        "midpoint_error_cm": 12.44,
+        "truth_within_interval": false
+      }
+    },
+    {
+      "id": "UW2",
+      "title": "身高样本二：作者标注照片",
+      "question": "人 #1目测多高？按手中的纸张参照给粗略范围；以作者采用的美式Letter纸尺寸假设（短边21.59厘米、长边27.94厘米）比较，注意纸张横竖方向。依据不足就具体说明。",
+      "answer": "人 #1：身高：粗略目测约170—185厘米，参照手中横拿的白色打印纸短边的常见高度；受距离和视角影响，仅作目测参考；看起来身形中等偏瘦，肩背较窄；深色短发，穿黑色外套、白色内搭和灰色运动裤，脚穿白鞋；双手在胸前横拿一张白纸。",
+      "source_sha256": "ecf37bb968c81523c9df8121f1ba08b279cad48971a528759d3bd016e31eae7a",
+      "source_note": "作者标注180.34厘米；测量流程未公开，纸张尺寸为来源项目假设。",
+      "ai_ratings": {
+        "question_coverage": "pass",
+        "fact_accuracy": "interval_covers_author_label_only",
+        "citation_alignment": "pass",
+        "unnecessary_refusal": "not_applicable",
+        "unsupported_inference": "unrequested_visual_details"
+      },
+      "ai_comment": "区间覆盖作者标签，但追加了未询问的外观、体型和持物；不把区间覆盖说成实测准确。",
+      "evidence_checks": [
+        {
+          "t": 0,
+          "target": "1",
+          "image_sha256": "414cb3737a754d38bbf3205656a88e41a7aca3b76e83d76074659c51ab322fa5",
+          "belongs_to_current_record": true
+        },
+        {
+          "t": 0,
+          "target": "1",
+          "image_sha256": "797465c21b228be2cfea96350428d423abd8e6996fa47dc430596c31dd374905",
+          "belongs_to_current_record": true
+        }
+      ],
+      "author_label_comparison": {
+        "author_height_cm": 180.34,
+        "predicted_range_cm": [
+          170,
+          185
+        ],
+        "midpoint_error_cm": 2.84,
+        "truth_within_interval": true
+      }
+    },
+    {
+      "id": "UW3",
+      "title": "身高样本三：作者标注照片",
+      "question": "人 #1目测多高？按手中的纸张参照给粗略范围；以作者采用的美式Letter纸尺寸假设（短边21.59厘米、长边27.94厘米）比较，注意纸张横竖方向。依据不足就具体说明。",
+      "answer": "人 #1：身高：粗略目测约160—180厘米，参照手中白色打印纸短边的常见高度；受距离和视角影响，仅作目测参考；看起来身形偏瘦，肩背较窄；深色外套内搭浅棕花纹上衣，下穿深色紧身裤和棕色短靴，背双肩包；双手在胸前横持一张白纸。",
+      "source_sha256": "29990e88f64f02b7b9dbda32f7d87a723e9c4d7a9e2ce8d6048511d1f48afc9d",
+      "source_note": "作者标注162.56厘米；测量流程未公开，纸张尺寸为来源项目假设。",
+      "ai_ratings": {
+        "question_coverage": "pass",
+        "fact_accuracy": "interval_covers_author_label_only",
+        "citation_alignment": "pass",
+        "unnecessary_refusal": "not_applicable",
+        "unsupported_inference": "unrequested_visual_details"
+      },
+      "ai_comment": "区间覆盖作者标签；纸张倾斜与尺寸假设仍限制估计，追加外观并非本题必要。",
+      "evidence_checks": [
+        {
+          "t": 0,
+          "target": "1",
+          "image_sha256": "586acc8748f0a2b8850503716f2e91130dfc50a817cd4204b9179267d26a9073",
+          "belongs_to_current_record": true
+        },
+        {
+          "t": 0,
+          "target": "1",
+          "image_sha256": "2aedb4cb228a0fbd77dbb580d7fd05e3c0e7efb8b8c994beb005d24b0fe0c20d",
+          "belongs_to_current_record": true
+        }
+      ],
+      "author_label_comparison": {
+        "author_height_cm": 162.56,
+        "predicted_range_cm": [
+          160,
+          180
+        ],
+        "midpoint_error_cm": 7.44,
+        "truth_within_interval": true
+      }
+    }
+  ],
+  "presentation_previews": {
+    "method": "Current presentation rules applied to already validated historical facts, no new inference or vision correction.",
+    "implementation_sha256": "1d9cd6b8e2ad2cec13ce010fb12fb4dc7a5d5f3cd975594d8fa73c72dd96f528",
+    "cases": [
+      {
+        "id": "mixed",
+        "answer": "出现最久：人 #1（累计15.2秒），汽车 #36（累计7秒）。\n\n人 #48：短发，肩背较宽，整体外观偏男性化；看起来身形中等偏结实；身高缺少可靠尺寸参照，暂不能估计。",
+        "answer_details": "人中出现最久的是人 #1，可确认的累计出现时间15.2秒。中间没识别到的时间不计入。\n\n汽车中出现最久的是汽车 #36，可确认的累计出现时间7秒。中间没识别到的时间不计入。\n\n人 #48 · 外观呈现：短发、肩背较宽，整体外观偏男性化。\n\n人 #48 · 体型：身形中等偏结实，肩背较宽。（穿宽松球衣，躯干轮廓被衣服遮住，胖瘦只能粗略判断。）\n\n人 #48 · 身高：身高无法粗估。（画面中附近物体远近不同，缺少与目标同距离的尺寸参照。）",
+        "answer_parts": [
+          {
+            "key": "ranking.person.observed_seconds",
+            "text": "人 #1（累计15.2秒）",
+            "details": "人中出现最久的是人 #1，可确认的累计出现时间15.2秒。中间没识别到的时间不计入。",
+            "subject_id": null,
+            "status": "confirmed",
+            "evidence_ids": [
+              "upload-4634f30c-de10-4e74-aac2-bd9761360af4-r1-e0"
+            ]
+          },
+          {
+            "key": "ranking.car.observed_seconds",
+            "text": "汽车 #36（累计7秒）",
+            "details": "汽车中出现最久的是汽车 #36，可确认的累计出现时间7秒。中间没识别到的时间不计入。",
+            "subject_id": null,
+            "status": "confirmed",
+            "evidence_ids": [
+              "upload-4634f30c-de10-4e74-aac2-bd9761360af4-r1-e37"
+            ]
+          },
+          {
+            "key": "target48.gender",
+            "text": "短发、肩背较宽，整体外观偏男性化",
+            "details": "外观呈现：短发、肩背较宽，整体外观偏男性化。",
+            "subject_id": "48",
+            "status": "interpretation",
+            "evidence_ids": [
+              "upload-4634f30c-de10-4e74-aac2-bd9761360af4-r1-t48-v59-7ab3e8e64ca6",
+              "upload-4634f30c-de10-4e74-aac2-bd9761360af4-r1-t48-v64-7ab3e8e64ca6"
+            ]
+          },
+          {
+            "key": "target48.body",
+            "text": "看起来身形中等偏结实，肩背较宽",
+            "details": "体型：身形中等偏结实，肩背较宽。（穿宽松球衣，躯干轮廓被衣服遮住，胖瘦只能粗略判断。）",
+            "subject_id": "48",
+            "status": "interpretation",
+            "evidence_ids": [
+              "upload-4634f30c-de10-4e74-aac2-bd9761360af4-r1-t48-v59-7ab3e8e64ca6",
+              "upload-4634f30c-de10-4e74-aac2-bd9761360af4-r1-t48-v64-7ab3e8e64ca6"
+            ]
+          },
+          {
+            "key": "target48.height",
+            "text": "身高缺少可靠尺寸参照，暂不能估计",
+            "details": "身高：身高无法粗估。（画面中附近物体远近不同，缺少与目标同距离的尺寸参照。）",
+            "subject_id": "48",
+            "status": "insufficient",
+            "evidence_ids": [
+              "upload-4634f30c-de10-4e74-aac2-bd9761360af4-r1-t48-v59-7ab3e8e64ca6",
+              "upload-4634f30c-de10-4e74-aac2-bd9761360af4-r1-t48-v64-7ab3e8e64ca6"
+            ]
+          }
+        ],
+        "unchanged_fact_values_and_citations": true
+      },
+      {
+        "id": "cached_repeat",
+        "answer": "出现最久：人 #1（累计15.2秒），汽车 #36（累计7秒）。\n\n人 #48：短发，肩背较宽，整体外观偏男性化；看起来身形中等偏结实；身高缺少可靠尺寸参照，暂不能估计。",
+        "answer_details": "人中出现最久的是人 #1，可确认的累计出现时间15.2秒。中间没识别到的时间不计入。\n\n汽车中出现最久的是汽车 #36，可确认的累计出现时间7秒。中间没识别到的时间不计入。\n\n人 #48 · 外观呈现：短发、肩背较宽，整体外观偏男性化。\n\n人 #48 · 体型：身形中等偏结实，肩背较宽。（穿宽松球衣，躯干轮廓被衣服遮住，胖瘦只能粗略判断。）\n\n人 #48 · 身高：身高无法粗估。（画面中附近物体远近不同，缺少与目标同距离的尺寸参照。）",
+        "answer_parts": [
+          {
+            "key": "ranking.person.observed_seconds",
+            "text": "人 #1（累计15.2秒）",
+            "details": "人中出现最久的是人 #1，可确认的累计出现时间15.2秒。中间没识别到的时间不计入。",
+            "subject_id": null,
+            "status": "confirmed",
+            "evidence_ids": [
+              "upload-4634f30c-de10-4e74-aac2-bd9761360af4-r1-e0"
+            ]
+          },
+          {
+            "key": "ranking.car.observed_seconds",
+            "text": "汽车 #36（累计7秒）",
+            "details": "汽车中出现最久的是汽车 #36，可确认的累计出现时间7秒。中间没识别到的时间不计入。",
+            "subject_id": null,
+            "status": "confirmed",
+            "evidence_ids": [
+              "upload-4634f30c-de10-4e74-aac2-bd9761360af4-r1-e37"
+            ]
+          },
+          {
+            "key": "target48.gender",
+            "text": "短发、肩背较宽，整体外观偏男性化",
+            "details": "外观呈现：短发、肩背较宽，整体外观偏男性化。",
+            "subject_id": "48",
+            "status": "interpretation",
+            "evidence_ids": [
+              "upload-4634f30c-de10-4e74-aac2-bd9761360af4-r1-t48-v59-7ab3e8e64ca6",
+              "upload-4634f30c-de10-4e74-aac2-bd9761360af4-r1-t48-v64-7ab3e8e64ca6"
+            ]
+          },
+          {
+            "key": "target48.body",
+            "text": "看起来身形中等偏结实，肩背较宽",
+            "details": "体型：身形中等偏结实，肩背较宽。（穿宽松球衣，躯干轮廓被衣服遮住，胖瘦只能粗略判断。）",
+            "subject_id": "48",
+            "status": "interpretation",
+            "evidence_ids": [
+              "upload-4634f30c-de10-4e74-aac2-bd9761360af4-r1-t48-v59-7ab3e8e64ca6",
+              "upload-4634f30c-de10-4e74-aac2-bd9761360af4-r1-t48-v64-7ab3e8e64ca6"
+            ]
+          },
+          {
+            "key": "target48.height",
+            "text": "身高缺少可靠尺寸参照，暂不能估计",
+            "details": "身高：身高无法粗估。（画面中附近物体远近不同，缺少与目标同距离的尺寸参照。）",
+            "subject_id": "48",
+            "status": "insufficient",
+            "evidence_ids": [
+              "upload-4634f30c-de10-4e74-aac2-bd9761360af4-r1-t48-v59-7ab3e8e64ca6",
+              "upload-4634f30c-de10-4e74-aac2-bd9761360af4-r1-t48-v64-7ab3e8e64ca6"
+            ]
+          }
+        ],
+        "unchanged_fact_values_and_citations": true
+      },
+      {
+        "id": "pronoun",
+        "answer": "人 #48：深色带彩色花纹的短袖球衣，背后印有名字和号码，配深蓝及膝短裤和人字拖；两手自然下垂，未见明显手持物品（画面多为背面且手部细节较小，不能完全排除手里有小物件）。",
+        "answer_details": "衣着：深色带彩色花纹的短袖球衣，背后印有名字和号码，配深蓝及膝短裤和人字拖。\n\n随身物品：两手自然下垂，未见明显手持物品。（画面多为背面且手部细节较小，不能完全排除手里有小物件。）",
+        "answer_parts": [
+          {
+            "key": "target48.clothing",
+            "text": "深色带彩色花纹的短袖球衣，背后印有名字和号码，配深蓝及膝短裤和人字拖",
+            "details": "衣着：深色带彩色花纹的短袖球衣，背后印有名字和号码，配深蓝及膝短裤和人字拖。",
+            "subject_id": "48",
+            "status": "interpretation",
+            "evidence_ids": [
+              "upload-4634f30c-de10-4e74-aac2-bd9761360af4-r1-t48-v63-e422a72680cf",
+              "upload-4634f30c-de10-4e74-aac2-bd9761360af4-r1-t48-v70-e422a72680cf",
+              "upload-4634f30c-de10-4e74-aac2-bd9761360af4-r1-t48-v64-e422a72680cf",
+              "upload-4634f30c-de10-4e74-aac2-bd9761360af4-r1-e57"
+            ]
+          },
+          {
+            "key": "target48.carrying",
+            "text": "两手自然下垂，未见明显手持物品（画面多为背面且手部细节较小，不能完全排除手里有小物件）",
+            "details": "随身物品：两手自然下垂，未见明显手持物品。（画面多为背面且手部细节较小，不能完全排除手里有小物件。）",
+            "subject_id": "48",
+            "status": "interpretation",
+            "evidence_ids": [
+              "upload-4634f30c-de10-4e74-aac2-bd9761360af4-r1-t48-v63-e422a72680cf",
+              "upload-4634f30c-de10-4e74-aac2-bd9761360af4-r1-t48-v70-e422a72680cf",
+              "upload-4634f30c-de10-4e74-aac2-bd9761360af4-r1-t48-v64-e422a72680cf",
+              "upload-4634f30c-de10-4e74-aac2-bd9761360af4-r1-e57"
+            ]
+          }
+        ],
+        "unchanged_fact_values_and_citations": true
+      }
+    ]
+  },
+  "offline_packet_validation": {
+    "network_requests": 0,
+    "errors": [],
+    "real_human_reviews_created": 0,
+    "passed": true,
+    "unsigned_by_default": true,
+    "draft_is_not_human_review": true,
+    "synthetic_exports_cannot_become_human_reviews": true,
+    "injected_answer_is_plain_text": true,
+    "mobile_no_overflow": true
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "source": "117-second, 1280-wide, 5fps normalized public street clip from previous local test",
+  "bytes": 34914443,
+  "task_seconds": 164.668,
+  "status": "complete",
+  "processed": 584,
+  "total": 584,
+  "result_duration": 117.0,
+  "processing": {
+    "device": "cpu",
+    "inference_backend": "onnxruntime-cpu",
+    "timings": {
+      "prepare_seconds": 0.61,
+      "load_seconds": 0.48,
+      "detect_track_seconds": 146.033,
+      "render_encode_seconds": 13.789
+    },
+    "model": "yolo11s.pt",
+    "imgsz": 960,
+    "confidence": 0.1,
+    "iou": 0.65,
+    "max_det": 200,
+    "new_track_confidence": 0.25,
+    "sample_fps": 5,
+    "class_aware_tracking": true,
+    "type_stabilization": "confidence_weighted_track_vote",
+    "detection_policy": "adaptive-density-v1",
+    "detection_policy_sha256": "316354e30d7ced6000e15be228d53bdc153979cc28bffedf2f1c0aa8445e829f",
+    "dense_detection": true,
+    "dense_frames": 584,
+    "extra_detection_passes": 1,
+    "tracking_policy": "appearance-gated-v2",
+    "tracking_policy_sha256": "78025325fd2cfa167e95a9e708369b0d2ac3ecf7148435d1780b5da794ac85dd",
+    "appearance_model_sha256": "cf55163d78fc44c62c82f85ab62d39f10438679b5abe8c698ae08cfa84aa6e18",
+    "tracking_diagnostics": {
+      "appearance_veto_pairs": 15629,
+      "ambiguous_pairs": 2843,
+      "occluded_samples": 9268,
+      "provisional_candidate_pairs": 486
+    },
+    "pipeline_fingerprint": "08ab308891d0740e92ac63c1501a8ef25a0157041ea853459584d108bb4ed9c1"
+  },
+  "eta_observed": true,
+  "external_model_calls": 0,
+  "error_code": null,
+  "validation": "passed",
+  "resampling_note": "Input metadata reports 585 frames at 5fps; FFmpeg renormalization produced 584 frames. All 584 generated samples were processed, and source duration remains 117 seconds."
+}

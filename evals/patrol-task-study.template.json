@@ -1,0 +1,12 @@
+{
+  "protocol": "patrol-task-study-v1",
+  "status": "not_measured",
+  "purpose": "Compare the same locate-review-document task with manual playback and the review workspace.",
+  "dataset_requirements": { "duration_seconds": [60, 120], "multiple_targets": true, "public_reuse_license_verified": false, "source_url": null, "sha256": null },
+  "controls": ["Use independently checked event references", "Counterbalance task order or use comparable unseen clips", "Record familiarity, network/cache condition and errors", "Do not treat automated browser duration as human task time"],
+  "tasks": [
+    { "task": "Locate a regional appearance and its observed exit, review frames, and save an evidence record", "manual_seconds": null, "assisted_seconds": null, "missed_items": null, "false_items": null, "record_correct": null, "evidence_links_valid": null },
+    { "task": "Determine whether a continuous-duration claim is supported across a detection gap", "manual_seconds": null, "assisted_seconds": null, "missed_items": null, "false_items": null, "conclusion_correct": null, "uncertainty_preserved": null }
+  ],
+  "results": null
+}

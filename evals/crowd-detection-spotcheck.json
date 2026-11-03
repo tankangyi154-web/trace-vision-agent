@@ -1,0 +1,187 @@
+{
+  "date": "2026-11-03",
+  "source_page": "https://www.pexels.com/video/bustling-street-scene-with-flags-and-people-33778196/",
+  "source_author": "Towfiqu barbhuiya",
+  "license": "https://www.pexels.com/license/",
+  "source_sha256": "18a44466d9a458755883d0d0def3968723c5d62f85a92e96ca54798ca10e9ed6",
+  "classes": [
+    0,
+    2,
+    1
+  ],
+  "comparison_scope": "Same local input, class order, sample timestamps and machine. Visible detected/tracked boxes only; no independent human annotations, no accuracy/recall or IDF1 claim.",
+  "before": {
+    "width": 1280,
+    "height": 720,
+    "frames": 70,
+    "mean_visible_person_boxes": 2.757142857142857,
+    "max_visible_person_boxes": 16,
+    "processing": {
+      "model": "yolo11s.pt",
+      "imgsz": 960,
+      "confidence": 0.1,
+      "new_track_confidence": 0.25,
+      "sample_fps": 5,
+      "class_aware_tracking": true,
+      "type_stabilization": "confidence_weighted_track_vote",
+      "tracking_policy": "appearance-gated-v1",
+      "tracking_policy_sha256": "3a8d7eeb7b7e62fd395db30c27628f0bfe06ff869ff622509b4128794399f3a7",
+      "appearance_model_sha256": "cf55163d78fc44c62c82f85ab62d39f10438679b5abe8c698ae08cfa84aa6e18",
+      "tracking_diagnostics": {
+        "appearance_veto_pairs": 1879,
+        "ambiguous_pairs": 45,
+        "occluded_samples": 1583
+      }
+    }
+  },
+  "after": {
+    "width": 1920,
+    "height": 1080,
+    "frames": 70,
+    "mean_visible_person_boxes": 14.928571428571429,
+    "max_visible_person_boxes": 25,
+    "processing": {
+      "model": "yolo11s.pt",
+      "imgsz": 1280,
+      "confidence": 0.1,
+      "iou": 0.65,
+      "max_det": 200,
+      "new_track_confidence": 0.25,
+      "sample_fps": 5,
+      "class_aware_tracking": true,
+      "type_stabilization": "confidence_weighted_track_vote",
+      "detection_policy": "adaptive-density-v1",
+      "detection_policy_sha256": "316354e30d7ced6000e15be228d53bdc153979cc28bffedf2f1c0aa8445e829f",
+      "dense_detection": true,
+      "dense_frames": 70,
+      "extra_detection_passes": 1,
+      "tracking_policy": "appearance-gated-v2",
+      "tracking_policy_sha256": "78025325fd2cfa167e95a9e708369b0d2ac3ecf7148435d1780b5da794ac85dd",
+      "appearance_model_sha256": "cf55163d78fc44c62c82f85ab62d39f10438679b5abe8c698ae08cfa84aa6e18",
+      "tracking_diagnostics": {
+        "appearance_veto_pairs": 372,
+        "ambiguous_pairs": 2,
+        "occluded_samples": 2539,
+        "provisional_candidate_pairs": 1106
+      }
+    }
+  },
+  "frame_comparison": [
+    {
+      "t": 0,
+      "before": 16,
+      "after": 25
+    },
+    {
+      "t": 2,
+      "before": 1,
+      "after": 19
+    },
+    {
+      "t": 3,
+      "before": 4,
+      "after": 13
+    },
+    {
+      "t": 4,
+      "before": 3,
+      "after": 15
+    },
+    {
+      "t": 6,
+      "before": 5,
+      "after": 11
+    },
+    {
+      "t": 8,
+      "before": 3,
+      "after": 14
+    },
+    {
+      "t": 10,
+      "before": 3,
+      "after": 13
+    },
+    {
+      "t": 12,
+      "before": 3,
+      "after": 12
+    }
+  ],
+  "diagnosis": {
+    "baseline_high_confidence_person_candidates_mean": 15.785714285714286,
+    "tracking_only_fix_mean_visible_person_boxes": 11.528571428571428
+  },
+  "after_single_run_elapsed_ms": 35576,
+  "red_pedestrian_regression": {
+    "passed": true,
+    "scope": "Known crossing spot check only; not a general tracking score.",
+    "timeline": [
+      {
+        "t": 20,
+        "id": "35"
+      },
+      {
+        "t": 21.6,
+        "id": "35"
+      },
+      {
+        "t": 24,
+        "id": "35"
+      },
+      {
+        "t": 26,
+        "id": "35"
+      },
+      {
+        "t": 30,
+        "id": "35"
+      },
+      {
+        "t": 32,
+        "id": "35"
+      },
+      {
+        "t": 33.2,
+        "id": "35"
+      },
+      {
+        "t": 33.6,
+        "id": "35"
+      },
+      {
+        "t": 34,
+        "id": "35"
+      },
+      {
+        "t": 34.6,
+        "id": "35"
+      },
+      {
+        "t": 35.4,
+        "id": "35"
+      },
+      {
+        "t": 36.6,
+        "id": "35"
+      }
+    ],
+    "false_continuations_to_beige": []
+  },
+  "browser_checks": {
+    "passed": true,
+    "same_time_2s_boxes": [
+      1,
+      19
+    ],
+    "refresh_reuses_result": true,
+    "mobile_no_overflow": true,
+    "model_requests": 0
+  },
+  "known_limits": [
+    "Many distant heads or heavily occluded bodies remain undetected.",
+    "Crowded associations may start a new number; track records are not unique physical people.",
+    "More rectangles do not by themselves prove more correct detections.",
+    "No semantic visual-model accuracy was re-evaluated by this local detector check."
+  ]
+}

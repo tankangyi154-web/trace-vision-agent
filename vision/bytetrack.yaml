@@ -1,0 +1,9 @@
+# Adapted from Ultralytics 8.3.231 cfg/trackers/bytetrack.yaml (AGPL-3.0).
+# Buffer scales with frames; at 10 fps, 10 frames preserves ~1 s of lost tracks.
+tracker_type: bytetrack
+track_high_thresh: 0.25
+track_low_thresh: 0.1
+new_track_thresh: 0.25
+track_buffer: 10
+match_thresh: 0.8
+fuse_score: true

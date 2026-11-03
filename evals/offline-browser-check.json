@@ -1,0 +1,12 @@
+{
+  "checks": [
+    "file:// daylight plays and shows detections with browser network disabled",
+    "file:// lowlight plays and shows detections with browser network disabled",
+    "file:// occlusion plays and shows detections with browser network disabled",
+    "offline proof seeking and selected ID/playback time survive refresh; no unavailable upload control",
+    "portable CPU scope result restores its range, selected ID/time and local history after refresh"
+  ],
+  "offline_http_requests": 0,
+  "external_model_calls": 0,
+  "page_errors": []
+}

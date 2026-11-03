@@ -1,0 +1,60 @@
+{
+  "scope": "independent_review_readiness_not_model_accuracy",
+  "model_calls": 0,
+  "human_review": {
+    "status": "pending",
+    "reviewer_identity": "self_declared_not_programmatically_verified",
+    "eligible_reviewer_declared": false,
+    "total_cases": 11,
+    "reviewed_cases": 0,
+    "metrics": {
+      "question_coverage": {
+        "pass": 0,
+        "fail": 0,
+        "not_applicable": 0,
+        "pending": 11,
+        "pass_rate": null
+      },
+      "fact_accuracy": {
+        "pass": 0,
+        "fail": 0,
+        "not_applicable": 0,
+        "pending": 11,
+        "pass_rate": null
+      },
+      "citation_alignment": {
+        "pass": 0,
+        "fail": 0,
+        "not_applicable": 0,
+        "pending": 11,
+        "pass_rate": null
+      },
+      "unnecessary_refusal": {
+        "pass": 0,
+        "fail": 0,
+        "not_applicable": 0,
+        "pending": 11,
+        "pass_rate": null
+      },
+      "unsupported_inference": {
+        "pass": 0,
+        "fail": 0,
+        "not_applicable": 0,
+        "pending": 11,
+        "pass_rate": null
+      }
+    }
+  },
+  "measured_height": {
+    "status": "measured",
+    "verified_measurements": 88,
+    "numeric_estimates": 88,
+    "point_estimates": 88,
+    "interval_estimates": 0,
+    "mae_cm": 1.9088911363636354,
+    "midpoint_mae_cm": null,
+    "interval_coverage": null,
+    "note": "描述性统计，不自动证明可用于测量；拒答样本单独保留，不作为零误差。",
+    "method": "ccvs_calibrated_manual_points_baseline_not_agent"
+  }
+}

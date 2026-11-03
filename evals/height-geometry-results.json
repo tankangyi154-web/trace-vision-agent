@@ -1,0 +1,1317 @@
+{
+  "scope": "measured_height_geometric_baseline_with_human_marked_points_not_agent_accuracy",
+  "source": "https://github.com/lishengzhe/ccvs",
+  "paper": "https://doi.org/10.1186/s13640-015-0086-1",
+  "ground_truth": "Study authors measured stature with shoes before recording, per paper section 3.2.",
+  "protocol": "Calibrate each camera using subject 001 only; evaluate every available other subject, no test-height fitting.",
+  "image_height_px": 720,
+  "cameras": 9,
+  "held_out_camera_subject_groups": 88,
+  "unique_held_out_subjects": 10,
+  "evaluated_groups": 88,
+  "mae_cm": 1.9088911363636363,
+  "maximum_absolute_error_cm": 10.801634,
+  "sample_unit": "camera-subject mean; same person across cameras is correlated",
+  "model_calls": 0,
+  "calibration": [
+    {
+      "camera": "01",
+      "reference_subject": "001",
+      "reference_height_cm": 174.5,
+      "observations": 29,
+      "reprojection_rms_px": 4.92892,
+      "parameters": {
+        "focal_px": 791.103048259754,
+        "tilt_radians": -0.3298164856366474,
+        "height_cm": 321.739483813715
+      }
+    },
+    {
+      "camera": "02",
+      "reference_subject": "001",
+      "reference_height_cm": 174.5,
+      "observations": 20,
+      "reprojection_rms_px": 6.59339,
+      "parameters": {
+        "focal_px": 1017.3899966252517,
+        "tilt_radians": -0.38531504380368603,
+        "height_cm": 361.32467887927277
+      }
+    },
+    {
+      "camera": "03",
+      "reference_subject": "001",
+      "reference_height_cm": 174.5,
+      "observations": 28,
+      "reprojection_rms_px": 2.05399,
+      "parameters": {
+        "focal_px": 845.8112972331197,
+        "tilt_radians": -0.21422135315193308,
+        "height_cm": 307.07457056719414
+      }
+    },
+    {
+      "camera": "04",
+      "reference_subject": "001",
+      "reference_height_cm": 174.5,
+      "observations": 14,
+      "reprojection_rms_px": 3.01617,
+      "parameters": {
+        "focal_px": 4999.999999999372,
+        "tilt_radians": -0.11067707787034911,
+        "height_cm": 335.91465803874536
+      }
+    },
+    {
+      "camera": "05",
+      "reference_subject": "001",
+      "reference_height_cm": 174.5,
+      "observations": 10,
+      "reprojection_rms_px": 7.64738,
+      "parameters": {
+        "focal_px": 900.8992902221283,
+        "tilt_radians": -0.5012889694859661,
+        "height_cm": 329.9330791391137
+      }
+    },
+    {
+      "camera": "08",
+      "reference_subject": "001",
+      "reference_height_cm": 174.5,
+      "observations": 14,
+      "reprojection_rms_px": 5.69999,
+      "parameters": {
+        "focal_px": 829.4630151371837,
+        "tilt_radians": -0.4650358334821681,
+        "height_cm": 244.71702111676143
+      }
+    },
+    {
+      "camera": "10",
+      "reference_subject": "001",
+      "reference_height_cm": 174.5,
+      "observations": 15,
+      "reprojection_rms_px": 2.23614,
+      "parameters": {
+        "focal_px": 703.1151210466464,
+        "tilt_radians": -0.4650676007377315,
+        "height_cm": 239.87140158568374
+      }
+    },
+    {
+      "camera": "11",
+      "reference_subject": "001",
+      "reference_height_cm": 174.5,
+      "observations": 10,
+      "reprojection_rms_px": 1.47386,
+      "parameters": {
+        "focal_px": 512.092681204904,
+        "tilt_radians": -0.6461350519720477,
+        "height_cm": 222.91715498693392
+      }
+    },
+    {
+      "camera": "12",
+      "reference_subject": "001",
+      "reference_height_cm": 174.5,
+      "observations": 5,
+      "reprojection_rms_px": 1.2924,
+      "parameters": {
+        "focal_px": 423.62441078645645,
+        "tilt_radians": -0.7008022986142712,
+        "height_cm": 216.90241090010625
+      }
+    }
+  ],
+  "cases": [
+    {
+      "camera": "01",
+      "subject": "002",
+      "measured_height_cm": 176.5,
+      "mean_estimate_cm": 180.129223,
+      "absolute_error_cm": 3.629223,
+      "observations": 10,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "01",
+      "subject": "003",
+      "measured_height_cm": 169.5,
+      "mean_estimate_cm": 172.094164,
+      "absolute_error_cm": 2.594164,
+      "observations": 10,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "01",
+      "subject": "004",
+      "measured_height_cm": 184.5,
+      "mean_estimate_cm": 186.620811,
+      "absolute_error_cm": 2.120811,
+      "observations": 8,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "01",
+      "subject": "005",
+      "measured_height_cm": 170.5,
+      "mean_estimate_cm": 168.585083,
+      "absolute_error_cm": 1.914917,
+      "observations": 4,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "01",
+      "subject": "008",
+      "measured_height_cm": 170.5,
+      "mean_estimate_cm": 176.17554,
+      "absolute_error_cm": 5.67554,
+      "observations": 7,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "01",
+      "subject": "009",
+      "measured_height_cm": 173.5,
+      "mean_estimate_cm": 176.899178,
+      "absolute_error_cm": 3.399178,
+      "observations": 6,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "01",
+      "subject": "010",
+      "measured_height_cm": 176.5,
+      "mean_estimate_cm": 180.849503,
+      "absolute_error_cm": 4.349503,
+      "observations": 7,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "01",
+      "subject": "011",
+      "measured_height_cm": 174.0,
+      "mean_estimate_cm": 172.22324,
+      "absolute_error_cm": 1.77676,
+      "observations": 7,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "01",
+      "subject": "012",
+      "measured_height_cm": 173.0,
+      "mean_estimate_cm": 174.352928,
+      "absolute_error_cm": 1.352928,
+      "observations": 8,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "02",
+      "subject": "002",
+      "measured_height_cm": 176.5,
+      "mean_estimate_cm": 181.111373,
+      "absolute_error_cm": 4.611373,
+      "observations": 7,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "02",
+      "subject": "003",
+      "measured_height_cm": 169.5,
+      "mean_estimate_cm": 172.765982,
+      "absolute_error_cm": 3.265982,
+      "observations": 8,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "02",
+      "subject": "004",
+      "measured_height_cm": 184.5,
+      "mean_estimate_cm": 188.703339,
+      "absolute_error_cm": 4.203339,
+      "observations": 6,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "02",
+      "subject": "005",
+      "measured_height_cm": 170.5,
+      "mean_estimate_cm": 172.766868,
+      "absolute_error_cm": 2.266868,
+      "observations": 8,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "02",
+      "subject": "006",
+      "measured_height_cm": 179.5,
+      "mean_estimate_cm": 183.010506,
+      "absolute_error_cm": 3.510506,
+      "observations": 8,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "02",
+      "subject": "008",
+      "measured_height_cm": 170.5,
+      "mean_estimate_cm": 176.877207,
+      "absolute_error_cm": 6.377207,
+      "observations": 7,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "02",
+      "subject": "009",
+      "measured_height_cm": 173.5,
+      "mean_estimate_cm": 177.763445,
+      "absolute_error_cm": 4.263445,
+      "observations": 7,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "02",
+      "subject": "010",
+      "measured_height_cm": 176.5,
+      "mean_estimate_cm": 179.575206,
+      "absolute_error_cm": 3.075206,
+      "observations": 6,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "02",
+      "subject": "011",
+      "measured_height_cm": 174.0,
+      "mean_estimate_cm": 176.135925,
+      "absolute_error_cm": 2.135925,
+      "observations": 7,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "02",
+      "subject": "012",
+      "measured_height_cm": 173.0,
+      "mean_estimate_cm": 175.466538,
+      "absolute_error_cm": 2.466538,
+      "observations": 7,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "03",
+      "subject": "002",
+      "measured_height_cm": 176.5,
+      "mean_estimate_cm": 180.019092,
+      "absolute_error_cm": 3.519092,
+      "observations": 11,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "03",
+      "subject": "003",
+      "measured_height_cm": 169.5,
+      "mean_estimate_cm": 171.516613,
+      "absolute_error_cm": 2.016613,
+      "observations": 12,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "03",
+      "subject": "004",
+      "measured_height_cm": 184.5,
+      "mean_estimate_cm": 186.215754,
+      "absolute_error_cm": 1.715754,
+      "observations": 11,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "03",
+      "subject": "005",
+      "measured_height_cm": 170.5,
+      "mean_estimate_cm": 169.819613,
+      "absolute_error_cm": 0.680387,
+      "observations": 11,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "03",
+      "subject": "006",
+      "measured_height_cm": 179.5,
+      "mean_estimate_cm": 180.41812,
+      "absolute_error_cm": 0.91812,
+      "observations": 14,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "03",
+      "subject": "008",
+      "measured_height_cm": 170.5,
+      "mean_estimate_cm": 172.665182,
+      "absolute_error_cm": 2.165182,
+      "observations": 9,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "03",
+      "subject": "009",
+      "measured_height_cm": 173.5,
+      "mean_estimate_cm": 174.758909,
+      "absolute_error_cm": 1.258909,
+      "observations": 9,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "03",
+      "subject": "010",
+      "measured_height_cm": 176.5,
+      "mean_estimate_cm": 177.872155,
+      "absolute_error_cm": 1.372155,
+      "observations": 11,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "03",
+      "subject": "011",
+      "measured_height_cm": 174.0,
+      "mean_estimate_cm": 174.598371,
+      "absolute_error_cm": 0.598371,
+      "observations": 10,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "03",
+      "subject": "012",
+      "measured_height_cm": 173.0,
+      "mean_estimate_cm": 172.941236,
+      "absolute_error_cm": 0.058764,
+      "observations": 12,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "04",
+      "subject": "002",
+      "measured_height_cm": 174.5,
+      "mean_estimate_cm": 176.379589,
+      "absolute_error_cm": 1.879589,
+      "observations": 6,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "04",
+      "subject": "003",
+      "measured_height_cm": 169.5,
+      "mean_estimate_cm": 173.559798,
+      "absolute_error_cm": 4.059798,
+      "observations": 9,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "04",
+      "subject": "004",
+      "measured_height_cm": 184.5,
+      "mean_estimate_cm": 184.195391,
+      "absolute_error_cm": 0.304609,
+      "observations": 7,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "04",
+      "subject": "005",
+      "measured_height_cm": 170.5,
+      "mean_estimate_cm": 168.398232,
+      "absolute_error_cm": 2.101768,
+      "observations": 9,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "04",
+      "subject": "006",
+      "measured_height_cm": 179.5,
+      "mean_estimate_cm": 180.617603,
+      "absolute_error_cm": 1.117603,
+      "observations": 9,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "04",
+      "subject": "008",
+      "measured_height_cm": 170.5,
+      "mean_estimate_cm": 173.350396,
+      "absolute_error_cm": 2.850396,
+      "observations": 9,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "04",
+      "subject": "009",
+      "measured_height_cm": 173.5,
+      "mean_estimate_cm": 176.733018,
+      "absolute_error_cm": 3.233018,
+      "observations": 6,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "04",
+      "subject": "010",
+      "measured_height_cm": 176.5,
+      "mean_estimate_cm": 178.20027,
+      "absolute_error_cm": 1.70027,
+      "observations": 8,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "04",
+      "subject": "011",
+      "measured_height_cm": 174.0,
+      "mean_estimate_cm": 176.05553,
+      "absolute_error_cm": 2.05553,
+      "observations": 8,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "04",
+      "subject": "012",
+      "measured_height_cm": 173.0,
+      "mean_estimate_cm": 172.687862,
+      "absolute_error_cm": 0.312138,
+      "observations": 8,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "05",
+      "subject": "002",
+      "measured_height_cm": 176.5,
+      "mean_estimate_cm": 176.804385,
+      "absolute_error_cm": 0.304385,
+      "observations": 5,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "05",
+      "subject": "003",
+      "measured_height_cm": 169.5,
+      "mean_estimate_cm": 170.260507,
+      "absolute_error_cm": 0.760507,
+      "observations": 6,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "05",
+      "subject": "004",
+      "measured_height_cm": 184.5,
+      "mean_estimate_cm": 180.460573,
+      "absolute_error_cm": 4.039427,
+      "observations": 3,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "05",
+      "subject": "005",
+      "measured_height_cm": 170.5,
+      "mean_estimate_cm": 166.515242,
+      "absolute_error_cm": 3.984758,
+      "observations": 6,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "05",
+      "subject": "006",
+      "measured_height_cm": 179.5,
+      "mean_estimate_cm": 179.506915,
+      "absolute_error_cm": 0.006915,
+      "observations": 6,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "05",
+      "subject": "008",
+      "measured_height_cm": 170.5,
+      "mean_estimate_cm": 170.055112,
+      "absolute_error_cm": 0.444888,
+      "observations": 5,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "05",
+      "subject": "009",
+      "measured_height_cm": 173.5,
+      "mean_estimate_cm": 172.68175,
+      "absolute_error_cm": 0.81825,
+      "observations": 5,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "05",
+      "subject": "010",
+      "measured_height_cm": 174.5,
+      "mean_estimate_cm": 174.839967,
+      "absolute_error_cm": 0.339967,
+      "observations": 5,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "05",
+      "subject": "011",
+      "measured_height_cm": 174.0,
+      "mean_estimate_cm": 173.627969,
+      "absolute_error_cm": 0.372031,
+      "observations": 5,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "05",
+      "subject": "012",
+      "measured_height_cm": 173.0,
+      "mean_estimate_cm": 162.198366,
+      "absolute_error_cm": 10.801634,
+      "observations": 3,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "08",
+      "subject": "002",
+      "measured_height_cm": 176.5,
+      "mean_estimate_cm": 177.605157,
+      "absolute_error_cm": 1.105157,
+      "observations": 6,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "08",
+      "subject": "004",
+      "measured_height_cm": 184.5,
+      "mean_estimate_cm": 183.237801,
+      "absolute_error_cm": 1.262199,
+      "observations": 4,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "08",
+      "subject": "005",
+      "measured_height_cm": 170.5,
+      "mean_estimate_cm": 168.760945,
+      "absolute_error_cm": 1.739055,
+      "observations": 5,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "08",
+      "subject": "006",
+      "measured_height_cm": 179.5,
+      "mean_estimate_cm": 180.474219,
+      "absolute_error_cm": 0.974219,
+      "observations": 6,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "08",
+      "subject": "008",
+      "measured_height_cm": 170.5,
+      "mean_estimate_cm": 171.969409,
+      "absolute_error_cm": 1.469409,
+      "observations": 7,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "08",
+      "subject": "009",
+      "measured_height_cm": 173.5,
+      "mean_estimate_cm": 175.656251,
+      "absolute_error_cm": 2.156251,
+      "observations": 7,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "08",
+      "subject": "010",
+      "measured_height_cm": 176.5,
+      "mean_estimate_cm": 177.526956,
+      "absolute_error_cm": 1.026956,
+      "observations": 6,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "08",
+      "subject": "011",
+      "measured_height_cm": 174.0,
+      "mean_estimate_cm": 174.136257,
+      "absolute_error_cm": 0.136257,
+      "observations": 6,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "08",
+      "subject": "012",
+      "measured_height_cm": 173.0,
+      "mean_estimate_cm": 172.64448,
+      "absolute_error_cm": 0.35552,
+      "observations": 6,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "10",
+      "subject": "002",
+      "measured_height_cm": 176.5,
+      "mean_estimate_cm": 176.49455,
+      "absolute_error_cm": 0.00545,
+      "observations": 6,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "10",
+      "subject": "003",
+      "measured_height_cm": 169.5,
+      "mean_estimate_cm": 169.861871,
+      "absolute_error_cm": 0.361871,
+      "observations": 8,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "10",
+      "subject": "004",
+      "measured_height_cm": 184.5,
+      "mean_estimate_cm": 181.818671,
+      "absolute_error_cm": 2.681329,
+      "observations": 6,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "10",
+      "subject": "005",
+      "measured_height_cm": 170.5,
+      "mean_estimate_cm": 168.638326,
+      "absolute_error_cm": 1.861674,
+      "observations": 7,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "10",
+      "subject": "006",
+      "measured_height_cm": 179.5,
+      "mean_estimate_cm": 177.313785,
+      "absolute_error_cm": 2.186215,
+      "observations": 5,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "10",
+      "subject": "008",
+      "measured_height_cm": 170.5,
+      "mean_estimate_cm": 171.360465,
+      "absolute_error_cm": 0.860465,
+      "observations": 7,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "10",
+      "subject": "009",
+      "measured_height_cm": 173.5,
+      "mean_estimate_cm": 173.048029,
+      "absolute_error_cm": 0.451971,
+      "observations": 6,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "10",
+      "subject": "010",
+      "measured_height_cm": 176.5,
+      "mean_estimate_cm": 175.791942,
+      "absolute_error_cm": 0.708058,
+      "observations": 6,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "10",
+      "subject": "011",
+      "measured_height_cm": 174.0,
+      "mean_estimate_cm": 172.554756,
+      "absolute_error_cm": 1.445244,
+      "observations": 8,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "10",
+      "subject": "012",
+      "measured_height_cm": 173.0,
+      "mean_estimate_cm": 172.686168,
+      "absolute_error_cm": 0.313832,
+      "observations": 6,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "11",
+      "subject": "002",
+      "measured_height_cm": 176.5,
+      "mean_estimate_cm": 176.231787,
+      "absolute_error_cm": 0.268213,
+      "observations": 6,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "11",
+      "subject": "003",
+      "measured_height_cm": 169.5,
+      "mean_estimate_cm": 171.428742,
+      "absolute_error_cm": 1.928742,
+      "observations": 7,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "11",
+      "subject": "004",
+      "measured_height_cm": 184.5,
+      "mean_estimate_cm": 182.961203,
+      "absolute_error_cm": 1.538797,
+      "observations": 7,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "11",
+      "subject": "005",
+      "measured_height_cm": 170.5,
+      "mean_estimate_cm": 169.832871,
+      "absolute_error_cm": 0.667129,
+      "observations": 7,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "11",
+      "subject": "006",
+      "measured_height_cm": 179.5,
+      "mean_estimate_cm": 179.002749,
+      "absolute_error_cm": 0.497251,
+      "observations": 8,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "11",
+      "subject": "008",
+      "measured_height_cm": 170.5,
+      "mean_estimate_cm": 171.913892,
+      "absolute_error_cm": 1.413892,
+      "observations": 9,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "11",
+      "subject": "009",
+      "measured_height_cm": 173.5,
+      "mean_estimate_cm": 174.714386,
+      "absolute_error_cm": 1.214386,
+      "observations": 9,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "11",
+      "subject": "010",
+      "measured_height_cm": 176.5,
+      "mean_estimate_cm": 176.123346,
+      "absolute_error_cm": 0.376654,
+      "observations": 7,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "11",
+      "subject": "011",
+      "measured_height_cm": 174.0,
+      "mean_estimate_cm": 172.813795,
+      "absolute_error_cm": 1.186205,
+      "observations": 6,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "11",
+      "subject": "012",
+      "measured_height_cm": 173.0,
+      "mean_estimate_cm": 172.505464,
+      "absolute_error_cm": 0.494536,
+      "observations": 6,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "12",
+      "subject": "002",
+      "measured_height_cm": 176.5,
+      "mean_estimate_cm": 176.827029,
+      "absolute_error_cm": 0.327029,
+      "observations": 4,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "12",
+      "subject": "003",
+      "measured_height_cm": 169.5,
+      "mean_estimate_cm": 171.049668,
+      "absolute_error_cm": 1.549668,
+      "observations": 4,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "12",
+      "subject": "004",
+      "measured_height_cm": 184.5,
+      "mean_estimate_cm": 181.592272,
+      "absolute_error_cm": 2.907728,
+      "observations": 5,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "12",
+      "subject": "005",
+      "measured_height_cm": 170.5,
+      "mean_estimate_cm": 170.229211,
+      "absolute_error_cm": 0.270789,
+      "observations": 3,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "12",
+      "subject": "006",
+      "measured_height_cm": 179.5,
+      "mean_estimate_cm": 178.181045,
+      "absolute_error_cm": 1.318955,
+      "observations": 5,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "12",
+      "subject": "008",
+      "measured_height_cm": 170.5,
+      "mean_estimate_cm": 171.944258,
+      "absolute_error_cm": 1.444258,
+      "observations": 4,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "12",
+      "subject": "009",
+      "measured_height_cm": 173.5,
+      "mean_estimate_cm": 173.401903,
+      "absolute_error_cm": 0.098097,
+      "observations": 5,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "12",
+      "subject": "010",
+      "measured_height_cm": 176.5,
+      "mean_estimate_cm": 175.036375,
+      "absolute_error_cm": 1.463625,
+      "observations": 4,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "12",
+      "subject": "011",
+      "measured_height_cm": 174.0,
+      "mean_estimate_cm": 173.450551,
+      "absolute_error_cm": 0.549449,
+      "observations": 4,
+      "rejected_observations": 0
+    },
+    {
+      "camera": "12",
+      "subject": "012",
+      "measured_height_cm": 173.0,
+      "mean_estimate_cm": 164.414356,
+      "absolute_error_cm": 8.585644,
+      "observations": 5,
+      "rejected_observations": 0
+    }
+  ],
+  "input_files": [
+    {
+      "path": "01/001.txt",
+      "sha256": "5798e17b4af8e7f3b96e3c5424b2dc1e50e74478eb0956b7ca2a7afc4ac5cb36"
+    },
+    {
+      "path": "01/002.txt",
+      "sha256": "3f4ef45098bdc9d443b1f30600e602c380c963b05d191e591c45668103816d0e"
+    },
+    {
+      "path": "01/003.txt",
+      "sha256": "23ee5480487f00cda3b877d137bd36380b3f95ace067ae3f484750e98b942470"
+    },
+    {
+      "path": "01/004.txt",
+      "sha256": "6aaa4b0e96025004d83d534ba330a1755ffea1d1bc01ac59eb8de7ab48050629"
+    },
+    {
+      "path": "01/005.txt",
+      "sha256": "ae72205285a43ac3dbb6c1c3119d33296f1f6069d006e103dd554781319f95f7"
+    },
+    {
+      "path": "01/008.txt",
+      "sha256": "830b00494736a64db5a431620cb703fad9cfe4d2c129018fbeaf42e17a2d123f"
+    },
+    {
+      "path": "01/009.txt",
+      "sha256": "edef020a6c70fbeb3b09aa45a71c81eff8533e0582d9c3ea89a77925909f0ca2"
+    },
+    {
+      "path": "01/010.txt",
+      "sha256": "c7936b706e804671c76d46d6980b89efc033cc7e1006c7dcb8a286d5bfd3d13b"
+    },
+    {
+      "path": "01/011.txt",
+      "sha256": "e2ce95e71c87c15d725ed8ab61892264775b0ffad225205bf2fc32cb04f0e81f"
+    },
+    {
+      "path": "01/012.txt",
+      "sha256": "85f70bbf5085a0f42761d8167780345b7a784a29bf7e10a42366af742d060abb"
+    },
+    {
+      "path": "02/001.txt",
+      "sha256": "1deaa05abc4fe5a178d57e6648e5eac8c7aa0cdd1f9d4a480a70d9bef98b0d9b"
+    },
+    {
+      "path": "02/002.txt",
+      "sha256": "51edc07a1fbd5e05d6cf5f3ccb725486e46ba3dabfb6126531c1f2ebb2f44ff1"
+    },
+    {
+      "path": "02/003.txt",
+      "sha256": "0d8c51be141a21347d67d1a61e7659c64d00a3d4175ba1443c7886150d8ddb32"
+    },
+    {
+      "path": "02/004.txt",
+      "sha256": "c3901cd8c2e78ea950b6f8e4737bcd30cac682839c0572b1edacd8e3f4978935"
+    },
+    {
+      "path": "02/005.txt",
+      "sha256": "fde0065e5a5cc6db35e63118ceffd52092c39f8aa0141f5305ef9596b4c432ab"
+    },
+    {
+      "path": "02/006.txt",
+      "sha256": "76a8e328f575066f76c0b709b6967b402fbcbee7c39685753837866a4518af70"
+    },
+    {
+      "path": "02/008.txt",
+      "sha256": "d40a1050c741d696db67c105b86025c3c1d8f93c37ce9e5567b013c31862b2ea"
+    },
+    {
+      "path": "02/009.txt",
+      "sha256": "c1700875c4b7f085a1ea9d87a99b6b41c421bb8b7efce597e342e3ff59431921"
+    },
+    {
+      "path": "02/010.txt",
+      "sha256": "70a3873d2baa45494c5247a678e6e82298170827d79f83999b8ac2aff1674d42"
+    },
+    {
+      "path": "02/011.txt",
+      "sha256": "04efbd6b608eab0fd4a3b220b0fb2ed4fa3a0fad33d63f45b75662bc4bf90af6"
+    },
+    {
+      "path": "02/012.txt",
+      "sha256": "17ece8b27a83ce6656c02ccf1be67ef840e9ec8e644924e44e5f92f9507c75b6"
+    },
+    {
+      "path": "03/001.txt",
+      "sha256": "5dc46befc71a1732a5f5897605bfca66190b901823df8953e027ce12d1fd2806"
+    },
+    {
+      "path": "03/002.txt",
+      "sha256": "1f9aeef0dce4672d9dd5a1e4b7c0b6e9e5d870ede57f2e6f11d161b6118dd59b"
+    },
+    {
+      "path": "03/003.txt",
+      "sha256": "ed016476c30b06d4d2c4defeda75f4b3d43ba042791c338ed310dd0f0ea2b6b8"
+    },
+    {
+      "path": "03/004.txt",
+      "sha256": "2b810128cb332eca945f127605768e832eafc5a555ba6646dd2dc478cd34c6bb"
+    },
+    {
+      "path": "03/005.txt",
+      "sha256": "b2a5abf4da9df25c94c0a249bef2a509a45e6feda7d975a370ba56335044ed70"
+    },
+    {
+      "path": "03/006.txt",
+      "sha256": "70ceb8e6af5e44a1778d94488f7143b5e3fdaeb5659305163dac837bcd5a0e94"
+    },
+    {
+      "path": "03/008.txt",
+      "sha256": "b06525839e85cf04e254e998ebcd3dfeddb337d2d18f08a935112fa8d383a120"
+    },
+    {
+      "path": "03/009.txt",
+      "sha256": "b839a9d444183d01aeb5c2723169b12d24a5e5c13ebe8e7634d7ccc5ec190553"
+    },
+    {
+      "path": "03/010.txt",
+      "sha256": "beec7f43819db64c381e0035e2c9d0a2c1445590bc9e4d28ac4bbddcb4d59382"
+    },
+    {
+      "path": "03/011.txt",
+      "sha256": "0788945785d0d33b5b6dd8cd673b93716c107891afc51c5ace9b03468dc80450"
+    },
+    {
+      "path": "03/012.txt",
+      "sha256": "f9e35e48ad4baadf1f5a686fc2bf745ce765872de874b374658dab9e487c1bc5"
+    },
+    {
+      "path": "04/001.txt",
+      "sha256": "70630766b27cbd1a0a38dbdfde4cfb909ca9712a737cbc221c5c360c68938dbd"
+    },
+    {
+      "path": "04/002.txt",
+      "sha256": "c3608a660f3907ef4a1698312182e7301a8e7e88a842860e7764e4ee5020291f"
+    },
+    {
+      "path": "04/003.txt",
+      "sha256": "a0a5cbfe3cf3cb19be23f7e420c5eb46e6e8489bb22e0c1106fd3f87aa850f85"
+    },
+    {
+      "path": "04/004.txt",
+      "sha256": "031ee058e78976db36eaf08ce6b84dcbafa41c0ac0eedde46a29ebbd526ef940"
+    },
+    {
+      "path": "04/005.txt",
+      "sha256": "b309a1944c539619fd762d0fdeebccb2348b25612be12f2bd6f67cd23aa3de66"
+    },
+    {
+      "path": "04/006.txt",
+      "sha256": "5d68e4bfeceda53d7479b8883dad52d0babc140a1f10a11e3df8c578a58a1fc0"
+    },
+    {
+      "path": "04/008.txt",
+      "sha256": "b6abef56abee4934ea1288c407285a82a96f15bea76022117a87282454f4fa9c"
+    },
+    {
+      "path": "04/009.txt",
+      "sha256": "845e04fecbc2e7123de86c478700d54f0a2928cd8852b4edc8a9d09b44d6b3e6"
+    },
+    {
+      "path": "04/010.txt",
+      "sha256": "5ab1dd4eaaa339a27d82018380d9746cc753ef1c529f9c2d3b489e21166ece3f"
+    },
+    {
+      "path": "04/011.txt",
+      "sha256": "526f6a9d51c7d595d398c3bd56c5e48bb5462089ebab80c785e34a45a979fe3c"
+    },
+    {
+      "path": "04/012.txt",
+      "sha256": "ec03a79c13bca72027865745e2ffe8cedd6f21315e346744dc3652c0851e8000"
+    },
+    {
+      "path": "05/001.txt",
+      "sha256": "d5cbf8bb82af01dc567a4513149a630d80ff0627989a4dd76c48beb04497eb14"
+    },
+    {
+      "path": "05/002.txt",
+      "sha256": "7b7edbd298c4ca6cf82334bf78a464c0da28ab4ee5232331c24e2d2a5a8cf720"
+    },
+    {
+      "path": "05/003.txt",
+      "sha256": "ae549576068a93decc3b8d23ac0de4aedde70660c999167a4d416b74a081584d"
+    },
+    {
+      "path": "05/004.txt",
+      "sha256": "874c2dc37a8c4117e52815ff1bb119fe461b1ae13f0b0585df2528a21602130d"
+    },
+    {
+      "path": "05/005.txt",
+      "sha256": "da657aea6c17740ba5ce11be0544a3c63c31641b370357566c5312a9eb47b285"
+    },
+    {
+      "path": "05/006.txt",
+      "sha256": "28d07daf9bd04fddf60d147858dc67e604d3fa5ac8cc3465c1dc383fce86756c"
+    },
+    {
+      "path": "05/008.txt",
+      "sha256": "51f34a6369efca31894ce0787f50f70b4e2577cc7d2349d2e8ec9e4be383f788"
+    },
+    {
+      "path": "05/009.txt",
+      "sha256": "b3cb87f2a0128f2992d32614c0215fa29bf4ff79011226bababc2bcae9cd5b44"
+    },
+    {
+      "path": "05/010.txt",
+      "sha256": "5caa9bcd5777a033f5014dea6476d5328549239c779952d6a73541dc30ab2885"
+    },
+    {
+      "path": "05/011.txt",
+      "sha256": "f5ffa30179d2a0f66f410ffad2d36e97afddb4970cde9afb5bb6ae5b06aecf19"
+    },
+    {
+      "path": "05/012.txt",
+      "sha256": "3d6f48ae0cacb7d8588da9837007fcaf690fcacea6e5452ac47c2b19570dcb3d"
+    },
+    {
+      "path": "08/001.txt",
+      "sha256": "385bb769d7ece3c3a69346e54c47053db229e796dfa4aaf53f9fa87ff56ad566"
+    },
+    {
+      "path": "08/002.txt",
+      "sha256": "f0757e057e91b53d58c7f894b106d0cc529e711423a2cde9fdf1d4cf20c6ec1f"
+    },
+    {
+      "path": "08/004.txt",
+      "sha256": "d3fee6f4d4c6f3ea3c10b47e395bbe593e24d2dae2b4f725eb8c74c7f2708e73"
+    },
+    {
+      "path": "08/005.txt",
+      "sha256": "22bf9919b03d4a83117f20a12144dfd1da1dbe8e25447f3a4b0f130ec31b6413"
+    },
+    {
+      "path": "08/006.txt",
+      "sha256": "8496203cbec2e06fb96bde8e7ccc4eacfd98d8acbc295f67e7645919b751fb85"
+    },
+    {
+      "path": "08/008.txt",
+      "sha256": "912e8e628b1dd5f25595fc83a852889f6f6924cf8591f3f2a8d20f3df7cd95d6"
+    },
+    {
+      "path": "08/009.txt",
+      "sha256": "216c044591f9549c2fe02c13c07160936e66dd3879254de9f4718e7b274a2249"
+    },
+    {
+      "path": "08/010.txt",
+      "sha256": "ac8c756f04047096b142bcbb48870a4d9ca3f6c1fa2cde209e706596ff023b58"
+    },
+    {
+      "path": "08/011.txt",
+      "sha256": "a587cb2afb241e14baebfd5de20799a1ddccb5bbf70ed66eeb7dc692eb398a7f"
+    },
+    {
+      "path": "08/012.txt",
+      "sha256": "525401c5210d87bfb9950e7f2abfc251a27a4f54cae2ca66def096daf2d77eb9"
+    },
+    {
+      "path": "10/001.txt",
+      "sha256": "16d819f9ca0b3e61700c144349a708c9b60e7550d4bfb8e72e9bd4c0c9f47696"
+    },
+    {
+      "path": "10/002.txt",
+      "sha256": "8b366f5d1e3ccf73cc80e408229070c079170967e769fb251c31ca08f7b32f77"
+    },
+    {
+      "path": "10/003.txt",
+      "sha256": "5992265c267542695b76d7d8fc83923e3a8fa9d4a3e3f4c521b0fa6563b5dfec"
+    },
+    {
+      "path": "10/004.txt",
+      "sha256": "1d4b28ac84a6a8ced11fe460a3f4b0aca1adcf020952da0916977c6f1e98f5a1"
+    },
+    {
+      "path": "10/005.txt",
+      "sha256": "9ca7771c3dbbf795c610e33f4cb5b474eb182eebad8a7bf1f0d59ca345c13130"
+    },
+    {
+      "path": "10/006.txt",
+      "sha256": "0e5ce6c706853fb4ce1257557fbfb8cbe4b52010924ccb8b312f3cc672308ebc"
+    },
+    {
+      "path": "10/008.txt",
+      "sha256": "fce5b0d2fa82327b40c4e101213041c47573041d1aeaa6c08a53dc30792e5d76"
+    },
+    {
+      "path": "10/009.txt",
+      "sha256": "ae15514cb7d1c12cf8645ba1dcb38c4cfee04e1c8e6c0432d9017c3af24a8c55"
+    },
+    {
+      "path": "10/010.txt",
+      "sha256": "fdc329273095454ff0016f2ce69177637d3c59b3f24a8146806280e2976c4e4c"
+    },
+    {
+      "path": "10/011.txt",
+      "sha256": "2181fa9e651c8021beded70fc9761c835ce32246f23403eb6ce462b05a7c297a"
+    },
+    {
+      "path": "10/012.txt",
+      "sha256": "de7196dcd45eb2a0ef1e1a9a49a3789c3d320228ed17ecc155c538eae50e1a1b"
+    },
+    {
+      "path": "11/001.txt",
+      "sha256": "5985f44d91edf48e0465adacf3fe47d43078dc7b17a3d3258d5d09c7f6e59887"
+    },
+    {
+      "path": "11/002.txt",
+      "sha256": "e99dcc9f634ed525b824ca7615e7594e8bac41e87a8eca8ca2121d92326fdd31"
+    },
+    {
+      "path": "11/003.txt",
+      "sha256": "1b8b049ba1b0ac8d8979c4543af16144cb62c2e2f01c0c65c1ca039a73d8450d"
+    },
+    {
+      "path": "11/004.txt",
+      "sha256": "854cbbb46ee811fb8f0eb9d3d0dca034c97d94b0e6dffb41c8d04fd600325bd0"
+    },
+    {
+      "path": "11/005.txt",
+      "sha256": "7b227b36e6765d5cd22fa0f684e71357910958227c5dbec988c59fd07dde229b"
+    },
+    {
+      "path": "11/006.txt",
+      "sha256": "fc04b12cdd71f0cae09819a740e1bd83c5df182aa7da53e4f45870905b1c02e1"
+    },
+    {
+      "path": "11/008.txt",
+      "sha256": "8763cdaaafde4fb4864c2b983832fdd3586331260ddaf797fb6f39ecb179a853"
+    },
+    {
+      "path": "11/009.txt",
+      "sha256": "de4fccdd5ec346c882f7edbcf141bd1c8607a42c2f38bc90c42ec577e96d69b7"
+    },
+    {
+      "path": "11/010.txt",
+      "sha256": "fc9b5233f4358f8b47cfe60079d2783ef519f983ab396812c425db59dcd5095b"
+    },
+    {
+      "path": "11/011.txt",
+      "sha256": "3d989c175c86a9710b9bc93f811235a3f2c3b7e1d47bc961d79e4cbb6e54fbfc"
+    },
+    {
+      "path": "11/012.txt",
+      "sha256": "cf87fb35a07fd679cf8f93d9d3acce255874ebb4815ac525a0fb9d5209a284f9"
+    },
+    {
+      "path": "12/001.txt",
+      "sha256": "f386d51167bc50847eb7c98d6b3e3a962f0f2025a759aa23ba57e99a178403be"
+    },
+    {
+      "path": "12/002.txt",
+      "sha256": "deeba06871b92402e1d188b512800ca5562bc57e591a25a546b64b88b01d8102"
+    },
+    {
+      "path": "12/003.txt",
+      "sha256": "290d7f41222f8dafee27d99c603c89f9f1b83988f4931879b68e539c8f1c062b"
+    },
+    {
+      "path": "12/004.txt",
+      "sha256": "7d6c40596e8cb935f4c604397be7f821b0e125a310f9c93ecf1e2d0ee1510c3a"
+    },
+    {
+      "path": "12/005.txt",
+      "sha256": "eb3c80fee5d0054f4961c286b5344d754a3a3f28e9bb4330b5319050c6147283"
+    },
+    {
+      "path": "12/006.txt",
+      "sha256": "6f641b2ad23c0a92c7e5a37d8632c1a30c9183dc5cc2570d0a8ea0fbacf84770"
+    },
+    {
+      "path": "12/008.txt",
+      "sha256": "d28b67473ca684a3d52485e8c26980f4f99475a25ef9ccb3f05e593b7a6af65f"
+    },
+    {
+      "path": "12/009.txt",
+      "sha256": "c06e08ab5cf63cda16f8effd39cd2b72d5a5d851341d64923b00e2969fb9bb85"
+    },
+    {
+      "path": "12/010.txt",
+      "sha256": "ffb1ca319a1a556ec1688dc550b9940bde5ec6ef4d7d2aabbf2a8df4232f7788"
+    },
+    {
+      "path": "12/011.txt",
+      "sha256": "34f5bd4adbee8af220e83f463874912da096c798287643c307a92274879cac62"
+    },
+    {
+      "path": "12/012.txt",
+      "sha256": "598fe7a66f5d149023bfd512a043404166342641c5196019678064382e1d9006"
+    }
+  ],
+  "limitations": [
+    "Manual point annotations exclude detector and tracker error.",
+    "Camera assumptions include flat ground and negligible roll/pan.",
+    "Not a result of the DeepSeek Agent; the Agent is evaluated separately on image samples.",
+    "No lens distortion correction; do not claim reproduction of the paper reported metric."
+  ],
+  "source_commit": "2a1f45a29eeceb945d53410135535d5e6c87b408"
+}

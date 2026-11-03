@@ -1,0 +1,566 @@
+{
+  "scope": "bounded_real_provider_spotcheck_not_semantic_accuracy",
+  "model": "deepseek-flash",
+  "provider": "deepseek",
+  "actual_model_calls": 9,
+  "max_model_calls": 12,
+  "human_review": "pending",
+  "cases": [
+    {
+      "id": "mixed",
+      "group": "market",
+      "question": "画面里出现最长的人和汽车分别是编号几，人48号是什么性别 身高多高 什么身材",
+      "selected_target": "48",
+      "status": "complete",
+      "answer": "出现最久：人 #1（累计15.2秒），汽车 #36（累计7秒）。\n\n人 #48：短发、肩背较宽，整体外观偏男性化；看起来身形中等偏结实，肩背较宽；身高缺少可靠尺寸参照，暂不能估计。",
+      "answer_details": "人中出现最久的是人 #1，可确认的累计出现时间15.2秒。中间没识别到的时间不计入。\n\n汽车中出现最久的是汽车 #36，可确认的累计出现时间7秒。中间没识别到的时间不计入。\n\n人 #48 · 外观呈现：短发、肩背较宽，整体外观偏男性化。\n\n人 #48 · 体型：身形中等偏结实，肩背较宽。（穿宽松球衣，躯干轮廓被衣服遮住，胖瘦只能粗略判断。）\n\n人 #48 · 身高：身高无法粗估。（画面中附近物体远近不同，缺少与目标同距离的尺寸参照。）",
+      "usage": {
+        "input_tokens": 6582,
+        "output_tokens": 575,
+        "model_calls": 1,
+        "tool_calls": 3,
+        "usage_complete": true
+      },
+      "coverage": [
+        {
+          "scope": "ranking",
+          "label": "person",
+          "aspect": "observed_seconds",
+          "status": "answered"
+        },
+        {
+          "scope": "ranking",
+          "label": "car",
+          "aspect": "observed_seconds",
+          "status": "answered"
+        },
+        {
+          "target": "48",
+          "aspect": "gender",
+          "status": "uncertain"
+        },
+        {
+          "target": "48",
+          "aspect": "body",
+          "status": "uncertain"
+        },
+        {
+          "target": "48",
+          "aspect": "height",
+          "status": "insufficient"
+        }
+      ],
+      "visual_frames": 3,
+      "cache_hit": false,
+      "execution_mode": null,
+      "plan": {
+        "source": "rules",
+        "tasks": [
+          {
+            "kind": "rank",
+            "label": "person",
+            "metric": "observed_seconds"
+          },
+          {
+            "kind": "rank",
+            "label": "car",
+            "metric": "observed_seconds"
+          },
+          {
+            "kind": "target",
+            "target_id": "48",
+            "facets": [
+              "gender",
+              "body",
+              "height"
+            ]
+          }
+        ],
+        "clarifications": []
+      },
+      "error_code": null,
+      "citation_membership_valid": true,
+      "tool_names": [
+        "rank_objects",
+        "rank_objects",
+        "locate_object"
+      ],
+      "elapsed_seconds": 4.53,
+      "source_sha256": "cbfc54178b5b5eefed4567d4e43d2500b42f11990aa78442dba0242734dce0b7"
+    },
+    {
+      "id": "cached_repeat",
+      "group": "market",
+      "question": "画面里出现最长的人和汽车分别是编号几，人48号是什么性别 身高多高 什么身材",
+      "selected_target": "48",
+      "status": "complete",
+      "answer": "出现最久：人 #1（累计15.2秒），汽车 #36（累计7秒）。\n\n人 #48：短发、肩背较宽，整体外观偏男性化；看起来身形中等偏结实，肩背较宽；身高缺少可靠尺寸参照，暂不能估计。",
+      "answer_details": "人中出现最久的是人 #1，可确认的累计出现时间15.2秒。中间没识别到的时间不计入。\n\n汽车中出现最久的是汽车 #36，可确认的累计出现时间7秒。中间没识别到的时间不计入。\n\n人 #48 · 外观呈现：短发、肩背较宽，整体外观偏男性化。\n\n人 #48 · 体型：身形中等偏结实，肩背较宽。（穿宽松球衣，躯干轮廓被衣服遮住，胖瘦只能粗略判断。）\n\n人 #48 · 身高：身高无法粗估。（画面中附近物体远近不同，缺少与目标同距离的尺寸参照。）",
+      "usage": {
+        "model_calls": 0,
+        "tool_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "usage_complete": true
+      },
+      "coverage": [
+        {
+          "scope": "ranking",
+          "label": "person",
+          "aspect": "observed_seconds",
+          "status": "answered"
+        },
+        {
+          "scope": "ranking",
+          "label": "car",
+          "aspect": "observed_seconds",
+          "status": "answered"
+        },
+        {
+          "target": "48",
+          "aspect": "gender",
+          "status": "uncertain"
+        },
+        {
+          "target": "48",
+          "aspect": "body",
+          "status": "uncertain"
+        },
+        {
+          "target": "48",
+          "aspect": "height",
+          "status": "insufficient"
+        }
+      ],
+      "visual_frames": 3,
+      "cache_hit": true,
+      "execution_mode": "cache",
+      "plan": {
+        "source": "rules",
+        "tasks": [
+          {
+            "kind": "rank",
+            "label": "person",
+            "metric": "observed_seconds"
+          },
+          {
+            "kind": "rank",
+            "label": "car",
+            "metric": "observed_seconds"
+          },
+          {
+            "kind": "target",
+            "target_id": "48",
+            "facets": [
+              "gender",
+              "body",
+              "height"
+            ]
+          }
+        ],
+        "clarifications": []
+      },
+      "error_code": null,
+      "citation_membership_valid": true,
+      "tool_names": [],
+      "elapsed_seconds": 0.02,
+      "source_sha256": "cbfc54178b5b5eefed4567d4e43d2500b42f11990aa78442dba0242734dce0b7"
+    },
+    {
+      "id": "pronoun",
+      "group": "market",
+      "question": "他穿搭和手里拿什么？",
+      "selected_target": "48",
+      "status": "complete",
+      "answer": "人 #48：深色带彩色花纹的短袖球衣，背后印有名字和号码，配深蓝及膝短裤和人字拖；两手自然下垂，未见明显手持物品。",
+      "answer_details": "衣着：深色带彩色花纹的短袖球衣，背后印有名字和号码，配深蓝及膝短裤和人字拖。\n\n随身物品：两手自然下垂，未见明显手持物品。（画面多为背面且手部细节较小，不能完全排除手里有小物件。）",
+      "usage": {
+        "input_tokens": 6226,
+        "output_tokens": 510,
+        "model_calls": 1,
+        "tool_calls": 1,
+        "usage_complete": true
+      },
+      "coverage": [
+        {
+          "target": "48",
+          "aspect": "clothing",
+          "status": "answered"
+        },
+        {
+          "target": "48",
+          "aspect": "carrying",
+          "status": "uncertain"
+        }
+      ],
+      "visual_frames": 3,
+      "cache_hit": false,
+      "execution_mode": null,
+      "plan": {
+        "source": "rules",
+        "tasks": [
+          {
+            "kind": "target",
+            "target_id": "48",
+            "facets": [
+              "clothing",
+              "carrying"
+            ]
+          }
+        ],
+        "clarifications": []
+      },
+      "error_code": null,
+      "citation_membership_valid": true,
+      "tool_names": [
+        "locate_object"
+      ],
+      "elapsed_seconds": 4.39,
+      "source_sha256": "cbfc54178b5b5eefed4567d4e43d2500b42f11990aa78442dba0242734dce0b7"
+    },
+    {
+      "id": "semantic",
+      "group": "market",
+      "question": "帮我概括这位的服饰细节",
+      "selected_target": "48",
+      "status": "failed",
+      "answer": null,
+      "answer_details": null,
+      "usage": {
+        "input_tokens": 2738,
+        "output_tokens": 168,
+        "model_calls": 1,
+        "tool_calls": 0,
+        "usage_complete": true
+      },
+      "coverage": [],
+      "visual_frames": 0,
+      "cache_hit": false,
+      "execution_mode": null,
+      "plan": null,
+      "error_code": "invalid_question_plan",
+      "citation_membership_valid": true,
+      "tool_names": [],
+      "elapsed_seconds": 1.44,
+      "source_sha256": "cbfc54178b5b5eefed4567d4e43d2500b42f11990aa78442dba0242734dce0b7"
+    },
+    {
+      "id": "lowres",
+      "group": "lowres",
+      "question": "人30号穿什么、身材怎么样？",
+      "selected_target": "30",
+      "status": "complete",
+      "answer": "人 #30：身形轮廓无法判断；上身似为红色或暗红色上衣，下身深色长裤，手边有浅色物品。",
+      "answer_details": "体型：身形轮廓无法判断。（目标在画面中太小且模糊，衣着轮廓也看不清，无法评估胖瘦。）\n\n衣着：上身似为红色或暗红色上衣，下身深色长裤，手边有浅色物品。（目标很小且画面模糊，颜色和衣物款式只能大致判断。）",
+      "usage": {
+        "input_tokens": 6191,
+        "output_tokens": 430,
+        "model_calls": 1,
+        "tool_calls": 1,
+        "usage_complete": true
+      },
+      "coverage": [
+        {
+          "target": "30",
+          "aspect": "body",
+          "status": "insufficient"
+        },
+        {
+          "target": "30",
+          "aspect": "clothing",
+          "status": "uncertain"
+        }
+      ],
+      "visual_frames": 3,
+      "cache_hit": false,
+      "execution_mode": null,
+      "plan": {
+        "source": "rules",
+        "tasks": [
+          {
+            "kind": "target",
+            "target_id": "30",
+            "facets": [
+              "body",
+              "clothing"
+            ]
+          }
+        ],
+        "clarifications": []
+      },
+      "error_code": null,
+      "citation_membership_valid": true,
+      "tool_names": [
+        "locate_object"
+      ],
+      "elapsed_seconds": 2.72,
+      "source_sha256": "f9faba6482a182a937b429040450900a3d5c1bcc838a09175c8591bc992a1f29"
+    },
+    {
+      "id": "crowd",
+      "group": "crowd",
+      "question": "人1号穿什么？",
+      "selected_target": "1",
+      "status": "complete",
+      "answer": "人 #1：深色长外套配浅色高领内搭，戴橄榄色头巾，斜挎深色小包。",
+      "answer_details": "衣着：深色长外套配浅色高领内搭，戴橄榄色头巾，斜挎深色小包。",
+      "usage": {
+        "input_tokens": 5879,
+        "output_tokens": 350,
+        "model_calls": 1,
+        "tool_calls": 1,
+        "usage_complete": true
+      },
+      "coverage": [
+        {
+          "target": "1",
+          "aspect": "clothing",
+          "status": "answered"
+        }
+      ],
+      "visual_frames": 3,
+      "cache_hit": false,
+      "execution_mode": null,
+      "plan": {
+        "source": "rules",
+        "tasks": [
+          {
+            "kind": "target",
+            "target_id": "1",
+            "facets": [
+              "clothing"
+            ]
+          }
+        ],
+        "clarifications": []
+      },
+      "error_code": null,
+      "citation_membership_valid": true,
+      "tool_names": [
+        "locate_object"
+      ],
+      "elapsed_seconds": 2.86,
+      "source_sha256": "18a44466d9a458755883d0d0def3968723c5d62f85a92e96ca54798ca10e9ed6"
+    },
+    {
+      "id": "still",
+      "group": "image",
+      "question": "人2号穿什么、是什么姿态、身高多高？",
+      "selected_target": "2",
+      "status": "complete",
+      "answer": "人 #2：身高缺少可靠尺寸参照，暂不能估计；穿浅米色毛绒长外套，内搭橙色上衣，深蓝牛仔裤，浅色运动鞋。",
+      "answer_details": "身高：头脚虽可见，但附近没有与本人同距离的明确尺寸参照，无法粗估身高。\n\n衣着：穿浅米色毛绒长外套，内搭橙色上衣，深蓝牛仔裤，浅色运动鞋。",
+      "usage": {
+        "input_tokens": 4171,
+        "output_tokens": 275,
+        "model_calls": 1,
+        "tool_calls": 1,
+        "usage_complete": true
+      },
+      "coverage": [
+        {
+          "target": "2",
+          "aspect": "height",
+          "status": "insufficient"
+        },
+        {
+          "target": "2",
+          "aspect": "clothing",
+          "status": "answered"
+        }
+      ],
+      "visual_frames": 1,
+      "cache_hit": false,
+      "execution_mode": null,
+      "plan": {
+        "source": "rules",
+        "tasks": [
+          {
+            "kind": "target",
+            "target_id": "2",
+            "facets": [
+              "height",
+              "clothing"
+            ]
+          }
+        ],
+        "clarifications": []
+      },
+      "error_code": null,
+      "citation_membership_valid": true,
+      "tool_names": [
+        "locate_object"
+      ],
+      "elapsed_seconds": 2.19,
+      "source_sha256": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63"
+    },
+    {
+      "id": "negative_control",
+      "group": "blank",
+      "question": "有几个人？",
+      "selected_target": null,
+      "status": "complete",
+      "answer": "这张图片中没有检测到人。",
+      "answer_details": "这张图片中没有检测到人。",
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "model_calls": 0,
+        "tool_calls": 1,
+        "usage_complete": true
+      },
+      "coverage": [
+        {
+          "scope": "count",
+          "label": "person",
+          "aspect": "count",
+          "status": "answered"
+        }
+      ],
+      "visual_frames": 0,
+      "cache_hit": false,
+      "execution_mode": "direct",
+      "plan": {
+        "source": "rules",
+        "tasks": [
+          {
+            "kind": "count",
+            "label": "person",
+            "metric": "count"
+          }
+        ],
+        "clarifications": []
+      },
+      "error_code": null,
+      "citation_membership_valid": true,
+      "tool_names": [
+        "count_objects"
+      ],
+      "elapsed_seconds": 0.02,
+      "source_sha256": "b49148ab4ca4005d6b4ef24e8de4485e155a94fc30d4d41a6dc9a3223242875f"
+    }
+  ],
+  "rechecks": [
+    {
+      "id": "semantic",
+      "question": "帮我概括这位的服饰细节",
+      "status": "complete",
+      "answer": "人 #48：深色底彩色花纹短袖球衣，背后印名字和号码，袖口橙色；深蓝及膝短裤带浅色侧条；人字拖；两手自然下垂，未见明显手持物品。",
+      "answer_details": "衣着：深色底彩色花纹短袖球衣，背后印名字和号码，袖口橙色；深蓝及膝短裤带浅色侧条；人字拖。\n\n随身物品：两手自然下垂，未见明显手持物品。",
+      "usage": {
+        "input_tokens": 7263,
+        "output_tokens": 545,
+        "model_calls": 2,
+        "tool_calls": 1,
+        "usage_complete": true
+      },
+      "coverage": [
+        {
+          "target": "48",
+          "aspect": "clothing",
+          "status": "answered"
+        },
+        {
+          "target": "48",
+          "aspect": "carrying",
+          "status": "answered"
+        }
+      ],
+      "visual_frames": 3,
+      "plan": {
+        "source": "semantic",
+        "tasks": [
+          {
+            "kind": "target",
+            "target_id": "48",
+            "facets": [
+              "clothing",
+              "carrying"
+            ]
+          }
+        ],
+        "clarifications": []
+      },
+      "error_code": null,
+      "elapsed_seconds": 2.92,
+      "citation_membership_valid": true
+    },
+    {
+      "id": "still",
+      "question": "人2号穿什么、是什么姿态、身高多高？",
+      "status": "complete",
+      "answer": "人 #2：身高缺少可靠尺寸参照，暂不能估计；双臂交叉抱在胸前，直立站在人行道上；浅米色毛绒长外套，内搭橙色上衣，深蓝牛仔裤，浅色运动鞋。",
+      "answer_details": "身高：头脚虽完整，但附近没有距离相近的明确尺寸参照。\n\n动作：双臂交叉抱在胸前，直立站在人行道上。\n\n衣着：浅米色毛绒长外套，内搭橙色上衣，深蓝牛仔裤，浅色运动鞋。",
+      "usage": {
+        "input_tokens": 4276,
+        "output_tokens": 449,
+        "model_calls": 1,
+        "tool_calls": 1,
+        "usage_complete": true
+      },
+      "coverage": [
+        {
+          "target": "2",
+          "aspect": "height",
+          "status": "insufficient"
+        },
+        {
+          "target": "2",
+          "aspect": "action",
+          "status": "answered"
+        },
+        {
+          "target": "2",
+          "aspect": "clothing",
+          "status": "answered"
+        }
+      ],
+      "visual_frames": 1,
+      "plan": {
+        "source": "rules",
+        "tasks": [
+          {
+            "kind": "target",
+            "target_id": "2",
+            "facets": [
+              "height",
+              "action",
+              "clothing"
+            ]
+          }
+        ],
+        "clarifications": []
+      },
+      "error_code": null,
+      "elapsed_seconds": 2.5,
+      "citation_membership_valid": true
+    }
+  ],
+  "observed_and_fixed": [
+    {
+      "case": "semantic",
+      "issue": "首轮没有返回问题清单",
+      "fix": "规划阶段单独提示与严格白名单",
+      "recheck": "complete"
+    },
+    {
+      "case": "still",
+      "issue": "姿态漏答",
+      "fix": "加入姿态/姿势问法及回归用例",
+      "recheck": "complete"
+    }
+  ],
+  "limitations": [
+    "开发抽检，未完成独立人工语义标注，不计算回答或检测准确率。",
+    "空白图片是合成阴性对照，不代表真实空街景。",
+    "素材检测结果复用既有识别，未重新做YOLO对照。",
+    "缺少已知真实身高的独立材料，不能评估身高误差，粗估仍为实验功能。"
+  ],
+  "baseline": {
+    "source": "evals/mixed-question-spotcheck.json",
+    "comparison": "相同识别记录与原提问，不以随机视觉表述变化证明准确率提升。",
+    "before_characters": 229,
+    "after_characters": 90,
+    "requested_facets_after": 5
+  }
+}

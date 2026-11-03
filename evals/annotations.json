@@ -1,0 +1,15 @@
+{
+  "version": "development-spotcheck-v1",
+  "annotation_method": "开发代理逐帧目视框选；尚未由独立人员人工复核。不是训练集或正式金标准。",
+  "coordinate_system": "pixel xyxy at 960x540, clip-relative frame index at 10 fps",
+  "selection": "每场景预选两个不同时间帧；仅评估矩形ROI内中心点且同类目标。ROI用于限定可清晰目视标注的部分，不覆盖远处微小目标。",
+  "iou_threshold": 0.5,
+  "frames": [
+    {"scene_id":"harbor","frame":60,"t":6,"roi":[0,0,960,540],"classes":["boat"],"boxes":[{"label":"boat","bbox":[773,189,960,285]}]},
+    {"scene_id":"harbor","frame":120,"t":12,"roi":[0,0,960,540],"classes":["boat"],"boxes":[{"label":"boat","bbox":[0,193,960,442]}]},
+    {"scene_id":"crossing","frame":20,"t":2,"roi":[500,378,778,470],"classes":["car"],"boxes":[{"label":"car","bbox":[514,391,574,459]},{"label":"car","bbox":[592,385,649,441]},{"label":"car","bbox":[647,376,703,419]},{"label":"car","bbox":[690,366,772,419]}]},
+    {"scene_id":"crossing","frame":80,"t":8,"roi":[500,378,778,470],"classes":["car"],"boxes":[{"label":"car","bbox":[516,398,575,465]},{"label":"car","bbox":[684,401,769,463]}]},
+    {"scene_id":"night","frame":40,"t":4,"roi":[288,205,528,308],"classes":["car"],"boxes":[{"label":"car","bbox":[430,222,482,267]},{"label":"car","bbox":[375,223,411,259]},{"label":"car","bbox":[326,230,380,289]}]},
+    {"scene_id":"night","frame":100,"t":10,"roi":[269,184,643,313],"classes":["car"],"boxes":[{"label":"car","bbox":[299,199,511,298]},{"label":"car","bbox":[566,194,633,234]}]}
+  ]
+}

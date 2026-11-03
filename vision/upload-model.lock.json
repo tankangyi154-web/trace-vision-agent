@@ -1,0 +1,12 @@
+{
+  "model": "yolo11s.pt",
+  "url": "https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11s.pt",
+  "license": "AGPL-3.0",
+  "license_url": "https://github.com/ultralytics/ultralytics/blob/v8.3.231/LICENSE",
+  "sha256": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5",
+  "bytes": 19313732,
+  "imgsz": 960,
+  "detector_confidence": 0.1,
+  "image_confidence": 0.25,
+  "iou": 0.5
+}

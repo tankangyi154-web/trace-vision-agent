@@ -1,0 +1,20 @@
+{
+  "checked_on": "2026-11-03",
+  "implementation_status": "implemented_with_bounded_development_validation",
+  "full_plan_acceptance": "completed_for_user_selected_ai_review_scope_human_review_not_performed",
+  "user_scope_decision": "No available human reviewer; user explicitly selected completing AI review first.",
+  "items": [
+    {"id": 1, "name": "统一问题清单与指代", "implementation": "complete", "validation": "34_developer_contract_cases_passed"},
+    {"id": 2, "name": "短答与依据分层", "implementation": "complete", "validation": "browser_and_real_provider_spotcheck_passed"},
+    {"id": 3, "name": "按问题选图与编号疑点提示", "implementation": "complete", "validation": "bounded_frame_and_replay_checks_passed", "limitation": "编号疑点提示不能证明物理身份一致"},
+    {"id": 4, "name": "有条件地推断", "implementation": "complete_experimental_height", "validation": "scoped_public_data_comparisons_completed", "measured_manual_point_camera_subject_groups": 88, "unique_measured_test_subjects": 10, "agent_author_label_image_cases": 3, "agent_independently_measured_image_cases": 0, "limitation": "几何实测坐标基线不代表Agent看图精度；照片标签为作者声明，测量流程未公开"},
+    {"id": 5, "name": "回答评估（用户选择AI复核）", "implementation": "ai_evidence_review_and_unsigned_offline_packet_completed", "validation": "11_response_ai_review_and_33_citation_checks_completed_human_deferred", "ai_reviewed_responses": 11, "distinct_question_responses": 10, "independently_human_reviewed_cases": 0},
+    {"id": 6, "name": "直接查询与回答复用", "implementation": "complete", "validation": "direct_and_private_cache_checks_passed"}
+  ],
+  "new_model_calls_for_this_audit": 0,
+  "ai_evidence_review_additional_external_provider_calls": 0,
+  "height_followup_actual_model_calls": 8,
+  "height_followup_budget_deviation": "planned_3_actual_8_patch_scope_fixed_no_more_paid_calls",
+  "runtime": "http://127.0.0.1:8000/#assistant",
+  "not_claimed": ["任意问法完整理解", "独立视觉语义准确率", "普通上传Agent具有厘米级测量精度", "所有遮挡场景编号不变"]
+}

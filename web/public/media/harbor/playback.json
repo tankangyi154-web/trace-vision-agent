@@ -1,0 +1,37 @@
+{
+  "role": "browser_compatibility_playback_copy",
+  "for_evidence": false,
+  "source_url": "/media/harbor/original.mp4",
+  "playback_url": "/media/harbor/playback.webm",
+  "source_sha256": "48acaf2024ca892a133c31b238742f8f76d6cef76188e33dc01904e15a600376",
+  "output_sha256": "e59b18b5844d94352245ca9a06a1c352112e9d523eb7bbba588964dd574c9289",
+  "output_bytes": 36085689,
+  "codec": "VP9",
+  "encoder": "libvpx-vp9",
+  "lossless": true,
+  "pixel_format": "yuv420p",
+  "frames": 169,
+  "fps": 10.0,
+  "duration_seconds": 16.9,
+  "width": 960,
+  "height": 540,
+  "rescaled": false,
+  "resampled": false,
+  "pixel_check": {
+    "method": "OpenCV sequential decode to BGR; numpy.array_equal for every frame",
+    "opencv_version": "5.0.0",
+    "frames_compared": 169,
+    "all_frames_identical": true,
+    "differing_frame_count": 0,
+    "differing_frame_indices": [],
+    "max_abs_channel_difference": 0,
+    "source_decoded_bgr_sha256": "0926c7c46182c980e5a3f7cc3c3fa69016af2fd587f47570d802765e1567faf5",
+    "output_decoded_bgr_sha256": "0926c7c46182c980e5a3f7cc3c3fa69016af2fd587f47570d802765e1567faf5"
+  },
+  "notes": [
+    "Only a browser playback compatibility derivative; the original MP4 remains the forensic source.",
+    "No resize, fps change, interpolation, inference, or original scene/track mutation.",
+    "Video is derived from the CC BY-SA 4.0 harbor source; attribution in /media/ATTRIBUTION.txt remains applicable.",
+    "Pixel comparison refers to the same local OpenCV decoder version, not every possible browser decoder."
+  ]
+}

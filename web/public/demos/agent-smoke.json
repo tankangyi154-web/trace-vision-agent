@@ -1,0 +1,299 @@
+{
+  "recorded_at": "2026-10-31T21:17:44+08:00",
+  "provider": "deepseek",
+  "model": "deepseek-flash",
+  "protocol": "Development contract checks; no independent semantic accuracy claim.",
+  "records": [
+    {
+      "id": "I01",
+      "question": "检查T001的观测缺口，必要时调用局部复核，再判断是否能确认连续驻留超过5秒。",
+      "scene_id": "harbor",
+      "case_route": "#investigation",
+      "source_kind": "live_provider",
+      "status": "passed",
+      "answer": "结论：复核后仍不能确认T001连续驻留超过5秒。基线观测到缺口0.8秒（12.3—13.1秒），最长连续区间3.7秒（13.1—16.8秒），累计观测5.7秒。实际执行7帧局部复核（review-54b905ae…）：6帧被接受为几何候选，1帧未解（第126帧，12.6秒，无候选通过几何校验）。按0.5秒容忍规则合并后最长区间为6.5秒（10.3—16.8秒），但这是容忍规则下的连通结果，不是无缺帧的物理连续证明；跨缺口的5秒确认仍证据不足。未解帧不代表确认遮挡，接受帧也不证明同一身份。",
+      "tool_names": [
+        "calculate_dwell",
+        "get_track",
+        "review_gap"
+      ],
+      "citations": [
+        {
+          "evidence_id": "review-54b905ae-3a39-40a5-a6dc-7843ed4e5c6f-f0126",
+          "track_id": "T001",
+          "t": 12.6
+        },
+        {
+          "evidence_id": "harbor-T001-f0105",
+          "track_id": "T001",
+          "t": 10.5
+        },
+        {
+          "evidence_id": "harbor-T001-f0168",
+          "track_id": "T001",
+          "t": 16.8
+        }
+      ],
+      "usage": {
+        "input_tokens": 11629,
+        "output_tokens": 511,
+        "model_calls": 3,
+        "tool_calls": 3,
+        "usage_complete": true
+      },
+      "verification": {
+        "status": "insufficient_evidence",
+        "claims": [
+          {
+            "metric": "observed_seconds",
+            "basis": "review",
+            "value": 6.5,
+            "expected": 6.5,
+            "passed": true,
+            "description": "与源观测独立复算一致"
+          },
+          {
+            "metric": "longest_interval_seconds",
+            "basis": "review",
+            "value": 6.5,
+            "expected": 6.5,
+            "passed": true,
+            "description": "与源观测独立复算一致"
+          },
+          {
+            "metric": "gap_seconds",
+            "basis": "baseline",
+            "value": 0.8,
+            "expected": 0.8,
+            "passed": true,
+            "description": "与源观测独立复算一致"
+          },
+          {
+            "metric": "unresolved_frames",
+            "basis": "review",
+            "value": 1,
+            "expected": 1,
+            "passed": true,
+            "description": "与源观测独立复算一致"
+          },
+          {
+            "metric": "accepted_frames",
+            "basis": "review",
+            "value": 6,
+            "expected": 6,
+            "passed": true,
+            "description": "与源观测独立复算一致"
+          },
+          {
+            "metric": "threshold_seconds",
+            "basis": "review",
+            "value": 5.0,
+            "expected": 5.0,
+            "passed": true,
+            "description": "与源观测独立复算一致"
+          },
+          {
+            "metric": "temporal_text_range",
+            "basis": "answer",
+            "value": 0.8,
+            "expected": 0.8,
+            "passed": true,
+            "description": "显式时长与括号内起止时间相符"
+          },
+          {
+            "metric": "temporal_text_range",
+            "basis": "answer",
+            "value": 3.7,
+            "expected": 3.7,
+            "passed": true,
+            "description": "显式时长与括号内起止时间相符"
+          },
+          {
+            "metric": "temporal_text_range",
+            "basis": "answer",
+            "value": 6.5,
+            "expected": 6.5,
+            "passed": true,
+            "description": "显式时长与括号内起止时间相符"
+          },
+          {
+            "metric": "conclusion",
+            "value": null,
+            "expected": null,
+            "passed": true,
+            "description": "观测支持程度与证据完整性一致"
+          }
+        ],
+        "description": "结构化数值与结论经过程序复算；不等于模型自由文本已完全证明。"
+      }
+    },
+    {
+      "id": "H01",
+      "question": "T001在区域A累计观测多久，最长有效观测段多久？请调用工具核对。",
+      "scene_id": "harbor",
+      "source_kind": "live_provider",
+      "answer": "T001（boat）在区域A的累计可观测驻留为5.7秒（程序按observed_only方法计算，阈值3秒）。有效观测段共两段：10.3–12.3秒（2.0秒，censored）与13.1–16.8秒（3.7秒，censored），因此最长有效观测段为3.7秒（13.1–16.8秒）。两段均标记为censored，即段端受观测边界/中断影响，不能视为完整进出过程；12.3–13.1秒为观测中断，未计入驻留，也不等于确认遮挡。轨迹摘要显示T001首次出现于1.0秒、最后出现于16.8秒，共149次观测，但该时段并非全部在区域A内，故不能作为区内驻留时长。证据：harbor-T001-f0105（驻留计算证据）；轨迹采样证据harbor-T001-f0010、harbor-T001-f0015、harbor-T001-f0020、harbor-T001-f0025。未做标定，无法推断真实速度、距离或身份。",
+      "tool_names": [
+        "calculate_dwell",
+        "get_track"
+      ],
+      "citations": [
+        {
+          "evidence_id": "harbor-T001-f0105",
+          "track_id": "T001",
+          "t": 10.5
+        },
+        {
+          "evidence_id": "harbor-T001-f0010",
+          "track_id": "T001",
+          "t": 1.0
+        },
+        {
+          "evidence_id": "harbor-T001-f0015",
+          "track_id": "T001",
+          "t": 1.5
+        },
+        {
+          "evidence_id": "harbor-T001-f0020",
+          "track_id": "T001",
+          "t": 2.0
+        },
+        {
+          "evidence_id": "harbor-T001-f0025",
+          "track_id": "T001",
+          "t": 2.5
+        }
+      ],
+      "usage": {
+        "input_tokens": 3862,
+        "output_tokens": 389,
+        "model_calls": 2,
+        "tool_calls": 2,
+        "usage_complete": true
+      },
+      "insufficient_evidence": false,
+      "checks": {
+        "model_budget": true,
+        "tool_budget": true,
+        "required_tool": true,
+        "required_citations": true,
+        "required_refusal": true,
+        "forbidden_claims_absent": true
+      },
+      "status": "passed",
+      "elapsed_ms": 3400
+    },
+    {
+      "id": "H02",
+      "question": "目标T001有哪些实际轨迹观测？请给出可回看的证据。",
+      "scene_id": "harbor",
+      "source_kind": "live_provider",
+      "answer": "T001（标签 boat）在当前片段 harbor 的观测区间为 1.0s–16.8s，共 149 次观测记录。轨迹摘要显示：1.0s 时目标位于画面右侧（归一化框约 x 0.95–1.00），随后框体逐步向左扩展，至 10.1s 左右已横跨画面中部（x 约 0.50–0.98），11.6s 时左边界到 0.22，12.1s 到 0.12；13.5s 起框体覆盖近全宽（x 0.0–1.0，置信度 0.30 偏低），14.0s–16.5s 左边界接近 0、右边界由约 0.96 收缩至 0.70。以上仅为归一化采样框变化，未做标定，不能据此推断真实速度、距离、身份或行为。\n\n区域A相关事件（4条）：\n1) 进入区域A：10.3s（harbor:A:T001:enter:10.300，证据 harbor-T001-f0105）。\n2) 观测中断：12.3s–13.1s，持续0.8s（harbor:A:T001:observation_gap:12.300，证据 harbor-T001-f0120）；仅为漏检，不能确认为物理遮挡。\n3) 恢复观测时已在区域内：13.1s（harbor:A:T001:initial_presence:13.100，证据 harbor-T001-f0135），进入时刻未知，不能把该次出现当作进入。\n4) 区域A内连续可观测驻留：13.1s–16.8s，3.7s，达到3秒阈值（harbor:A:T001:dwell:13.100，证据 harbor-T001-f0135），该区间标记为截尾（censored），实际驻留可能更长。\n\n可回看截图证据：harbor-T001-f0010、f0015、f0020、f0025（轨迹采样证据）；f0105（进入）、f0120（观测中断）、f0135（恢复观测/驻留）。注意同ID恢复不保证身份连续，且中断间隔未计入驻留。",
+      "tool_names": [
+        "get_track",
+        "search_events"
+      ],
+      "citations": [
+        {
+          "evidence_id": "harbor-T001-f0010",
+          "track_id": "T001",
+          "t": 1.0
+        },
+        {
+          "evidence_id": "harbor-T001-f0015",
+          "track_id": "T001",
+          "t": 1.5
+        },
+        {
+          "evidence_id": "harbor-T001-f0020",
+          "track_id": "T001",
+          "t": 2.0
+        },
+        {
+          "evidence_id": "harbor-T001-f0025",
+          "track_id": "T001",
+          "t": 2.5
+        },
+        {
+          "evidence_id": "harbor-T001-f0105",
+          "track_id": "T001",
+          "t": 10.5
+        },
+        {
+          "evidence_id": "harbor-T001-f0120",
+          "track_id": "T001",
+          "t": 12.0
+        },
+        {
+          "evidence_id": "harbor-T001-f0135",
+          "track_id": "T001",
+          "t": 13.5
+        }
+      ],
+      "usage": {
+        "input_tokens": 4222,
+        "output_tokens": 688,
+        "model_calls": 2,
+        "tool_calls": 2,
+        "usage_complete": true
+      },
+      "insufficient_evidence": false,
+      "checks": {
+        "model_budget": true,
+        "tool_budget": true,
+        "required_tool": true,
+        "required_citations": true,
+        "required_refusal": true,
+        "forbidden_claims_absent": true
+      },
+      "status": "passed",
+      "elapsed_ms": 4609
+    },
+    {
+      "id": "U01",
+      "question": "能算出这艘船的真实航速是多少节吗？",
+      "scene_id": "harbor",
+      "source_kind": "live_provider",
+      "answer": "无法计算该船的真实航速（节）。原因：本片段为单目未标定视频，缺少真实距离尺度与相机标定参数，像素位移不能换算为真实距离或速度（规则R-LIMIT）。工具仅提供目标T001（boat）在区域A的事件：进入区域A发生于10.3秒（证据harbor-T001-f0105）；12.3–13.1秒存在0.8秒观测中断（证据harbor-T001-f0120），该中断不能确认为物理遮挡；13.1秒恢复观测时目标已在区内，进入时刻未知（证据harbor-T001-f0135）。这些时间信息只反映采样与观测情况，不包含任何真实距离或速度量，因此不能给出节数，也不应据常识估算。",
+      "tool_names": [
+        "retrieve_rules",
+        "search_events"
+      ],
+      "citations": [
+        {
+          "evidence_id": "harbor-T001-f0105",
+          "track_id": "T001",
+          "t": 10.5
+        },
+        {
+          "evidence_id": "harbor-T001-f0120",
+          "track_id": "T001",
+          "t": 12.0
+        },
+        {
+          "evidence_id": "harbor-T001-f0135",
+          "track_id": "T001",
+          "t": 13.5
+        }
+      ],
+      "usage": {
+        "input_tokens": 2788,
+        "output_tokens": 331,
+        "model_calls": 2,
+        "tool_calls": 2,
+        "usage_complete": true
+      },
+      "insufficient_evidence": true,
+      "checks": {
+        "model_budget": true,
+        "tool_budget": true,
+        "required_tool": true,
+        "required_citations": true,
+        "required_refusal": true,
+        "forbidden_claims_absent": true
+      },
+      "status": "passed",
+      "elapsed_ms": 3307
+    }
+  ]
+}

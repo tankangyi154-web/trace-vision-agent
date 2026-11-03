@@ -1,0 +1,332 @@
+{
+  "status": "measured",
+  "title": "真实轨迹输出的开发抽检",
+  "protocol": "6个预选帧；限定ROI与类别；目视标注框和实际导出跟踪框按同类IoU≥0.5贪心一对一匹配；开发代理辅助标注，尚未独立人工复核。",
+  "dataset": {
+    "scene_count": 3,
+    "frames_annotated": 6,
+    "objects_annotated": 13,
+    "classes": [
+      "boat",
+      "car"
+    ],
+    "sample_selection": "每场景预选两个不同时间帧；仅评估矩形ROI内中心点且同类目标。ROI用于限定可清晰目视标注的部分，不覆盖远处微小目标。"
+  },
+  "metrics": [
+    {
+      "name": "ROI框定位精确率",
+      "value": 1.0,
+      "unit": "ratio",
+      "description": "TP/(TP+FP)；TP=11, FP=0。仅代表这6帧的开发抽检。"
+    },
+    {
+      "name": "ROI框定位召回率",
+      "value": 0.8462,
+      "unit": "ratio",
+      "description": "TP/(TP+FN)；TP=11, FN=2。不代表全场景准确率。"
+    },
+    {
+      "name": "真实处理帧数",
+      "value": 428,
+      "unit": "frames",
+      "description": "本地实际解码、检测及跟踪帧数。"
+    },
+    {
+      "name": "真实观测样本数",
+      "value": 2273,
+      "unit": "samples",
+      "description": "至少3帧的轨迹内实际观测，无合成插值。"
+    }
+  ],
+  "per_scene": [
+    {
+      "scene_id": "crossing",
+      "frames": 2,
+      "ground_truth": 6,
+      "predictions": 6,
+      "true_positives": 6,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    {
+      "scene_id": "harbor",
+      "frames": 2,
+      "ground_truth": 2,
+      "predictions": 2,
+      "true_positives": 2,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    {
+      "scene_id": "night",
+      "frames": 2,
+      "ground_truth": 5,
+      "predictions": 3,
+      "true_positives": 3,
+      "false_positives": 0,
+      "false_negatives": 2,
+      "precision": 1.0,
+      "recall": 0.6
+    }
+  ],
+  "per_frame": [
+    {
+      "scene_id": "harbor",
+      "frame": 60,
+      "t": 6,
+      "ground_truth": 1,
+      "predictions": 1,
+      "true_positives": 1,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "predicted_boxes": [
+        {
+          "label": "boat",
+          "track_id": "T001",
+          "bbox": [
+            781.711,
+            214.918,
+            958.019,
+            295.41
+          ]
+        }
+      ]
+    },
+    {
+      "scene_id": "harbor",
+      "frame": 120,
+      "t": 12,
+      "ground_truth": 1,
+      "predictions": 1,
+      "true_positives": 1,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "predicted_boxes": [
+        {
+          "label": "boat",
+          "track_id": "T001",
+          "bbox": [
+            124.658,
+            238.757,
+            838.806,
+            406.429
+          ]
+        }
+      ]
+    },
+    {
+      "scene_id": "crossing",
+      "frame": 20,
+      "t": 2,
+      "ground_truth": 4,
+      "predictions": 4,
+      "true_positives": 4,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "predicted_boxes": [
+        {
+          "label": "car",
+          "track_id": "T002",
+          "bbox": [
+            510.484,
+            390.349,
+            570.745,
+            456.546
+          ]
+        },
+        {
+          "label": "car",
+          "track_id": "T008",
+          "bbox": [
+            646.217,
+            375.747,
+            701.19,
+            418.49
+          ]
+        },
+        {
+          "label": "car",
+          "track_id": "T013",
+          "bbox": [
+            591.345,
+            382.365,
+            653.914,
+            442.205
+          ]
+        },
+        {
+          "label": "car",
+          "track_id": "T039",
+          "bbox": [
+            695.869,
+            367.42,
+            756.18,
+            415.507
+          ]
+        }
+      ]
+    },
+    {
+      "scene_id": "crossing",
+      "frame": 80,
+      "t": 8,
+      "ground_truth": 2,
+      "predictions": 2,
+      "true_positives": 2,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "predicted_boxes": [
+        {
+          "label": "car",
+          "track_id": "T133",
+          "bbox": [
+            516.952,
+            397.445,
+            574.199,
+            462.646
+          ]
+        },
+        {
+          "label": "car",
+          "track_id": "T153",
+          "bbox": [
+            683.781,
+            401.696,
+            763.533,
+            459.4
+          ]
+        }
+      ]
+    },
+    {
+      "scene_id": "night",
+      "frame": 40,
+      "t": 4,
+      "ground_truth": 3,
+      "predictions": 1,
+      "true_positives": 1,
+      "false_positives": 0,
+      "false_negatives": 2,
+      "predicted_boxes": [
+        {
+          "label": "car",
+          "track_id": "T017",
+          "bbox": [
+            317.228,
+            230.226,
+            378.88,
+            288.645
+          ]
+        }
+      ]
+    },
+    {
+      "scene_id": "night",
+      "frame": 100,
+      "t": 10,
+      "ground_truth": 2,
+      "predictions": 2,
+      "true_positives": 2,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "predicted_boxes": [
+        {
+          "label": "car",
+          "track_id": "T034",
+          "bbox": [
+            309.762,
+            198.99,
+            518.859,
+            293.729
+          ]
+        },
+        {
+          "label": "car",
+          "track_id": "T079",
+          "bbox": [
+            573.132,
+            197.126,
+            625.785,
+            235.337
+          ]
+        }
+      ]
+    }
+  ],
+  "failures": [
+    {
+      "id": "spotcheck-night-40",
+      "scene_id": "night",
+      "t": 4,
+      "image_url": "/media/night/evaluation/frame-0040.jpg",
+      "title": "夜间交通的观测边界 · 4秒",
+      "description": "此抽检帧有2个未匹配标注框、0个未匹配输出框。绿色框为开发目视标注，黄色框为实际跟踪输出，白框为评测ROI；标注尚未独立人工复核。"
+    }
+  ],
+  "limitations": [
+    "抽检仅6帧，ROI由开发阶段限定且未覆盖全部类别和小目标，不能推广为全视频或真实部署准确率。",
+    "目视标注由开发代理辅助完成，尚未独立人工复核，不是正式金标准。",
+    "未测mAP、IDF1、HOTA，不报告这些指标或性能提升。",
+    "夜间低照度、运动模糊、远处小目标和相互遮挡会造成漏检和ID分裂。",
+    "区域为画面坐标，镜头平移时不代表地理区域；无法推断真实速度、距离或违法结论。"
+  ],
+  "configuration": {
+    "model": "YOLO11n (COCO pretrained; no fine-tuning)",
+    "tracker": "ByteTrack",
+    "confidence": 0.25,
+    "iou": 0.5,
+    "imgsz": 640,
+    "sample_fps": 10,
+    "device": "cpu",
+    "versions": {
+      "torch": "2.6.0+cpu",
+      "torchvision": "0.21.0+cpu",
+      "ultralytics": "8.3.231",
+      "opencv-python": "5.0.0.93",
+      "numpy": "2.5.4",
+      "lap": "0.5.12",
+      "imageio-ffmpeg": "0.6.0",
+      "python": "3.12.10"
+    },
+    "timing_by_scene": [
+      {
+        "scene_id": "crossing",
+        "inference_ms_mean": 21.174,
+        "inference_ms_p50": 20.57,
+        "inference_ms_p95": 25.749,
+        "processing_wall_seconds": 3.279
+      },
+      {
+        "scene_id": "harbor",
+        "inference_ms_mean": 32.574,
+        "inference_ms_p50": 20.892,
+        "inference_ms_p95": 24.325,
+        "processing_wall_seconds": 7.063
+      },
+      {
+        "scene_id": "night",
+        "inference_ms_mean": 18.031,
+        "inference_ms_p50": 17.564,
+        "inference_ms_p95": 21.607,
+        "processing_wall_seconds": 3.945
+      }
+    ]
+  },
+  "contributions": {
+    "open_source": [
+      "Ultralytics YOLO11n COCO预训练检测器（未重训）",
+      "Ultralytics集成ByteTrack跟踪器",
+      "LangGraph、Qwen和BM25基础方法"
+    ],
+    "project": [
+      "本地可复现视觉处理及契约导出",
+      "区域/驻留/中断事件与可核查证据",
+      "工具/RAG/有界Agent与成本控制",
+      "响应式工作台、导出与开发抽检"
+    ]
+  }
+}

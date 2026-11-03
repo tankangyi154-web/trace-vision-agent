@@ -1,0 +1,708 @@
+{
+  "purpose": "public_height_validation",
+  "geometry_commit": "2a1f45a29eeceb945d53410135535d5e6c87b408",
+  "image_commit": "0441d2667f99892fe3e0beb99f6a70fe97b8f755",
+  "redistribution": "Raw source images and annotations are downloaded locally, not included in the project archive.",
+  "files": [
+    {
+      "part": "geometry",
+      "path": "ccvs/01/001.txt",
+      "bytes": 806,
+      "sha256": "5798e17b4af8e7f3b96e3c5424b2dc1e50e74478eb0956b7ca2a7afc4ac5cb36",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/01/001.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/01/002.txt",
+      "bytes": 302,
+      "sha256": "3f4ef45098bdc9d443b1f30600e602c380c963b05d191e591c45668103816d0e",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/01/002.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/01/003.txt",
+      "bytes": 302,
+      "sha256": "23ee5480487f00cda3b877d137bd36380b3f95ace067ae3f484750e98b942470",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/01/003.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/01/004.txt",
+      "bytes": 250,
+      "sha256": "6aaa4b0e96025004d83d534ba330a1755ffea1d1bc01ac59eb8de7ab48050629",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/01/004.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/01/005.txt",
+      "bytes": 146,
+      "sha256": "ae72205285a43ac3dbb6c1c3119d33296f1f6069d006e103dd554781319f95f7",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/01/005.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/01/008.txt",
+      "bytes": 224,
+      "sha256": "830b00494736a64db5a431620cb703fad9cfe4d2c129018fbeaf42e17a2d123f",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/01/008.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/01/009.txt",
+      "bytes": 198,
+      "sha256": "edef020a6c70fbeb3b09aa45a71c81eff8533e0582d9c3ea89a77925909f0ca2",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/01/009.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/01/010.txt",
+      "bytes": 224,
+      "sha256": "c7936b706e804671c76d46d6980b89efc033cc7e1006c7dcb8a286d5bfd3d13b",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/01/010.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/01/011.txt",
+      "bytes": 210,
+      "sha256": "e2ce95e71c87c15d725ed8ab61892264775b0ffad225205bf2fc32cb04f0e81f",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/01/011.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/01/012.txt",
+      "bytes": 234,
+      "sha256": "85f70bbf5085a0f42761d8167780345b7a784a29bf7e10a42366af742d060abb",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/01/012.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/02/001.txt",
+      "bytes": 561,
+      "sha256": "1deaa05abc4fe5a178d57e6648e5eac8c7aa0cdd1f9d4a480a70d9bef98b0d9b",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/02/001.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/02/002.txt",
+      "bytes": 220,
+      "sha256": "51edc07a1fbd5e05d6cf5f3ccb725486e46ba3dabfb6126531c1f2ebb2f44ff1",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/02/002.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/02/003.txt",
+      "bytes": 248,
+      "sha256": "0d8c51be141a21347d67d1a61e7659c64d00a3d4175ba1443c7886150d8ddb32",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/02/003.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/02/004.txt",
+      "bytes": 196,
+      "sha256": "c3901cd8c2e78ea950b6f8e4737bcd30cac682839c0572b1edacd8e3f4978935",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/02/004.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/02/005.txt",
+      "bytes": 246,
+      "sha256": "fde0065e5a5cc6db35e63118ceffd52092c39f8aa0141f5305ef9596b4c432ab",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/02/005.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/02/006.txt",
+      "bytes": 244,
+      "sha256": "76a8e328f575066f76c0b709b6967b402fbcbee7c39685753837866a4518af70",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/02/006.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/02/008.txt",
+      "bytes": 222,
+      "sha256": "d40a1050c741d696db67c105b86025c3c1d8f93c37ce9e5567b013c31862b2ea",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/02/008.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/02/009.txt",
+      "bytes": 221,
+      "sha256": "c1700875c4b7f085a1ea9d87a99b6b41c421bb8b7efce597e342e3ff59431921",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/02/009.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/02/010.txt",
+      "bytes": 196,
+      "sha256": "70a3873d2baa45494c5247a678e6e82298170827d79f83999b8ac2aff1674d42",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/02/010.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/02/011.txt",
+      "bytes": 207,
+      "sha256": "04efbd6b608eab0fd4a3b220b0fb2ed4fa3a0fad33d63f45b75662bc4bf90af6",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/02/011.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/02/012.txt",
+      "bytes": 207,
+      "sha256": "17ece8b27a83ce6656c02ccf1be67ef840e9ec8e644924e44e5f92f9507c75b6",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/02/012.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/03/001.txt",
+      "bytes": 788,
+      "sha256": "5dc46befc71a1732a5f5897605bfca66190b901823df8953e027ce12d1fd2806",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/03/001.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/03/002.txt",
+      "bytes": 328,
+      "sha256": "1f9aeef0dce4672d9dd5a1e4b7c0b6e9e5d870ede57f2e6f11d161b6118dd59b",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/03/002.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/03/003.txt",
+      "bytes": 354,
+      "sha256": "ed016476c30b06d4d2c4defeda75f4b3d43ba042791c338ed310dd0f0ea2b6b8",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/03/003.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/03/004.txt",
+      "bytes": 334,
+      "sha256": "2b810128cb332eca945f127605768e832eafc5a555ba6646dd2dc478cd34c6bb",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/03/004.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/03/005.txt",
+      "bytes": 329,
+      "sha256": "b2a5abf4da9df25c94c0a249bef2a509a45e6feda7d975a370ba56335044ed70",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/03/005.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/03/006.txt",
+      "bytes": 406,
+      "sha256": "70ceb8e6af5e44a1778d94488f7143b5e3fdaeb5659305163dac837bcd5a0e94",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/03/006.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/03/008.txt",
+      "bytes": 276,
+      "sha256": "b06525839e85cf04e254e998ebcd3dfeddb337d2d18f08a935112fa8d383a120",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/03/008.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/03/009.txt",
+      "bytes": 276,
+      "sha256": "b839a9d444183d01aeb5c2723169b12d24a5e5c13ebe8e7634d7ccc5ec190553",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/03/009.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/03/010.txt",
+      "bytes": 328,
+      "sha256": "beec7f43819db64c381e0035e2c9d0a2c1445590bc9e4d28ac4bbddcb4d59382",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/03/010.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/03/011.txt",
+      "bytes": 282,
+      "sha256": "0788945785d0d33b5b6dd8cd673b93716c107891afc51c5ace9b03468dc80450",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/03/011.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/03/012.txt",
+      "bytes": 330,
+      "sha256": "f9e35e48ad4baadf1f5a686fc2bf745ce765872de874b374658dab9e487c1bc5",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/03/012.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/04/001.txt",
+      "bytes": 405,
+      "sha256": "70630766b27cbd1a0a38dbdfde4cfb909ca9712a737cbc221c5c360c68938dbd",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/04/001.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/04/002.txt",
+      "bytes": 193,
+      "sha256": "c3608a660f3907ef4a1698312182e7301a8e7e88a842860e7764e4ee5020291f",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/04/002.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/04/003.txt",
+      "bytes": 268,
+      "sha256": "a0a5cbfe3cf3cb19be23f7e420c5eb46e6e8489bb22e0c1106fd3f87aa850f85",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/04/003.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/04/004.txt",
+      "bytes": 219,
+      "sha256": "031ee058e78976db36eaf08ce6b84dcbafa41c0ac0eedde46a29ebbd526ef940",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/04/004.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/04/005.txt",
+      "bytes": 271,
+      "sha256": "b309a1944c539619fd762d0fdeebccb2348b25612be12f2bd6f67cd23aa3de66",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/04/005.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/04/006.txt",
+      "bytes": 269,
+      "sha256": "5d68e4bfeceda53d7479b8883dad52d0babc140a1f10a11e3df8c578a58a1fc0",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/04/006.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/04/008.txt",
+      "bytes": 272,
+      "sha256": "b6abef56abee4934ea1288c407285a82a96f15bea76022117a87282454f4fa9c",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/04/008.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/04/009.txt",
+      "bytes": 196,
+      "sha256": "845e04fecbc2e7123de86c478700d54f0a2928cd8852b4edc8a9d09b44d6b3e6",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/04/009.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/04/010.txt",
+      "bytes": 242,
+      "sha256": "5ab1dd4eaaa339a27d82018380d9746cc753ef1c529f9c2d3b489e21166ece3f",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/04/010.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/04/011.txt",
+      "bytes": 230,
+      "sha256": "526f6a9d51c7d595d398c3bd56c5e48bb5462089ebab80c785e34a45a979fe3c",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/04/011.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/04/012.txt",
+      "bytes": 231,
+      "sha256": "ec03a79c13bca72027865745e2ffe8cedd6f21315e346744dc3652c0851e8000",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/04/012.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/05/001.txt",
+      "bytes": 299,
+      "sha256": "d5cbf8bb82af01dc567a4513149a630d80ff0627989a4dd76c48beb04497eb14",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/05/001.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/05/002.txt",
+      "bytes": 172,
+      "sha256": "7b7edbd298c4ca6cf82334bf78a464c0da28ab4ee5232331c24e2d2a5a8cf720",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/05/002.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/05/003.txt",
+      "bytes": 197,
+      "sha256": "ae549576068a93decc3b8d23ac0de4aedde70660c999167a4d416b74a081584d",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/05/003.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/05/004.txt",
+      "bytes": 119,
+      "sha256": "874c2dc37a8c4117e52815ff1bb119fe461b1ae13f0b0585df2528a21602130d",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/05/004.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/05/005.txt",
+      "bytes": 197,
+      "sha256": "da657aea6c17740ba5ce11be0544a3c63c31641b370357566c5312a9eb47b285",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/05/005.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/05/006.txt",
+      "bytes": 198,
+      "sha256": "28d07daf9bd04fddf60d147858dc67e604d3fa5ac8cc3465c1dc383fce86756c",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/05/006.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/05/008.txt",
+      "bytes": 171,
+      "sha256": "51f34a6369efca31894ce0787f50f70b4e2577cc7d2349d2e8ec9e4be383f788",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/05/008.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/05/009.txt",
+      "bytes": 171,
+      "sha256": "b3cb87f2a0128f2992d32614c0215fa29bf4ff79011226bababc2bcae9cd5b44",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/05/009.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/05/010.txt",
+      "bytes": 172,
+      "sha256": "5caa9bcd5777a033f5014dea6476d5328549239c779952d6a73541dc30ab2885",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/05/010.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/05/011.txt",
+      "bytes": 161,
+      "sha256": "f5ffa30179d2a0f66f410ffad2d36e97afddb4970cde9afb5bb6ae5b06aecf19",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/05/011.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/05/012.txt",
+      "bytes": 112,
+      "sha256": "3d6f48ae0cacb7d8588da9837007fcaf690fcacea6e5452ac47c2b19570dcb3d",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/05/012.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/08/001.txt",
+      "bytes": 397,
+      "sha256": "385bb769d7ece3c3a69346e54c47053db229e796dfa4aaf53f9fa87ff56ad566",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/08/001.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/08/002.txt",
+      "bytes": 194,
+      "sha256": "f0757e057e91b53d58c7f894b106d0cc529e711423a2cde9fdf1d4cf20c6ec1f",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/08/002.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/08/004.txt",
+      "bytes": 140,
+      "sha256": "d3fee6f4d4c6f3ea3c10b47e395bbe593e24d2dae2b4f725eb8c74c7f2708e73",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/08/004.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/08/005.txt",
+      "bytes": 166,
+      "sha256": "22bf9919b03d4a83117f20a12144dfd1da1dbe8e25447f3a4b0f130ec31b6413",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/08/005.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/08/006.txt",
+      "bytes": 194,
+      "sha256": "8496203cbec2e06fb96bde8e7ccc4eacfd98d8acbc295f67e7645919b751fb85",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/08/006.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/08/008.txt",
+      "bytes": 221,
+      "sha256": "912e8e628b1dd5f25595fc83a852889f6f6924cf8591f3f2a8d20f3df7cd95d6",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/08/008.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/08/009.txt",
+      "bytes": 219,
+      "sha256": "216c044591f9549c2fe02c13c07160936e66dd3879254de9f4718e7b274a2249",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/08/009.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/08/010.txt",
+      "bytes": 196,
+      "sha256": "ac8c756f04047096b142bcbb48870a4d9ca3f6c1fa2cde209e706596ff023b58",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/08/010.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/08/011.txt",
+      "bytes": 184,
+      "sha256": "a587cb2afb241e14baebfd5de20799a1ddccb5bbf70ed66eeb7dc692eb398a7f",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/08/011.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/08/012.txt",
+      "bytes": 183,
+      "sha256": "525401c5210d87bfb9950e7f2abfc251a27a4f54cae2ca66def096daf2d77eb9",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/08/012.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/10/001.txt",
+      "bytes": 427,
+      "sha256": "16d819f9ca0b3e61700c144349a708c9b60e7550d4bfb8e72e9bd4c0c9f47696",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/10/001.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/10/002.txt",
+      "bytes": 197,
+      "sha256": "8b366f5d1e3ccf73cc80e408229070c079170967e769fb251c31ca08f7b32f77",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/10/002.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/10/003.txt",
+      "bytes": 249,
+      "sha256": "5992265c267542695b76d7d8fc83923e3a8fa9d4a3e3f4c521b0fa6563b5dfec",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/10/003.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/10/004.txt",
+      "bytes": 197,
+      "sha256": "1d4b28ac84a6a8ced11fe460a3f4b0aca1adcf020952da0916977c6f1e98f5a1",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/10/004.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/10/005.txt",
+      "bytes": 221,
+      "sha256": "9ca7771c3dbbf795c610e33f4cb5b474eb182eebad8a7bf1f0d59ca345c13130",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/10/005.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/10/006.txt",
+      "bytes": 171,
+      "sha256": "0e5ce6c706853fb4ce1257557fbfb8cbe4b52010924ccb8b312f3cc672308ebc",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/10/006.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/10/008.txt",
+      "bytes": 223,
+      "sha256": "fce5b0d2fa82327b40c4e101213041c47573041d1aeaa6c08a53dc30792e5d76",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/10/008.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/10/009.txt",
+      "bytes": 197,
+      "sha256": "ae15514cb7d1c12cf8645ba1dcb38c4cfee04e1c8e6c0432d9017c3af24a8c55",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/10/009.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/10/010.txt",
+      "bytes": 197,
+      "sha256": "fdc329273095454ff0016f2ce69177637d3c59b3f24a8146806280e2976c4e4c",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/10/010.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/10/011.txt",
+      "bytes": 233,
+      "sha256": "2181fa9e651c8021beded70fc9761c835ce32246f23403eb6ce462b05a7c297a",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/10/011.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/10/012.txt",
+      "bytes": 185,
+      "sha256": "de7196dcd45eb2a0ef1e1a9a49a3789c3d320228ed17ecc155c538eae50e1a1b",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/10/012.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/11/001.txt",
+      "bytes": 287,
+      "sha256": "5985f44d91edf48e0465adacf3fe47d43078dc7b17a3d3258d5d09c7f6e59887",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/11/001.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/11/002.txt",
+      "bytes": 187,
+      "sha256": "e99dcc9f634ed525b824ca7615e7594e8bac41e87a8eca8ca2121d92326fdd31",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/11/002.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/11/003.txt",
+      "bytes": 217,
+      "sha256": "1b8b049ba1b0ac8d8979c4543af16144cb62c2e2f01c0c65c1ca039a73d8450d",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/11/003.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/11/004.txt",
+      "bytes": 212,
+      "sha256": "854cbbb46ee811fb8f0eb9d3d0dca034c97d94b0e6dffb41c8d04fd600325bd0",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/11/004.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/11/005.txt",
+      "bytes": 211,
+      "sha256": "7b227b36e6765d5cd22fa0f684e71357910958227c5dbec988c59fd07dde229b",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/11/005.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/11/006.txt",
+      "bytes": 241,
+      "sha256": "fc04b12cdd71f0cae09819a740e1bd83c5df182aa7da53e4f45870905b1c02e1",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/11/006.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/11/008.txt",
+      "bytes": 267,
+      "sha256": "8763cdaaafde4fb4864c2b983832fdd3586331260ddaf797fb6f39ecb179a853",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/11/008.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/11/009.txt",
+      "bytes": 266,
+      "sha256": "de4fccdd5ec346c882f7edbcf141bd1c8607a42c2f38bc90c42ec577e96d69b7",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/11/009.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/11/010.txt",
+      "bytes": 213,
+      "sha256": "fc9b5233f4358f8b47cfe60079d2783ef519f983ab396812c425db59dcd5095b",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/11/010.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/11/011.txt",
+      "bytes": 180,
+      "sha256": "3d989c175c86a9710b9bc93f811235a3f2c3b7e1d47bc961d79e4cbb6e54fbfc",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/11/011.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/11/012.txt",
+      "bytes": 180,
+      "sha256": "cf87fb35a07fd679cf8f93d9d3acce255874ebb4815ac525a0fb9d5209a284f9",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/11/012.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/12/001.txt",
+      "bytes": 164,
+      "sha256": "f386d51167bc50847eb7c98d6b3e3a962f0f2025a759aa23ba57e99a178403be",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/12/001.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/12/002.txt",
+      "bytes": 144,
+      "sha256": "deeba06871b92402e1d188b512800ca5562bc57e591a25a546b64b88b01d8102",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/12/002.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/12/003.txt",
+      "bytes": 144,
+      "sha256": "290d7f41222f8dafee27d99c603c89f9f1b83988f4931879b68e539c8f1c062b",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/12/003.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/12/004.txt",
+      "bytes": 169,
+      "sha256": "7d6c40596e8cb935f4c604397be7f821b0e125a310f9c93ecf1e2d0ee1510c3a",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/12/004.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/12/005.txt",
+      "bytes": 119,
+      "sha256": "eb3c80fee5d0054f4961c286b5344d754a3a3f28e9bb4330b5319050c6147283",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/12/005.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/12/006.txt",
+      "bytes": 169,
+      "sha256": "6f641b2ad23c0a92c7e5a37d8632c1a30c9183dc5cc2570d0a8ea0fbacf84770",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/12/006.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/12/008.txt",
+      "bytes": 139,
+      "sha256": "d28b67473ca684a3d52485e8c26980f4f99475a25ef9ccb3f05e593b7a6af65f",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/12/008.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/12/009.txt",
+      "bytes": 169,
+      "sha256": "c06e08ab5cf63cda16f8effd39cd2b72d5a5d851341d64923b00e2969fb9bb85",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/12/009.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/12/010.txt",
+      "bytes": 144,
+      "sha256": "ffb1ca319a1a556ec1688dc550b9940bde5ec6ef4d7d2aabbf2a8df4232f7788",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/12/010.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/12/011.txt",
+      "bytes": 135,
+      "sha256": "34f5bd4adbee8af220e83f463874912da096c798287643c307a92274879cac62",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/12/011.txt"
+    },
+    {
+      "part": "geometry",
+      "path": "ccvs/12/012.txt",
+      "bytes": 160,
+      "sha256": "598fe7a66f5d149023bfd512a043404166342641c5196019678064382e1d9006",
+      "url": "https://raw.githubusercontent.com/lishengzhe/ccvs/2a1f45a29eeceb945d53410135535d5e6c87b408/data/human/12/012.txt"
+    },
+    {
+      "part": "images",
+      "path": "uw/height_input1.jpg",
+      "bytes": 147975,
+      "sha256": "03a5bb6569e8f1111d4c0dbfbf80783088d74a52555893eecb53e1742c2bfffb",
+      "url": "https://raw.githubusercontent.com/seanmiles/HeightEstimator/0441d2667f99892fe3e0beb99f6a70fe97b8f755/docs/height_input1.jpg"
+    },
+    {
+      "part": "images",
+      "path": "uw/height_input2.jpg",
+      "bytes": 38498,
+      "sha256": "ecf37bb968c81523c9df8121f1ba08b279cad48971a528759d3bd016e31eae7a",
+      "url": "https://raw.githubusercontent.com/seanmiles/HeightEstimator/0441d2667f99892fe3e0beb99f6a70fe97b8f755/docs/height_input2.jpg"
+    },
+    {
+      "part": "images",
+      "path": "uw/height_input3.jpg",
+      "bytes": 162540,
+      "sha256": "29990e88f64f02b7b9dbda32f7d87a723e9c4d7a9e2ce8d6048511d1f48afc9d",
+      "url": "https://raw.githubusercontent.com/seanmiles/HeightEstimator/0441d2667f99892fe3e0beb99f6a70fe97b8f755/docs/height_input3.jpg"
+    }
+  ]
+}

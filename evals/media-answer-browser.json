@@ -1,0 +1,19 @@
+{
+  "scope": "ui_replay_of_actual_provider_results_with_local_fixture_transport",
+  "actual_model_calls": 0,
+  "uploads": 0,
+  "submitted": [
+    {
+      "selected_target": "48",
+      "question": "他穿什么？"
+    }
+  ],
+  "errors": [],
+  "passed": true,
+  "concise_default": true,
+  "five_details_on_demand": true,
+  "evidence_switches_target": true,
+  "refresh_preserves_answer": true,
+  "selected_target_sent": true,
+  "mobile_no_overflow": true
+}

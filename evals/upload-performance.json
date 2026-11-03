@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-03",
+  "scope": "one exact local upload; no model API calls",
+  "hardware": {
+    "cpu": "Intel i5-14400F",
+    "gpu": "NVIDIA GeForce RTX 5060 8GB"
+  },
+  "input": {
+    "filename": "720p横屏街景-涩谷密集人流.mp4",
+    "source_sha256": "7926951edbbe9cfe5a8127ce28241ce58c6684951019320c608053fd1a125411",
+    "duration_seconds": 117.0,
+    "selected_classes": [
+      "人",
+      "汽车",
+      "自行车"
+    ]
+  },
+  "before": {
+    "device": "cpu",
+    "hard_timeout_seconds": 300,
+    "processed_frames": 448,
+    "total_frames": 585,
+    "completed": false
+  },
+  "after": {
+    "device": "cuda:0",
+    "wall_seconds": 65.43,
+    "worker_seconds": 63.112,
+    "processed_frames": 585,
+    "completed": true,
+    "phase_timings": {
+      "prepare_seconds": 1.882,
+      "load_seconds": 0.673,
+      "detect_track_seconds": 46.396,
+      "render_encode_seconds": 14.136
+    },
+    "tracking_records": 381,
+    "max_simultaneous": 30,
+    "evidence_count": 364
+  },
+  "unchanged": {
+    "model_sha256": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5",
+    "sample_fps": 5,
+    "detector_imgsz": 960,
+    "half_precision": false,
+    "tracking_policy": "appearance-gated-v2"
+  }
+}

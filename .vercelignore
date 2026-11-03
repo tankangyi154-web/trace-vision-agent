@@ -1,0 +1,13 @@
+.git
+.venv
+work
+outputs
+vision/cache
+vision/weights
+web/node_modules
+.env.local
+.env
+.env.*
+!.env.example
+.pytest_cache
+**/__pycache__

@@ -1,0 +1,18 @@
+{
+  "title": "我的本地视频",
+  "subtitle": "本地处理素材，请填写准确说明",
+  "focus": "进入区域",
+  "classes": [0, 1, 2, 3, 5, 7, 8],
+  "max_duration": 30,
+  "poster_t": 0,
+  "default_dwell_seconds": 3,
+  "zones": [{"id": "A", "name": "区域 A", "polygon": [[0.25, 0.25], [0.75, 0.25], [0.75, 0.9], [0.25, 0.9]]}],
+  "notes": ["替换成该素材的真实限制与说明。"],
+  "source": {
+    "title": "填写视频名称",
+    "url": "填写公开来源URL或本地自摄说明",
+    "author": "填写作者",
+    "license": "填写你有权使用的真实许可",
+    "license_url": "填写许可URL"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "image_max_mb": 20,
+  "video_max_mb": 200,
+  "video_max_seconds": 120,
+  "sample_fps": 5,
+  "worker_timeout_seconds": 900,
+  "fast_worker_timeout_seconds": 300,
+  "max_inflight": 3,
+  "upload_timeout_seconds": 120,
+  "ffmpeg_timeout_seconds": 120
+}

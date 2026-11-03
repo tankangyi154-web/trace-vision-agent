@@ -1,0 +1,335 @@
+{
+  "scope": "Development-assistant visual review of one known red/beige crossing. Not independent tracking ground truth or a general accuracy claim.",
+  "source_sha256": "f9faba6482a182a937b429040450900a3d5c1bcc838a09175c8591bc992a1f29",
+  "scores": {
+    "before": {
+      "anchor_id": "45",
+      "red_person_timeline": [
+        {
+          "t": 20,
+          "id": "45"
+        },
+        {
+          "t": 21.6,
+          "id": "45"
+        },
+        {
+          "t": 24,
+          "id": "45"
+        },
+        {
+          "t": 26,
+          "id": "45"
+        },
+        {
+          "t": 30,
+          "id": "45"
+        },
+        {
+          "t": 32,
+          "id": "45"
+        },
+        {
+          "t": 33.2,
+          "id": "69"
+        },
+        {
+          "t": 33.6,
+          "id": "69"
+        },
+        {
+          "t": 34,
+          "id": "69"
+        },
+        {
+          "t": 34.6,
+          "id": "69"
+        },
+        {
+          "t": 35.4,
+          "id": "69"
+        },
+        {
+          "t": 36.6,
+          "id": "69"
+        }
+      ],
+      "distinct_ids_for_red": 2,
+      "false_continuations_to_beige": [
+        33.2,
+        33.6,
+        34
+      ],
+      "matched_checkpoints": 12,
+      "same_id_checkpoints": 6
+    },
+    "after": {
+      "anchor_id": "30",
+      "red_person_timeline": [
+        {
+          "t": 20,
+          "id": "30"
+        },
+        {
+          "t": 21.6,
+          "id": "30"
+        },
+        {
+          "t": 24,
+          "id": "30"
+        },
+        {
+          "t": 26,
+          "id": "30"
+        },
+        {
+          "t": 30,
+          "id": "30"
+        },
+        {
+          "t": 32,
+          "id": "30"
+        },
+        {
+          "t": 33.2,
+          "id": "30"
+        },
+        {
+          "t": 33.6,
+          "id": "30"
+        },
+        {
+          "t": 34,
+          "id": "30"
+        },
+        {
+          "t": 34.6,
+          "id": "30"
+        },
+        {
+          "t": 35.4,
+          "id": "30"
+        },
+        {
+          "t": 36.6,
+          "id": "30"
+        }
+      ],
+      "distinct_ids_for_red": 1,
+      "false_continuations_to_beige": [],
+      "matched_checkpoints": 12,
+      "same_id_checkpoints": 12
+    }
+  },
+  "reported_target_in_original_result": "46",
+  "policy": {
+    "version": "appearance-gated-v1",
+    "max_feature_distance": 0.46,
+    "color_distance_gate": 0.72,
+    "color_feature_gate": 0.25,
+    "appearance_weight": 0.4,
+    "ambiguity_margin": 0.035,
+    "occlusion_overlap": 0.25,
+    "profile_min_confidence": 0.3,
+    "profile_update_rate": 0.1,
+    "profile_max_update_distance": 0.4
+  },
+  "appearance_model_sha256": "cf55163d78fc44c62c82f85ab62d39f10438679b5abe8c698ae08cfa84aa6e18",
+  "red_reference_boxes": [
+    {
+      "t": 20,
+      "bbox": [
+        0.10648,
+        0.52525,
+        0.139806,
+        0.639444
+      ]
+    },
+    {
+      "t": 21.6,
+      "bbox": [
+        0.235232,
+        0.535879,
+        0.276053,
+        0.631162
+      ]
+    },
+    {
+      "t": 24,
+      "bbox": [
+        0.386719,
+        0.508055,
+        0.423241,
+        0.64028
+      ]
+    },
+    {
+      "t": 26,
+      "bbox": [
+        0.409325,
+        0.501905,
+        0.440869,
+        0.63289
+      ]
+    },
+    {
+      "t": 30,
+      "bbox": [
+        0.409005,
+        0.472234,
+        0.450157,
+        0.634438
+      ]
+    },
+    {
+      "t": 32,
+      "bbox": [
+        0.413514,
+        0.503648,
+        0.452135,
+        0.65259
+      ]
+    },
+    {
+      "t": 33.2,
+      "bbox": [
+        0.474216,
+        0.54958,
+        0.506673,
+        0.681429
+      ]
+    },
+    {
+      "t": 33.6,
+      "bbox": [
+        0.493376,
+        0.563431,
+        0.531201,
+        0.699106
+      ]
+    },
+    {
+      "t": 34,
+      "bbox": [
+        0.524734,
+        0.577382,
+        0.566689,
+        0.720561
+      ]
+    },
+    {
+      "t": 34.6,
+      "bbox": [
+        0.576839,
+        0.612983,
+        0.620095,
+        0.749869
+      ]
+    },
+    {
+      "t": 35.4,
+      "bbox": [
+        0.628957,
+        0.593614,
+        0.686564,
+        0.797628
+      ]
+    },
+    {
+      "t": 36.6,
+      "bbox": [
+        0.736848,
+        0.703282,
+        0.779517,
+        0.859135
+      ]
+    }
+  ],
+  "beige_reference_boxes": [
+    {
+      "t": 33.2,
+      "bbox": [
+        0.440964,
+        0.511355,
+        0.478846,
+        0.625026
+      ]
+    },
+    {
+      "t": 33.6,
+      "bbox": [
+        0.465831,
+        0.523182,
+        0.502025,
+        0.648929
+      ]
+    },
+    {
+      "t": 34,
+      "bbox": [
+        0.493793,
+        0.533932,
+        0.534157,
+        0.699819
+      ]
+    }
+  ],
+  "reference_note": "Boxes taken from saved detections after development-assistant visual correspondence checks; no independent human annotation.",
+  "full_http_pipeline": {
+    "passed": true,
+    "processing_ms": 47412,
+    "red_person_crossing": {
+      "same_identity_at_all_12_checkpoints": true,
+      "timeline": [
+        {
+          "t": 20,
+          "id": "30"
+        },
+        {
+          "t": 21.6,
+          "id": "30"
+        },
+        {
+          "t": 24,
+          "id": "30"
+        },
+        {
+          "t": 26,
+          "id": "30"
+        },
+        {
+          "t": 30,
+          "id": "30"
+        },
+        {
+          "t": 32,
+          "id": "30"
+        },
+        {
+          "t": 33.2,
+          "id": "30"
+        },
+        {
+          "t": 33.6,
+          "id": "30"
+        },
+        {
+          "t": 34,
+          "id": "30"
+        },
+        {
+          "t": 34.6,
+          "id": "30"
+        },
+        {
+          "t": 35.4,
+          "id": "30"
+        },
+        {
+          "t": 36.6,
+          "id": "30"
+        }
+      ]
+    }
+  }
+}

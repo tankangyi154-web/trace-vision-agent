@@ -1,0 +1,1 @@
+{"schema":1,"url":"https://trace-agent-gateway.tankangyi154.chatgpt.site","provider":"deepseek","model":"deepseek-flash","limits":{"daily":100,"monthly":1000,"user":10},"privacy":"Recognition and media remain local. Questions send relevant observations; visual analysis additionally sends selected target JPEGs. No provider credential is distributed."}

@@ -1,0 +1,415 @@
+{
+  "scope": "developer_authored_question_plan_contracts_not_answer_accuracy",
+  "generated_at": "2026-11-03T05:09:46.553985+00:00",
+  "implementation_sha256": "1d9cd6b8e2ad2cec13ce010fb12fb4dc7a5d5f3cd975594d8fa73c72dd96f528",
+  "model_calls": 0,
+  "human_review": "pending",
+  "total": 34,
+  "passed": 34,
+  "cases": [
+    {
+      "id": "M01",
+      "question": "有几辆汽车？",
+      "expected": [
+        "count:car:max_simultaneous"
+      ],
+      "actual": [
+        "count:car:max_simultaneous"
+      ],
+      "semantic_planning_requested": false,
+      "passed": true
+    },
+    {
+      "id": "M02",
+      "question": "画面最多多少个人？",
+      "expected": [
+        "count:person:max_simultaneous"
+      ],
+      "actual": [
+        "count:person:max_simultaneous"
+      ],
+      "semantic_planning_requested": false,
+      "passed": true
+    },
+    {
+      "id": "M03",
+      "question": "这张图片有几个人？",
+      "expected": [
+        "count:person:count"
+      ],
+      "actual": [
+        "count:person:count"
+      ],
+      "semantic_planning_requested": false,
+      "passed": true
+    },
+    {
+      "id": "M04",
+      "question": "整段总共多少条汽车记录？",
+      "expected": [
+        "count:car:count"
+      ],
+      "actual": [
+        "count:car:count"
+      ],
+      "semantic_planning_requested": false,
+      "passed": true
+    },
+    {
+      "id": "M05",
+      "question": "有几类物体？",
+      "expected": [
+        "count:all:categories"
+      ],
+      "actual": [
+        "count:all:categories"
+      ],
+      "semantic_planning_requested": false,
+      "passed": true
+    },
+    {
+      "id": "M06",
+      "question": "出现最久的人是谁？",
+      "expected": [
+        "rank:person:observed_seconds"
+      ],
+      "actual": [
+        "rank:person:observed_seconds"
+      ],
+      "semantic_planning_requested": false,
+      "passed": true
+    },
+    {
+      "id": "M07",
+      "question": "汽车出现最久的是哪个编号？",
+      "expected": [
+        "rank:car:observed_seconds"
+      ],
+      "actual": [
+        "rank:car:observed_seconds"
+      ],
+      "semantic_planning_requested": false,
+      "passed": true
+    },
+    {
+      "id": "M08",
+      "question": "画面里出现最长的人和汽车分别是编号几，人48号是什么性别 身高多高 什么身材",
+      "expected": [
+        "rank:person:observed_seconds",
+        "rank:car:observed_seconds",
+        "target:48:gender",
+        "target:48:height",
+        "target:48:body"
+      ],
+      "actual": [
+        "rank:person:observed_seconds",
+        "rank:car:observed_seconds",
+        "target:48:gender",
+        "target:48:body",
+        "target:48:height"
+      ],
+      "semantic_planning_requested": false,
+      "passed": true
+    },
+    {
+      "id": "M09",
+      "question": "谁待得最久？",
+      "expected": [
+        "rank:person:observed_seconds"
+      ],
+      "actual": [
+        "rank:person:observed_seconds"
+      ],
+      "semantic_planning_requested": false,
+      "passed": true
+    },
+    {
+      "id": "M10",
+      "question": "哪辆车连续出现时间最长？",
+      "expected": [
+        "rank:car:longest_interval_seconds"
+      ],
+      "actual": [
+        "rank:car:longest_interval_seconds"
+      ],
+      "semantic_planning_requested": false,
+      "passed": true
+    },
+    {
+      "id": "M11",
+      "question": "人48号什么时候出现？",
+      "expected": [
+        "target:48:presence"
+      ],
+      "actual": [
+        "target:48:presence"
+      ],
+      "semantic_planning_requested": false,
+      "passed": true
+    },
+    {
+      "id": "M12",
+      "question": "人 #48穿什么？",
+      "expected": [
+        "target:48:clothing"
+      ],
+      "actual": [
+        "target:48:clothing"
+      ],
+      "semantic_planning_requested": false,
+      "passed": true
+    },
+    {
+      "id": "M13",
+      "question": "人48号的穿搭呢？",
+      "expected": [
+        "target:48:clothing"
+      ],
+      "actual": [
+        "target:48:clothing"
+      ],
+      "semantic_planning_requested": false,
+      "passed": true
+    },
+    {
+      "id": "M14",
+      "question": "人48号身形如何？",
+      "expected": [
+        "target:48:body"
+      ],
+      "actual": [
+        "target:48:body"
+      ],
+      "semantic_planning_requested": false,
+      "passed": true
+    },
+    {
+      "id": "M15",
+      "question": "人48号目测高矮怎么样？",
+      "expected": [
+        "target:48:height"
+      ],
+      "actual": [
+        "target:48:height"
+      ],
+      "semantic_planning_requested": false,
+      "passed": true
+    },
+    {
+      "id": "M16",
+      "question": "他穿什么？",
+      "expected": [
+        "target:48:clothing"
+      ],
+      "actual": [
+        "target:48:clothing"
+      ],
+      "semantic_planning_requested": false,
+      "passed": true
+    },
+    {
+      "id": "M17",
+      "question": "它什么时候出现？",
+      "expected": [
+        "target:9:presence"
+      ],
+      "actual": [
+        "target:9:presence"
+      ],
+      "semantic_planning_requested": false,
+      "passed": true
+    },
+    {
+      "id": "M18",
+      "question": "这个人的移动方向呢？",
+      "expected": [
+        "target:48:trajectory"
+      ],
+      "actual": [
+        "target:48:trajectory"
+      ],
+      "semantic_planning_requested": false,
+      "passed": true
+    },
+    {
+      "id": "M19",
+      "question": "人48穿什么，人7什么时候出现？",
+      "expected": [
+        "target:48:clothing",
+        "target:7:presence"
+      ],
+      "actual": [
+        "target:48:clothing",
+        "target:7:presence"
+      ],
+      "semantic_planning_requested": false,
+      "passed": true
+    },
+    {
+      "id": "M20",
+      "question": "人48什么时候出现，什么时候离开？",
+      "expected": [
+        "target:48:presence",
+        "target:48:visibility"
+      ],
+      "actual": [
+        "target:48:presence",
+        "target:48:visibility"
+      ],
+      "semantic_planning_requested": false,
+      "passed": true
+    },
+    {
+      "id": "M21",
+      "question": "不要判断身高，只看人48衣着。",
+      "expected": [
+        "target:48:clothing"
+      ],
+      "actual": [
+        "target:48:clothing"
+      ],
+      "semantic_planning_requested": false,
+      "passed": true
+    },
+    {
+      "id": "M22",
+      "question": "人48外观如何？不用猜性别身高。",
+      "expected": [
+        "target:48:appearance"
+      ],
+      "actual": [
+        "target:48:appearance"
+      ],
+      "semantic_planning_requested": false,
+      "passed": true
+    },
+    {
+      "id": "M23",
+      "question": "他呢？",
+      "expected": [],
+      "actual": [],
+      "semantic_planning_requested": true,
+      "passed": true
+    },
+    {
+      "id": "M24",
+      "question": "另一辆车什么时候出现？",
+      "expected": [
+        "target:2:presence"
+      ],
+      "actual": [
+        "target:2:presence"
+      ],
+      "semantic_planning_requested": false,
+      "passed": true
+    },
+    {
+      "id": "M25",
+      "question": "另一位什么时候出现？",
+      "expected": [
+        "target:7:presence"
+      ],
+      "actual": [
+        "target:7:presence"
+      ],
+      "semantic_planning_requested": false,
+      "passed": true
+    },
+    {
+      "id": "M26",
+      "question": "他穿什么？",
+      "expected": [],
+      "actual": [],
+      "semantic_planning_requested": false,
+      "passed": true
+    },
+    {
+      "id": "M27",
+      "question": "他什么时候出现？",
+      "expected": [
+        "target:48:presence"
+      ],
+      "actual": [
+        "target:48:presence"
+      ],
+      "semantic_planning_requested": false,
+      "passed": true
+    },
+    {
+      "id": "M28",
+      "question": "他穿什么？",
+      "expected": [],
+      "actual": [],
+      "semantic_planning_requested": false,
+      "passed": true
+    },
+    {
+      "id": "M29",
+      "question": "人48什么时候出现？",
+      "expected": [
+        "target:48:presence"
+      ],
+      "actual": [
+        "target:48:presence"
+      ],
+      "semantic_planning_requested": false,
+      "passed": true
+    },
+    {
+      "id": "M30",
+      "question": "有没有发生交通事故？",
+      "expected": [],
+      "actual": [],
+      "semantic_planning_requested": true,
+      "passed": true
+    },
+    {
+      "id": "M31",
+      "question": "人48号穿什么、是什么姿态、身高多高？",
+      "expected": [
+        "target:48:clothing",
+        "target:48:action",
+        "target:48:height"
+      ],
+      "actual": [
+        "target:48:height",
+        "target:48:action",
+        "target:48:clothing"
+      ],
+      "semantic_planning_requested": false,
+      "passed": true
+    },
+    {
+      "id": "M32",
+      "question": "帮我概括这位的服饰细节",
+      "expected": [
+        "target:48:clothing"
+      ],
+      "actual": [
+        "target:48:clothing"
+      ],
+      "semantic_planning_requested": false,
+      "passed": true
+    },
+    {
+      "id": "M33",
+      "question": "人 #48目测多高？按手中的纸张参照给粗略范围；以作者采用的美式Letter纸尺寸假设（短边21.59厘米、长边27.94厘米）比较，注意纸张横竖方向。依据不足就具体说明。",
+      "expected": [
+        "target:48:height"
+      ],
+      "actual": [
+        "target:48:height"
+      ],
+      "semantic_planning_requested": false,
+      "passed": true
+    },
+    {
+      "id": "M34",
+      "question": "帮我看看这位的行头细节",
+      "expected": [],
+      "actual": [],
+      "semantic_planning_requested": true,
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "scope": "relocated folder, isolated user profile, no Python/Node on PATH, packaged CPU-only Torch; host Windows VC runtime present",
+  "startup_seconds": 9.489,
+  "video_analysis": true,
+  "model_key_configured": false,
+  "clip_scope": {
+    "start_seconds": 4.0,
+    "end_seconds": 8.0,
+    "source_duration_seconds": 15.8,
+    "partial": true,
+    "time_origin": "selected_clip"
+  },
+  "clip_task_seconds": 11.271,
+  "frames": 20,
+  "device": "cpu",
+  "backend": "onnxruntime-cpu",
+  "identical_input_reused": true,
+  "external_model_calls": 0
+}

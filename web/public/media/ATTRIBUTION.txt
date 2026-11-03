@@ -1,0 +1,25 @@
+Historical harbor/, crossing/, night/ video frames and derivative screenshots: CC BY-SA 4.0.
+License: https://creativecommons.org/licenses/by-sa/4.0/
+
+harbor/: "Follow the waves.webm" by Myousry6666.
+https://commons.wikimedia.org/wiki/File:Follow_the_waves.webm
+
+crossing/: "Jalan Kuching traffic, Kuala Lumpur (240110).webm" by *angys*.
+https://commons.wikimedia.org/wiki/File:Jalan_Kuching_traffic,_Kuala_Lumpur_(240110).webm
+
+night/: "Cars Passing by at Night.webm" by Maximilian Schonherr (Schönherr).
+https://commons.wikimedia.org/wiki/File:Cars_Passing_by_at_Night.webm
+
+Changes: audio removed; downscaled; resampled to 10 fps; transcoded to H264.
+Annotated versions add actual YOLO11n/ByteTrack outputs, target IDs and sample image-coordinate zones.
+Evaluation screenshots add development-assisted visual reference boxes, actual output boxes and ROI boundaries.
+The original authors do not endorse this project.
+Keep this attribution, source links, license link and change description when redistributing derivatives.
+
+New presets/ examples (2026-11-03) are separately licensed under Pexels License:
+https://www.pexels.com/license/
+daylight: Image Hunter, https://www.pexels.com/video/lively-urban-scene-with-diverse-pedestrians-37567255/
+lowlight: Nothing Ahead, https://www.pexels.com/video/busy-city-street-at-night-with-traffic-and-cyclists-35186756/
+occlusion: SHOX ART, https://www.pexels.com/video/busy-city-intersection-with-pedestrians-crossing-33865608/
+Changes: trimmed, audio/metadata removed, normalized up to 1920x1080, real YOLO11s/OSNet tracking overlays and evidence screenshots added.
+These clips illustrate actual program outputs; creators and people shown do not endorse this project.

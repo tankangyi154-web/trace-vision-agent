@@ -1,0 +1,200 @@
+{
+  "source_sha256": "f9faba6482a182a937b429040450900a3d5c1bcc838a09175c8591bc992a1f29",
+  "scope": "Six manually checked frames, cars only, IoU >= 0.5. Not an independent test set or general accuracy claim. No pedestrian accuracy measured.",
+  "truth_pixels_360x288": {
+    "2": [
+      [
+        252,
+        97,
+        320,
+        166
+      ]
+    ],
+    "8.8": [
+      [
+        327,
+        35,
+        360,
+        85
+      ],
+      [
+        253,
+        97,
+        319,
+        166
+      ],
+      [
+        289,
+        144,
+        350,
+        205
+      ]
+    ],
+    "15.4": [
+      [
+        297,
+        64,
+        354,
+        114
+      ],
+      [
+        160,
+        162,
+        252,
+        260
+      ]
+    ],
+    "22": [
+      [
+        304,
+        56,
+        356,
+        105
+      ],
+      [
+        144,
+        179,
+        242,
+        262
+      ]
+    ],
+    "28.8": [
+      [
+        276,
+        159,
+        342,
+        227
+      ]
+    ],
+    "35.4": []
+  },
+  "scores": {
+    "baseline": {
+      "true_positive": 8,
+      "false_positive": 5,
+      "false_negative": 1,
+      "precision": 0.6154,
+      "recall": 0.8889,
+      "frames": [
+        {
+          "t": 2,
+          "expected": 1,
+          "correct": 1,
+          "false_positive": 2,
+          "missed": 0
+        },
+        {
+          "t": 8.8,
+          "expected": 3,
+          "correct": 3,
+          "false_positive": 1,
+          "missed": 0
+        },
+        {
+          "t": 15.4,
+          "expected": 2,
+          "correct": 1,
+          "false_positive": 1,
+          "missed": 1
+        },
+        {
+          "t": 22,
+          "expected": 2,
+          "correct": 2,
+          "false_positive": 1,
+          "missed": 0
+        },
+        {
+          "t": 28.8,
+          "expected": 1,
+          "correct": 1,
+          "false_positive": 0,
+          "missed": 0
+        },
+        {
+          "t": 35.4,
+          "expected": 0,
+          "correct": 0,
+          "false_positive": 0,
+          "missed": 0
+        }
+      ],
+      "wall_seconds": 12.0
+    },
+    "enhanced": {
+      "true_positive": 9,
+      "false_positive": 0,
+      "false_negative": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "frames": [
+        {
+          "t": 2,
+          "expected": 1,
+          "correct": 1,
+          "false_positive": 0,
+          "missed": 0
+        },
+        {
+          "t": 8.8,
+          "expected": 3,
+          "correct": 3,
+          "false_positive": 0,
+          "missed": 0
+        },
+        {
+          "t": 15.4,
+          "expected": 2,
+          "correct": 2,
+          "false_positive": 0,
+          "missed": 0
+        },
+        {
+          "t": 22,
+          "expected": 2,
+          "correct": 2,
+          "false_positive": 0,
+          "missed": 0
+        },
+        {
+          "t": 28.8,
+          "expected": 1,
+          "correct": 1,
+          "false_positive": 0,
+          "missed": 0
+        },
+        {
+          "t": 35.4,
+          "expected": 0,
+          "correct": 0,
+          "false_positive": 0,
+          "missed": 0
+        }
+      ],
+      "wall_seconds": 35.37
+    }
+  },
+  "annotation_review": "Development-assistant visual inspection; no independent human review; pedestrians not quantitatively evaluated.",
+  "baseline_implementation_sha256": "695fb4053b43c4ddc7ea57993e12e2fd73ce97a4ffcb40cdeae27dd115734809",
+  "configurations": {
+    "baseline": {
+      "model": "yolo11n.pt",
+      "imgsz": 640,
+      "confidence": 0.25,
+      "tracker": "ByteTrack class-agnostic / smoothed boxes"
+    },
+    "enhanced": {
+      "model": "yolo11s.pt",
+      "imgsz": 960,
+      "confidence": 0.1,
+      "new_track_confidence": 0.25,
+      "tracker": "ByteTrack per class / preserved detection indices / current measured boxes"
+    },
+    "sample_fps": 5,
+    "cpu_threads": 4,
+    "selected_classes": [
+      0,
+      2
+    ]
+  }
+}

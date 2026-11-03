@@ -1,0 +1,5 @@
+{
+  "schema": "trace-measured-height-v1",
+  "note": "只有拿到实际测量、明确来源及同地面参照的真实素材后才填写。当前空集，不报告误差。单条应包含source_sha256、target_id、measurement_verified、measurement_source、measured_height_cm、measured_reference_cm、predicted_range_cm（拒答则null）。",
+  "cases": []
+}

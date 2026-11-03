@@ -1,0 +1,177 @@
+{
+  "scope": "actual_agent_image_spotcheck_against_author_labels_not_measured_street_height_accuracy",
+  "source": "https://github.com/seanmiles/HeightEstimator",
+  "commit": "0441d2667f99892fe3e0beb99f6a70fe97b8f755",
+  "source_reference_note": "main.cpp assumes paper is 8.5 by 11 inches at the same depth as its holder; this is an assumption, not a verified measurement.",
+  "protocol": "Same frozen question for all images, labels withheld from provider; real upload/detect/extract/chat/validate path.",
+  "model": "deepseek-flash",
+  "provider": "deepseek",
+  "actual_model_calls": 8,
+  "request_budget": "Production default, up to three provider calls per request; planned per-check cap was not applied.",
+  "cases": [
+    {
+      "id": "UW1",
+      "source_image": "docs/height_input1.jpg",
+      "source_sha256": "03a5bb6569e8f1111d4c0dbfbf80783088d74a52555893eecb53e1742c2bfffb",
+      "truth_basis": "author_stated_actual_height_no_measurement_protocol_published",
+      "author_height_cm": 162.56,
+      "measurement_verified": false,
+      "label_pairing_verified": true,
+      "status": "complete",
+      "answer": "人 #1：身高：粗略目测约165—185厘米，参照手中白色打印纸（横向持握，画面竖直方向为短边）的常见高度；受距离和视角影响，仅作目测参考；看起来身形中等，肩背略宽，整体偏结实；双手在胸前横向持一张白纸；黑色长袖上衣配黑色长裤，脚穿黑白帆布鞋，戴眼镜。",
+      "predicted_range_cm": [
+        165,
+        185
+      ],
+      "midpoint_error_cm": 12.44,
+      "truth_within_interval": false,
+      "abstained": false,
+      "error_code": null,
+      "actual_model_calls": 2,
+      "usage": {
+        "input_tokens": 4963,
+        "output_tokens": 524,
+        "model_calls": 2,
+        "tool_calls": 1,
+        "usage_complete": true
+      },
+      "elapsed_seconds": 4.31,
+      "visual_frames": 1,
+      "coverage": [
+        {
+          "target": "1",
+          "aspect": "height",
+          "status": "uncertain"
+        },
+        {
+          "target": "1",
+          "aspect": "body",
+          "status": "uncertain"
+        },
+        {
+          "target": "1",
+          "aspect": "carrying",
+          "status": "answered"
+        },
+        {
+          "target": "1",
+          "aspect": "appearance",
+          "status": "answered"
+        }
+      ]
+    },
+    {
+      "id": "UW2",
+      "source_image": "docs/height_input2.jpg",
+      "source_sha256": "ecf37bb968c81523c9df8121f1ba08b279cad48971a528759d3bd016e31eae7a",
+      "truth_basis": "author_stated_actual_height_no_measurement_protocol_published",
+      "author_height_cm": 180.34,
+      "measurement_verified": false,
+      "label_pairing_verified": true,
+      "status": "complete",
+      "answer": "人 #1：身高：粗略目测约170—185厘米，参照手中横拿的白色打印纸短边的常见高度；受距离和视角影响，仅作目测参考；看起来身形中等偏瘦，肩背较窄；深色短发，穿黑色外套、白色内搭和灰色运动裤，脚穿白鞋；双手在胸前横拿一张白纸。",
+      "predicted_range_cm": [
+        170,
+        185
+      ],
+      "midpoint_error_cm": 2.84,
+      "truth_within_interval": true,
+      "abstained": false,
+      "error_code": null,
+      "actual_model_calls": 3,
+      "usage": {
+        "input_tokens": 8865,
+        "output_tokens": 576,
+        "model_calls": 3,
+        "tool_calls": 1,
+        "usage_complete": true
+      },
+      "elapsed_seconds": 5.39,
+      "visual_frames": 1,
+      "coverage": [
+        {
+          "target": "1",
+          "aspect": "height",
+          "status": "uncertain"
+        },
+        {
+          "target": "1",
+          "aspect": "body",
+          "status": "uncertain"
+        },
+        {
+          "target": "1",
+          "aspect": "appearance",
+          "status": "answered"
+        },
+        {
+          "target": "1",
+          "aspect": "carrying",
+          "status": "answered"
+        }
+      ]
+    },
+    {
+      "id": "UW3",
+      "source_image": "docs/height_input3.jpg",
+      "source_sha256": "29990e88f64f02b7b9dbda32f7d87a723e9c4d7a9e2ce8d6048511d1f48afc9d",
+      "truth_basis": "author_stated_actual_height_no_measurement_protocol_published",
+      "author_height_cm": 162.56,
+      "measurement_verified": false,
+      "label_pairing_verified": true,
+      "status": "complete",
+      "answer": "人 #1：身高：粗略目测约160—180厘米，参照手中白色打印纸短边的常见高度；受距离和视角影响，仅作目测参考；看起来身形偏瘦，肩背较窄；深色外套内搭浅棕花纹上衣，下穿深色紧身裤和棕色短靴，背双肩包；双手在胸前横持一张白纸。",
+      "predicted_range_cm": [
+        160,
+        180
+      ],
+      "midpoint_error_cm": 7.44,
+      "truth_within_interval": true,
+      "abstained": false,
+      "error_code": null,
+      "actual_model_calls": 3,
+      "usage": {
+        "input_tokens": 8877,
+        "output_tokens": 588,
+        "model_calls": 3,
+        "tool_calls": 1,
+        "usage_complete": true
+      },
+      "elapsed_seconds": 5.23,
+      "visual_frames": 1,
+      "coverage": [
+        {
+          "target": "1",
+          "aspect": "height",
+          "status": "uncertain"
+        },
+        {
+          "target": "1",
+          "aspect": "body",
+          "status": "uncertain"
+        },
+        {
+          "target": "1",
+          "aspect": "appearance",
+          "status": "answered"
+        },
+        {
+          "target": "1",
+          "aspect": "carrying",
+          "status": "answered"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_cases": 3,
+    "numeric_estimates": 3,
+    "abstentions": 0,
+    "execution_failures": 0,
+    "midpoint_mae_cm": 7.573333333333333,
+    "interval_coverage": 0.6666666666666666
+  },
+  "planned_model_call_cap": 3,
+  "budget_enforced": false,
+  "budget_deviation": "Provider patch ended before requests; production provider used 8 calls. Patch scope corrected, no further paid calls."
+}

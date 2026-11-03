@@ -1,0 +1,25 @@
+{
+  "scope": "3 frames only; numerical smoke check, not detection accuracy evaluation",
+  "frames": [
+    {
+      "frame": 0,
+      "cpu_high_confidence_boxes": 12,
+      "gpu_high_confidence_boxes": 12,
+      "minimum_best_class_matched_iou": 0.9997140765190125
+    },
+    {
+      "frame": 150,
+      "cpu_high_confidence_boxes": 15,
+      "gpu_high_confidence_boxes": 15,
+      "minimum_best_class_matched_iou": 0.9995825290679932
+    },
+    {
+      "frame": 400,
+      "cpu_high_confidence_boxes": 18,
+      "gpu_high_confidence_boxes": 18,
+      "minimum_best_class_matched_iou": 0.9996234774589539
+    }
+  ],
+  "appearance_cosine_distance": 7.748603820800781e-07,
+  "half_precision": false
+}
