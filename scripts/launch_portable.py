@@ -1,6 +1,6 @@
 """No-install local launcher. Binds loopback only and never installs system components."""
 from pathlib import Path
-import argparse,json,os,socket,subprocess,sys,time,urllib.request,uuid,webbrowser
+import argparse,json,os,socket,subprocess,sys,time,traceback,urllib.request,uuid,webbrowser
 ROOT=Path(__file__).resolve().parents[1]
 
 def local_environment():
@@ -11,8 +11,22 @@ def local_environment():
 
 def health(port):
     try:
-        with urllib.request.urlopen(f'http://127.0.0.1:{port}/api/health',timeout=1) as response:return json.load(response)
+        opener=urllib.request.build_opener(urllib.request.ProxyHandler({}))
+        with opener.open(f'http://127.0.0.1:{port}/api/health',timeout=1) as response:return json.load(response)
     except (OSError,ValueError):return None
+
+def open_workbench(url):
+    print(f'工作台已就绪：{url}',flush=True)
+    try:
+        if webbrowser.open(url):return True
+    except OSError:pass
+    if sys.platform=='win32':
+        try:
+            os.startfile(url)
+            return True
+        except OSError:pass
+    print('未能自动打开浏览器，请复制上方地址到浏览器。此窗口可以保留。',flush=True)
+    return False
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--no-browser',action='store_true');parser.add_argument('--check-only',action='store_true');parser.add_argument('--port',type=int,default=8000);args=parser.parse_args()
@@ -22,10 +36,10 @@ def main():
         previous=json.loads(state.read_text(encoding='utf8'));ready=health(previous['port'])
         if ready and ready.get('runtime_instance')==previous['instance']:
             url=f"http://127.0.0.1:{previous['port']}/"
-            if not args.no_browser:webbrowser.open(url)
+            if not args.no_browser and not open_workbench(url):return 2
             print(json.dumps({'ready':True,'url':url,'reused_server':True}));return 0
     except (OSError,ValueError,KeyError,TypeError):pass
-    print('正在检查本机识别环境，稍后将打开分析工作台。',flush=True)
+    print('正在启动视迹 Trace，首次检查通常需要十几秒，请保留此窗口。',flush=True)
     flags=subprocess.CREATE_NO_WINDOW if sys.platform=='win32' else 0
     with (work/'vision-selftest.log').open('w',encoding='utf8') as log:
         try:
@@ -51,10 +65,17 @@ def main():
         if ready and ready.get('runtime_instance')==instance:
             state.write_text(json.dumps({'pid':process.pid,'port':selected,'instance':instance}),encoding='utf8')
             url=f'http://127.0.0.1:{selected}/'
-            if not args.no_browser:webbrowser.open(url)
+            if not args.no_browser and not open_workbench(url):return 2
             print(json.dumps({'ready':True,'url':url,'vision_ready':check_code==0}));return 0
         if process.poll() is not None:raise RuntimeError('启动失败，请查看work/server-error.log。')
         time.sleep(.2)
     process.terminate();raise RuntimeError('启动超时，请查看work/server-error.log。')
 
-if __name__=='__main__':raise SystemExit(main())
+if __name__=='__main__':
+    try:code=main()
+    except Exception:
+        log=ROOT/'work/launch-error.log';log.parent.mkdir(exist_ok=True)
+        log.write_text(traceback.format_exc(),encoding='utf8')
+        print(f'启动未完成。诊断记录：{log}\n请打开“开发与维护”中的“运行环境检查”。',flush=True)
+        code=1
+    raise SystemExit(code)

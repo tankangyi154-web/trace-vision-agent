@@ -1,6 +1,8 @@
 """Build a relocatable Windows CPU distribution from explicitly prepared environments."""
 from pathlib import Path
 import argparse,hashlib,json,os,re,shutil,sys,urllib.request,uuid,zipfile
+sys.path.insert(0,str(Path(__file__).resolve().parent))
+from portable_layout import create_layout,write_entries
 ROOT=Path(__file__).resolve().parents[1]
 ROOT_DIRS={'.github','api','data','deploy','docs','evals','scripts','vision','web'}
 ROOT_FILES={'.env.example','.gitattributes','.gitignore','.vercelignore','.dockerignore','Dockerfile','compose.yaml','LICENSE','README.md','THIRD_PARTY_NOTICES.md','app.py','pyproject.toml','pytest.ini','requirements.txt','requirements-dev.txt','setup.cmd','setup.ps1','vercel.json','启动本地.cmd','启动便携版.cmd','停止便携版.cmd','运行环境检查.cmd'}
@@ -59,12 +61,11 @@ def main():
     parser.add_argument('--stage-only',action='store_true')
     args=parser.parse_args();stage=args.stage.resolve()
     if stage.exists():raise RuntimeError('Use a new staging directory; existing user records are never overwritten')
-    stage.mkdir(parents=True);values=secrets_to_exclude()
+    stage.mkdir(parents=True);values=secrets_to_exclude();app=create_layout(stage)
     for source in safe_source_files():
-        dest=stage/source.relative_to(ROOT);dest.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(source,dest)
-    shutil.copyfile(ROOT/'可选GPU加速.cmd',stage/'可选GPU加速.cmd')
-    shutil.copyfile(ROOT/'便携版使用说明.txt',stage/'便携版使用说明.txt')
-    runtime=stage/'work/vision-env/Scripts';runtime.mkdir(parents=True)
+        dest=app/source.relative_to(ROOT);dest.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(source,dest)
+    write_entries(stage)
+    runtime=app/'work/vision-env/Scripts';runtime.mkdir(parents=True)
     lock=json.loads((ROOT/'scripts/portable-runtime.lock.json').read_text(encoding='utf8'));args.download_cache.mkdir(parents=True,exist_ok=True)
     embedded=args.download_cache/'python-embed.zip'
     if not embedded.is_file() or digest(embedded)!=lock['sha256']:
@@ -79,16 +80,16 @@ def main():
     (runtime/'python312._pth').write_text('python312.zip\n.\nLib/site-packages\n../../../\nimport site\n',encoding='utf8')
     site=runtime/'Lib/site-packages';site.mkdir(parents=True)
     copy_site(args.api_site,site);copy_site(args.vision_site,site)
-    weights=stage/'vision/weights';weights.mkdir(parents=True)
+    weights=app/'vision/weights';weights.mkdir(parents=True)
     for name in ['model.lock.json','upload-model.lock.json','appearance-model.lock.json']:
         model=json.loads((ROOT/'vision'/name).read_text(encoding='utf8'));source=ROOT/'vision/weights'/model['model']
         if digest(source)!=model['sha256']:raise RuntimeError('Unverified source model')
         shutil.copyfile(source,weights/source.name)
     for name in ['detector.onnx','appearance.onnx','manifest.json']:
-        destination=stage/'work/onnx-models'/name;destination.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(ROOT/'work/onnx-models'/name,destination)
-    (stage/'work/bin').mkdir(parents=True);shutil.copyfile(ROOT/'work/bin/ffmpeg.exe',stage/'work/bin/ffmpeg.exe')
+        destination=app/'work/onnx-models'/name;destination.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(ROOT/'work/onnx-models'/name,destination)
+    (app/'work/bin').mkdir(parents=True);shutil.copyfile(ROOT/'work/bin/ffmpeg.exe',app/'work/bin/ffmpeg.exe')
     for filename in ['.env.local','work/local.sqlite3','work/agent-identity.json','work/cpu-profile.json','work/vision-selftest.json','work/portable-server.json']:
-        if (stage/filename).exists():raise RuntimeError('User state cannot be distributed')
+        if (app/filename).exists():raise RuntimeError('User state cannot be distributed')
     files=[]
     for path in sorted(stage.rglob('*')):
         if not path.is_file():continue
@@ -96,9 +97,10 @@ def main():
         files.append({'path':path.relative_to(stage).as_posix(),'bytes':path.stat().st_size,'sha256':digest(path)})
     manifest={'project':'video-event-agent','edition':'windows-cpu-portable','build_id':str(uuid.uuid4()),'date':'2026-11-03','python':lock,
         'api_keys_included':False,'user_records_included':False,'gpu_dependencies_included':False,
-        'launch':'启动便携版.cmd','native_runtime_note':'Some Windows machines require the Microsoft x64 Visual C++ runtime; startup checks it and preserves prepared examples when unavailable.',
+        'version':'1.0.1','launch':'启动项目.cmd','application_directory':'app','maintenance_directory':'开发与维护',
+        'native_runtime_note':'Some Windows machines require the Microsoft x64 Visual C++ runtime; startup checks it and preserves prepared examples when unavailable.',
         'files':files}
-    (stage/'PORTABLE-MANIFEST.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf8')
+    (app/'PORTABLE-MANIFEST.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf8')
     if args.stage_only:
         print(json.dumps({'stage_ready':True,'files':len(files)+1,'uncompressed_bytes':sum(row['bytes'] for row in files),'credential_scan':'passed'}));return
     if args.archive.exists():raise RuntimeError('Archive exists; use a new output filename')

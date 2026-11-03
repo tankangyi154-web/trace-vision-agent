@@ -36,3 +36,15 @@ jobs:
         with:
           node-version: '24'
       - run: node --test deploy/agent-gateway/tests/gateway.test.mjs
+  cloud-template:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate private cloud configuration
+        env:
+          TRACE_DOMAIN: trace.example.com
+          TRACE_WEB_PASSWORD: ci-fixture-password-not-a-real-secret
+        run: |
+          docker compose -f deploy/compose.cloud.yaml config --quiet
+          docker run --rm -e TRACE_DOMAIN=trace.example.com -v "$PWD/deploy/Caddyfile:/etc/caddy/Caddyfile:ro" caddy:2.11.7-alpine caddy validate --config /etc/caddy/Caddyfile --adapter caddyfile

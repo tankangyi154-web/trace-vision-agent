@@ -6,7 +6,7 @@
 
 **[下载完整版 · Windows x64](https://github.com/tankangyi154-web/trace-vision-agent/releases/latest/download/Trace-Windows-x64-Full.zip)** · [查看发行说明与全部下载](https://github.com/tankangyi154-web/trace-vision-agent/releases/latest)
 
-完整解压后双击`启动便携版.cmd`。内置Python、前端、CPU识别模型和FFmpeg，无需安装开发环境或填写问答配置；可上传自己的图片和最长2分钟视频，保留本机识别记录，再围绕编号提问。新的Agent问答需要联网，每份体验身份共10次，云端全站每天100次、每月1000次；一次问答最多三轮模型调用，只计一次问答。识别及已有结果回看不受问答次数限制。
+完整解压后双击`启动项目.cmd`。内置Python、前端、CPU识别模型和FFmpeg，无需安装开发环境或填写问答配置；可上传自己的图片和最长2分钟视频，保留本机识别记录，再围绕编号提问。新的Agent问答需要联网，每份体验身份共10次，云端全站每天100次、每月1000次；一次问答最多三轮模型调用，只计一次问答。识别及已有结果回看不受问答次数限制。
 
 适用Windows10/11 x64；启动会自检原生运行库，个别电脑可能需按提示安装微软官方组件。CPU耗时取决于硬件与素材，不能承诺所有电脑同速。仓库的“Code → Download ZIP”用于阅读/开发，直接体验请选择上面的**完整版**。
 

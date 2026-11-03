@@ -18,3 +18,5 @@ web/public/reviews/
 Ultralytics/
 web/offline-dist/
 deploy/server.env
+
+deploy/cloud.env

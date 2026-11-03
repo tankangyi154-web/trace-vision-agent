@@ -32,6 +32,7 @@ export interface Analysis {
 }
 export interface Health {
   status: string; live_agent: boolean; mode: string; reason: string | null
+  storage?: 'local' | 'server'
   limits: { session_questions: number; daily_questions: number }; model: string; version: string
   capabilities?: { local_uploads: boolean; image_analysis: boolean; video_analysis: boolean; model_verified: boolean; missing: string[] }
 }

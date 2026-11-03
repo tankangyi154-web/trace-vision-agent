@@ -1,0 +1,16 @@
+{$TRACE_DOMAIN} {
+    request_body {
+        max_size 210MB
+    }
+    reverse_proxy trace:8000 {
+        transport http {
+            read_timeout 950s
+            write_timeout 950s
+        }
+    }
+    header {
+        X-Content-Type-Options nosniff
+        Referrer-Policy same-origin
+        -Server
+    }
+}

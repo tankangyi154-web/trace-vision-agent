@@ -1,0 +1,45 @@
+services:
+  trace:
+    build:
+      context: ..
+      target: cpu
+    entrypoint: ["python", "deploy/start_cpu.py", "--cloud"]
+    environment:
+      APP_MODE: local
+      TRACE_DEPLOYMENT: cloud
+      TRACE_WEB_PASSWORD: ${TRACE_WEB_PASSWORD:?Set a private password of 20 or more characters}
+      TRACE_LOCAL_STATE_DIR: /app/work/state
+      SESSION_QUESTION_LIMIT: "10"
+      DAILY_QUESTION_LIMIT: "100"
+    volumes:
+      - records:/app/work/uploads
+      - state:/app/work/state
+    expose: ["8000"]
+    init: true
+    restart: unless-stopped
+    mem_limit: 8g
+    cpus: 4
+    pids_limit: 256
+    security_opt: ["no-new-privileges:true"]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/readyz', timeout=3)"]
+      interval: 30s
+      start_period: 180s
+  https:
+    image: caddy:2.11.7-alpine
+    ports: ["80:80", "443:443", "443:443/udp"]
+    environment:
+      TRACE_DOMAIN: ${TRACE_DOMAIN:?Set the hostname pointing to this server}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - certificates:/data
+      - caddy-config:/config
+    depends_on:
+      trace:
+        condition: service_healthy
+    restart: unless-stopped
+volumes:
+  records:
+  state:
+  certificates:
+  caddy-config:

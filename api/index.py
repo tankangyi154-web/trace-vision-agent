@@ -197,6 +197,7 @@ def create_app(settings=None,store=None):
     def health():
         return {'status':'ok','project':'video-event-agent','runtime_instance':os.getenv('TRACE_DISTRIBUTION_INSTANCE'),'live_agent':settings.reason is None and store is not None,
                 'reason':settings.reason,'mode':'production' if settings.production else 'local',
+                'storage':'server' if os.getenv('TRACE_DEPLOYMENT')=='cloud' else 'local',
                 'limits':{'session_questions':settings.session_limit,'daily_questions':settings.daily_limit},
                 'model':settings.model,'provider':settings.provider,'version':'0.1.0',
                 'capabilities':inspect_runtime(ROOT,local_allowed=upload_service.enabled)}

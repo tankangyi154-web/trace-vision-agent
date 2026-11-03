@@ -1,5 +1,6 @@
 """Public gateway address plus a per-install identity, never a shared provider credential."""
 from pathlib import Path
+from contextvars import ContextVar
 import json,os,re,secrets
 import threading
 import httpx
@@ -8,6 +9,7 @@ from api.agent import AgentError
 
 MESSAGES={'user_limit':'这份体验的10次问答已用完，仍可继续上传识别和查看结果。','daily_limit':'今天的问答次数已用完，请明天再试。','monthly_limit':'本月的问答次数已用完，请下月再试。','question_budget':'这次问题未能在处理次数内完成，请缩小范围后再试。'}
 _identity_lock=threading.RLock()
+browser_agent_identity=ContextVar('browser_agent_identity',default=None)
 
 def installation_token(root=ROOT):
     with _identity_lock:return _installation_token(root)
@@ -28,7 +30,7 @@ def _installation_token(root):
 
 class RemoteAgent:
     def __init__(self,settings,request_id,*,root=ROOT,transport=None):
-        self.url=settings.remote_agent_url.rstrip('/');self.request_id=request_id;self.token=installation_token(root)
+        self.url=settings.remote_agent_url.rstrip('/');self.request_id=request_id;self.token=browser_agent_identity.get() or installation_token(root)
         self.ticket=None;self.remaining=None;self.transport=transport
 
     async def _post(self,path,body):

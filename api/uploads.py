@@ -444,6 +444,9 @@ class UploadService:
                 try:
                     job=json.loads(record.read_text(encoding='utf8'));ident=record.parent.name
                     if job['status']=='complete' and job.get('result'):
+                        if os.getenv('TRACE_DEPLOYMENT')=='cloud' and time.time()-job['created_at']>86400:
+                            if ident not in self._processes and not job.get('updating'):self._purge(ident)
+                            continue
                         if job.get('expires_at') is not None:job['expires_at']=None;self._write(job)
                         continue
                     interrupted=job['status'] in ('uploading','queued','running') and not pid_alive(job.get('manager_pid'))

@@ -8,4 +8,5 @@ except subprocess.TimeoutExpired:
     import json
     (root/'work/vision-selftest.json').write_text(json.dumps({'ok':False,'code':'vision_self_test'}))
 os.chdir(root)
-os.execv(sys.executable,[sys.executable,'-m','uvicorn','app:app','--host','0.0.0.0','--port','8000','--workers','1','--no-access-log'])
+entry=['deploy.cloud:create_cloud_app','--factory'] if '--cloud' in sys.argv else ['app:app']
+os.execv(sys.executable,[sys.executable,'-m','uvicorn',*entry,'--host','0.0.0.0','--port','8000','--workers','1','--no-access-log'])

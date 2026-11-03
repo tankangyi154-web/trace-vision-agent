@@ -174,6 +174,17 @@ def test_completed_local_records_survive_cleanup_restart_and_are_owner_scoped(tm
     assert service.records('owner-a')==[] and len(service.records('owner-b'))==1
     service.close()
 
+def test_only_cloud_completed_records_expire_after_24_hours(tmp_path,monkeypatch):
+    from api.uploads import UploadService
+    service=UploadService(tmp_path/'jobs')
+    old=_completed_record(service,'owner','old.mp4');recent=_completed_record(service,'owner','recent.mp4')
+    old['created_at']=time.time()-86401;service._write(old)
+    service.cleanup();assert service._path(old['id']).exists()
+    monkeypatch.setenv('TRACE_DEPLOYMENT','cloud')
+    service.cleanup()
+    assert not service._path(old['id']).exists() and service._path(recent['id']).exists()
+    service.close()
+
 
 def test_saved_media_access_is_separate_from_question_session_and_keeps_quota(tmp_path,monkeypatch):
     from uuid import uuid4
